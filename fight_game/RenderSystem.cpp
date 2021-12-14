@@ -28,7 +28,7 @@ void RenderSystem::render(std::vector<Entity *> *entityArray, double deltaTime)
 		}
 
 
-	}
+	}   
 
 
 	glfwSwapBuffers(_window);
