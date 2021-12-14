@@ -9,6 +9,7 @@ RenderSystem::RenderSystem() :_window(glfwGetCurrentContext())
 
 RenderSystem::~RenderSystem()
 {
+
 }
 
 void RenderSystem::render(std::vector<Entity *> *entityArray, double deltaTime)
