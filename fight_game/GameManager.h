@@ -26,6 +26,9 @@ public:
 	void runGameLoop();	
 	static GameManager& getGameManager();
 	static void destroyGameManager();
+
+
+
 };
 
 #endif
