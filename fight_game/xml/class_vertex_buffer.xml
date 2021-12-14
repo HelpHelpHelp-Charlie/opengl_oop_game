@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_vertex_buffer" kind="class" language="C++" prot="public">
+    <compoundname>VertexBuffer</compoundname>
+    <includes refid="_vertex_buffer_8h" local="no">VertexBuffer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vertex_buffer_1acf2ddcbd747a822b2e6c88d800e80bb3" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint VertexBuffer::_vertexBufferID</definition>
+        <argsstring></argsstring>
+        <name>_vertexBufferID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="15" column="12" bodyfile="VertexBuffer.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1a46147394d20c3f7ac579a865e15bb300" prot="private" static="no" mutable="no">
+        <type>GLenum</type>
+        <definition>GLenum VertexBuffer::_mode</definition>
+        <argsstring></argsstring>
+        <name>_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="16" column="12" bodyfile="VertexBuffer.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1ab6bfcb3423bf3ccc3446c2d946030a29" prot="private" static="no" mutable="no">
+        <type>GLsizei</type>
+        <definition>GLsizei VertexBuffer::_count</definition>
+        <argsstring></argsstring>
+        <name>_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="17" column="13" bodyfile="VertexBuffer.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1aa3ffb1148766ad84f34f158559caf223" prot="private" static="no" mutable="no">
+        <type>GLsizei</type>
+        <definition>GLsizei VertexBuffer::_stride</definition>
+        <argsstring></argsstring>
+        <name>_stride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="18" column="13" bodyfile="VertexBuffer.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1a163d9a35d28bbab236d8b3a17e111640" prot="private" static="no" mutable="no">
+        <type><ref refid="class_texture" kindref="compound">Texture</ref> *</type>
+        <definition>Texture* VertexBuffer::_texture</definition>
+        <argsstring></argsstring>
+        <name>_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="19" column="9" bodyfile="VertexBuffer.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1affe31b624c21ffefa23ef9f10d13879d" prot="private" static="no" mutable="no">
+        <type>GLvoid *</type>
+        <definition>GLvoid* VertexBuffer::_positionOffset</definition>
+        <argsstring></argsstring>
+        <name>_positionOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="20" column="12" bodyfile="VertexBuffer.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vertex_buffer_1ad47b6a9b12acb20fc9b5aa0f06fccb14" prot="private" static="no" mutable="no">
+        <type>GLvoid *</type>
+        <definition>GLvoid* VertexBuffer::_textureOffset</definition>
+        <argsstring></argsstring>
+        <name>_textureOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="21" column="8" bodyfile="VertexBuffer.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vertex_buffer_1a58d807701e6c25c15705937b8e699b4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint VertexBuffer::getVertexBufferID</definition>
+        <argsstring>()</argsstring>
+        <name>getVertexBufferID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="24" column="12" bodyfile="VertexBuffer.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vertex_buffer_1a3535027a0946344fb08c0899140788b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VertexBuffer::VertexBuffer</definition>
+        <argsstring>(const GLvoid *data, GLsizei size, GLenum mode, GLsizei count, GLsizei stride, Texture *texture, GLvoid *positionOffset, GLvoid *textureOffset)</argsstring>
+        <name>VertexBuffer</name>
+        <param>
+          <type>const GLvoid *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>GLsizei</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>GLenum</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>GLsizei</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>GLsizei</type>
+          <declname>stride</declname>
+        </param>
+        <param>
+          <type><ref refid="class_texture" kindref="compound">Texture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <param>
+          <type>GLvoid *</type>
+          <declname>positionOffset</declname>
+        </param>
+        <param>
+          <type>GLvoid *</type>
+          <declname>textureOffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="25" column="5" bodyfile="VertexBuffer.cpp" bodystart="17" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vertex_buffer_1a5216726fdd43b2ae8e1439e347717fdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>VertexBuffer::~VertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~VertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="33" column="5" bodyfile="VertexBuffer.cpp" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vertex_buffer_1a41eade34b8748926aeda6688fa5f61a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VertexBuffer::configureVertexAttributes</definition>
+        <argsstring>()</argsstring>
+        <name>configureVertexAttributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="35" column="10" bodyfile="VertexBuffer.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vertex_buffer_1ae522778b0808bb41609ab871e594499f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void VertexBuffer::renderVertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>renderVertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexBuffer.h" line="36" column="10" bodyfile="VertexBuffer.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VertexBuffer.h" line="11" column="1" bodyfile="VertexBuffer.h" bodystart="12" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_vertex_buffer_1ab6bfcb3423bf3ccc3446c2d946030a29" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_count</name></member>
+      <member refid="class_vertex_buffer_1a46147394d20c3f7ac579a865e15bb300" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_mode</name></member>
+      <member refid="class_vertex_buffer_1affe31b624c21ffefa23ef9f10d13879d" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_positionOffset</name></member>
+      <member refid="class_vertex_buffer_1aa3ffb1148766ad84f34f158559caf223" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_stride</name></member>
+      <member refid="class_vertex_buffer_1a163d9a35d28bbab236d8b3a17e111640" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_texture</name></member>
+      <member refid="class_vertex_buffer_1ad47b6a9b12acb20fc9b5aa0f06fccb14" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_textureOffset</name></member>
+      <member refid="class_vertex_buffer_1acf2ddcbd747a822b2e6c88d800e80bb3" prot="private" virt="non-virtual"><scope>VertexBuffer</scope><name>_vertexBufferID</name></member>
+      <member refid="class_vertex_buffer_1a41eade34b8748926aeda6688fa5f61a7" prot="public" virt="non-virtual"><scope>VertexBuffer</scope><name>configureVertexAttributes</name></member>
+      <member refid="class_vertex_buffer_1a58d807701e6c25c15705937b8e699b4d" prot="public" virt="non-virtual"><scope>VertexBuffer</scope><name>getVertexBufferID</name></member>
+      <member refid="class_vertex_buffer_1ae522778b0808bb41609ab871e594499f" prot="public" virt="non-virtual"><scope>VertexBuffer</scope><name>renderVertexBuffer</name></member>
+      <member refid="class_vertex_buffer_1a3535027a0946344fb08c0899140788b8" prot="public" virt="non-virtual"><scope>VertexBuffer</scope><name>VertexBuffer</name></member>
+      <member refid="class_vertex_buffer_1a5216726fdd43b2ae8e1439e347717fdd" prot="public" virt="non-virtual"><scope>VertexBuffer</scope><name>~VertexBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

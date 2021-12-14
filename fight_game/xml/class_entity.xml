@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_entity" kind="class" language="C++" prot="public">
+    <compoundname>Entity</compoundname>
+    <includes refid="_entity_8h" local="no">Entity.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_entity_1abbfa8d4cdb09d3b6672c4d02b855b60f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+        <definition>VertexBuffer* Entity::_vertexBuffer</definition>
+        <argsstring></argsstring>
+        <name>_vertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="13" column="18" bodyfile="Entity.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1afc1c4ffa492705cbc0f9dcc96a9d2d22" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_position</definition>
+        <argsstring></argsstring>
+        <name>_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="15" column="6" bodyfile="Entity.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a243b702fc6a67534d299ca1704667f08" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_scale</definition>
+        <argsstring></argsstring>
+        <name>_scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="16" column="6" bodyfile="Entity.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a770a9a513469a6edeb46cf7b3783cc56" prot="private" static="no" mutable="no">
+        <type>GLfloat</type>
+        <definition>GLfloat Entity::_rotation</definition>
+        <argsstring></argsstring>
+        <name>_rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="17" column="9" bodyfile="Entity.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a1f1772f02ccb5478a5cb21a09f03817b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_velocity</definition>
+        <argsstring></argsstring>
+        <name>_velocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="19" column="6" bodyfile="Entity.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1ad84a4f301cd30a31cc951335c1ab495b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_scaleVelocity</definition>
+        <argsstring></argsstring>
+        <name>_scaleVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="20" column="6" bodyfile="Entity.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a950222067786b57039d2f68b2557ed14" prot="private" static="no" mutable="no">
+        <type>GLfloat</type>
+        <definition>GLfloat Entity::_rotationVelocity</definition>
+        <argsstring></argsstring>
+        <name>_rotationVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="21" column="9" bodyfile="Entity.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a9b52d90af78abe05b8a658ecf4510e14" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_eyeVector</definition>
+        <argsstring></argsstring>
+        <name>_eyeVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="23" column="6" bodyfile="Entity.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_1a92dc3bdd80104f1474b94add426b5081" prot="private" static="no" mutable="no">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::_upVector</definition>
+        <argsstring></argsstring>
+        <name>_upVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="24" column="6" bodyfile="Entity.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_1a73306699ac0699098b3ce2aaea4f5c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+        <definition>VertexBuffer * Entity::getVertexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>getVertexBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="28" column="18" bodyfile="Entity.cpp" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a422b66f3129f0187e5bb8377cb1c1150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setVertexBuffer</definition>
+        <argsstring>(VertexBuffer *newVertexBuffer)</argsstring>
+        <name>setVertexBuffer</name>
+        <param>
+          <type><ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+          <declname>newVertexBuffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="29" column="10" bodyfile="Entity.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aa56f70c14495d69c2bdcc8b78735b009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getPosition</definition>
+        <argsstring>()</argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="31" column="6" bodyfile="Entity.cpp" bodystart="21" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a87e10143e2349c6e805a6806f8f00226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setPosition</definition>
+        <argsstring>(Vec2 newPosition)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="32" column="10" bodyfile="Entity.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a66f77e9e4373aacba5a3b6ca83ce0a9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getScale</definition>
+        <argsstring>()</argsstring>
+        <name>getScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="34" column="6" bodyfile="Entity.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a84970413c920468874fa9efc129a9cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setScale</definition>
+        <argsstring>(Vec2 newScale)</argsstring>
+        <name>setScale</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newScale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="35" column="10" bodyfile="Entity.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a8d9a73ad06630797994713588c2d8678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLfloat</type>
+        <definition>GLfloat Entity::getRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getRotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="37" column="9" bodyfile="Entity.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a7e7d2092ef1375a31fc5b8d2e6c62403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setRotation</definition>
+        <argsstring>(GLfloat newRotation)</argsstring>
+        <name>setRotation</name>
+        <param>
+          <type>GLfloat</type>
+          <declname>newRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="38" column="10" bodyfile="Entity.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ada743e15b2af97b9cbc8b9df65bef4f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="40" column="6" bodyfile="Entity.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a559fb6e5c5e79735c42d0aa82d75e717" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setVelocity</definition>
+        <argsstring>(Vec2 newVelocity)</argsstring>
+        <name>setVelocity</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="41" column="10" bodyfile="Entity.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ab1cc189486c97f13361aff47e92cd053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getScaleVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getScaleVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="43" column="6" bodyfile="Entity.cpp" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ad452c228a8ec03396fb37ed2b6ffd5fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setScaleVelocity</definition>
+        <argsstring>(Vec2 newScaleVelocity)</argsstring>
+        <name>setScaleVelocity</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newScaleVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="44" column="10" bodyfile="Entity.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ac367a2b4f4f29ad555d569c1557e6188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLfloat</type>
+        <definition>GLfloat Entity::getRotationVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getRotationVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="46" column="9" bodyfile="Entity.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a98cd63e06d63daaf23cfa6d05393185c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setRotationVelocity</definition>
+        <argsstring>(GLfloat newRotationVelocity)</argsstring>
+        <name>setRotationVelocity</name>
+        <param>
+          <type>GLfloat</type>
+          <declname>newRotationVelocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="47" column="10" bodyfile="Entity.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ae026ea133a028081a673e381df662e92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getEyeVector</definition>
+        <argsstring>()</argsstring>
+        <name>getEyeVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="49" column="6" bodyfile="Entity.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aac0ef95ef75d3a82edfdb8097006581a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setEyeVector</definition>
+        <argsstring>(Vec2 newEyeVector)</argsstring>
+        <name>setEyeVector</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newEyeVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="50" column="10" bodyfile="Entity.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a772b36cc492187ffc901b8ae9abcc950" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+        <definition>Vec2 Entity::getUpVector</definition>
+        <argsstring>()</argsstring>
+        <name>getUpVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="52" column="6" bodyfile="Entity.cpp" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ae25bebe1ef377d803890d92eee263ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Entity::setUpVector</definition>
+        <argsstring>(Vec2 newUpVector)</argsstring>
+        <name>setUpVector</name>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>newUpVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="53" column="10" bodyfile="Entity.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a0c9fbe317cca6853542c63e089257df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::Entity</definition>
+        <argsstring>(VertexBuffer *vertexBuffer, Vec2 position)</argsstring>
+        <name>Entity</name>
+        <param>
+          <type><ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> *</type>
+          <declname>vertexBuffer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="55" column="5" bodyfile="Entity.cpp" bodystart="101" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Entity::~Entity</definition>
+        <argsstring>()</argsstring>
+        <name>~Entity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Entity.h" line="56" column="5" bodyfile="Entity.cpp" bodystart="110" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Entity.h" line="9" column="1" bodyfile="Entity.h" bodystart="10" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_entity_1a9b52d90af78abe05b8a658ecf4510e14" prot="private" virt="non-virtual"><scope>Entity</scope><name>_eyeVector</name></member>
+      <member refid="class_entity_1afc1c4ffa492705cbc0f9dcc96a9d2d22" prot="private" virt="non-virtual"><scope>Entity</scope><name>_position</name></member>
+      <member refid="class_entity_1a770a9a513469a6edeb46cf7b3783cc56" prot="private" virt="non-virtual"><scope>Entity</scope><name>_rotation</name></member>
+      <member refid="class_entity_1a950222067786b57039d2f68b2557ed14" prot="private" virt="non-virtual"><scope>Entity</scope><name>_rotationVelocity</name></member>
+      <member refid="class_entity_1a243b702fc6a67534d299ca1704667f08" prot="private" virt="non-virtual"><scope>Entity</scope><name>_scale</name></member>
+      <member refid="class_entity_1ad84a4f301cd30a31cc951335c1ab495b" prot="private" virt="non-virtual"><scope>Entity</scope><name>_scaleVelocity</name></member>
+      <member refid="class_entity_1a92dc3bdd80104f1474b94add426b5081" prot="private" virt="non-virtual"><scope>Entity</scope><name>_upVector</name></member>
+      <member refid="class_entity_1a1f1772f02ccb5478a5cb21a09f03817b" prot="private" virt="non-virtual"><scope>Entity</scope><name>_velocity</name></member>
+      <member refid="class_entity_1abbfa8d4cdb09d3b6672c4d02b855b60f" prot="private" virt="non-virtual"><scope>Entity</scope><name>_vertexBuffer</name></member>
+      <member refid="class_entity_1a0c9fbe317cca6853542c63e089257df2" prot="public" virt="non-virtual"><scope>Entity</scope><name>Entity</name></member>
+      <member refid="class_entity_1ae026ea133a028081a673e381df662e92" prot="public" virt="non-virtual"><scope>Entity</scope><name>getEyeVector</name></member>
+      <member refid="class_entity_1aa56f70c14495d69c2bdcc8b78735b009" prot="public" virt="non-virtual"><scope>Entity</scope><name>getPosition</name></member>
+      <member refid="class_entity_1a8d9a73ad06630797994713588c2d8678" prot="public" virt="non-virtual"><scope>Entity</scope><name>getRotation</name></member>
+      <member refid="class_entity_1ac367a2b4f4f29ad555d569c1557e6188" prot="public" virt="non-virtual"><scope>Entity</scope><name>getRotationVelocity</name></member>
+      <member refid="class_entity_1a66f77e9e4373aacba5a3b6ca83ce0a9a" prot="public" virt="non-virtual"><scope>Entity</scope><name>getScale</name></member>
+      <member refid="class_entity_1ab1cc189486c97f13361aff47e92cd053" prot="public" virt="non-virtual"><scope>Entity</scope><name>getScaleVelocity</name></member>
+      <member refid="class_entity_1a772b36cc492187ffc901b8ae9abcc950" prot="public" virt="non-virtual"><scope>Entity</scope><name>getUpVector</name></member>
+      <member refid="class_entity_1ada743e15b2af97b9cbc8b9df65bef4f6" prot="public" virt="non-virtual"><scope>Entity</scope><name>getVelocity</name></member>
+      <member refid="class_entity_1a73306699ac0699098b3ce2aaea4f5c95" prot="public" virt="non-virtual"><scope>Entity</scope><name>getVertexBuffer</name></member>
+      <member refid="class_entity_1aac0ef95ef75d3a82edfdb8097006581a" prot="public" virt="non-virtual"><scope>Entity</scope><name>setEyeVector</name></member>
+      <member refid="class_entity_1a87e10143e2349c6e805a6806f8f00226" prot="public" virt="non-virtual"><scope>Entity</scope><name>setPosition</name></member>
+      <member refid="class_entity_1a7e7d2092ef1375a31fc5b8d2e6c62403" prot="public" virt="non-virtual"><scope>Entity</scope><name>setRotation</name></member>
+      <member refid="class_entity_1a98cd63e06d63daaf23cfa6d05393185c" prot="public" virt="non-virtual"><scope>Entity</scope><name>setRotationVelocity</name></member>
+      <member refid="class_entity_1a84970413c920468874fa9efc129a9cc2" prot="public" virt="non-virtual"><scope>Entity</scope><name>setScale</name></member>
+      <member refid="class_entity_1ad452c228a8ec03396fb37ed2b6ffd5fa" prot="public" virt="non-virtual"><scope>Entity</scope><name>setScaleVelocity</name></member>
+      <member refid="class_entity_1ae25bebe1ef377d803890d92eee263ad0" prot="public" virt="non-virtual"><scope>Entity</scope><name>setUpVector</name></member>
+      <member refid="class_entity_1a559fb6e5c5e79735c42d0aa82d75e717" prot="public" virt="non-virtual"><scope>Entity</scope><name>setVelocity</name></member>
+      <member refid="class_entity_1a422b66f3129f0187e5bb8377cb1c1150" prot="public" virt="non-virtual"><scope>Entity</scope><name>setVertexBuffer</name></member>
+      <member refid="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" prot="public" virt="non-virtual"><scope>Entity</scope><name>~Entity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

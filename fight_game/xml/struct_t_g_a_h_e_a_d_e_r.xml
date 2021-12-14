@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="struct_t_g_a_h_e_a_d_e_r" kind="struct" language="C++" prot="public">
+    <compoundname>TGAHEADER</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a7e95180a64f23121916f79bb5a450f67" prot="public" static="no" mutable="no">
+        <type>GLbyte</type>
+        <definition>GLbyte TGAHEADER::identsize</definition>
+        <argsstring></argsstring>
+        <name>identsize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="14" column="7" bodyfile="loadTGA.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1afa9624515a431c35cac310dc616cce20" prot="public" static="no" mutable="no">
+        <type>GLbyte</type>
+        <definition>GLbyte TGAHEADER::colorMapType</definition>
+        <argsstring></argsstring>
+        <name>colorMapType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="15" column="7" bodyfile="loadTGA.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a25f60fd03b8f3ca45c51570fdf9c37f8" prot="public" static="no" mutable="no">
+        <type>GLbyte</type>
+        <definition>GLbyte TGAHEADER::imageType</definition>
+        <argsstring></argsstring>
+        <name>imageType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="16" column="7" bodyfile="loadTGA.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a77b4ee20178980a4c15b4f9964d316a5" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::colorMapStart</definition>
+        <argsstring></argsstring>
+        <name>colorMapStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="17" column="15" bodyfile="loadTGA.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a099159a965bb119e3f0bb6ab51263be2" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::colorMapLength</definition>
+        <argsstring></argsstring>
+        <name>colorMapLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="18" column="15" bodyfile="loadTGA.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1ac1ec5898c11a2c2a857135f6491476a8" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char TGAHEADER::colorMapBits</definition>
+        <argsstring></argsstring>
+        <name>colorMapBits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="19" column="15" bodyfile="loadTGA.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a401e8bd5c99a9b4eb1f2870fb7798451" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::xstart</definition>
+        <argsstring></argsstring>
+        <name>xstart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="20" column="15" bodyfile="loadTGA.cpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a5764ddc4d61823db8ad1d4d52a7fa271" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::ystart</definition>
+        <argsstring></argsstring>
+        <name>ystart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="21" column="15" bodyfile="loadTGA.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1ae6ddb06ece470aa657b1b7f874a4b9de" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="22" column="15" bodyfile="loadTGA.cpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1aec46a067f60610efda8e7253787ba9d5" prot="public" static="no" mutable="no">
+        <type>unsigned short</type>
+        <definition>unsigned short TGAHEADER::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="23" column="15" bodyfile="loadTGA.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1a11419767ec86b64b07aef26f94818075" prot="public" static="no" mutable="no">
+        <type>GLbyte</type>
+        <definition>GLbyte TGAHEADER::bits</definition>
+        <argsstring></argsstring>
+        <name>bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="24" column="7" bodyfile="loadTGA.cpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_t_g_a_h_e_a_d_e_r_1aaa26be3ddc5aa33fdbbd1bd2fc6aad55" prot="public" static="no" mutable="no">
+        <type>GLbyte</type>
+        <definition>GLbyte TGAHEADER::descriptor</definition>
+        <argsstring></argsstring>
+        <name>descriptor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.cpp" line="25" column="7" bodyfile="loadTGA.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="loadTGA.cpp" line="12" column="1" bodyfile="loadTGA.cpp" bodystart="13" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a11419767ec86b64b07aef26f94818075" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>bits</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1ac1ec5898c11a2c2a857135f6491476a8" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>colorMapBits</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a099159a965bb119e3f0bb6ab51263be2" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>colorMapLength</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a77b4ee20178980a4c15b4f9964d316a5" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>colorMapStart</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1afa9624515a431c35cac310dc616cce20" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>colorMapType</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1aaa26be3ddc5aa33fdbbd1bd2fc6aad55" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>descriptor</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1aec46a067f60610efda8e7253787ba9d5" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>height</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a7e95180a64f23121916f79bb5a450f67" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>identsize</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a25f60fd03b8f3ca45c51570fdf9c37f8" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>imageType</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1ae6ddb06ece470aa657b1b7f874a4b9de" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>width</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a401e8bd5c99a9b4eb1f2870fb7798451" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>xstart</name></member>
+      <member refid="struct_t_g_a_h_e_a_d_e_r_1a5764ddc4d61823db8ad1d4d52a7fa271" prot="public" virt="non-virtual"><scope>TGAHEADER</scope><name>ystart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

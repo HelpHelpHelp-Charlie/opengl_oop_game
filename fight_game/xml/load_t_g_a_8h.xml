@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="load_t_g_a_8h" kind="file" language="C++">
+    <compoundname>loadTGA.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includes local="no">gl\gl.h</includes>
+    <includes local="no">gl\glu.h</includes>
+    <includes refid="load_t_g_a_8h" local="yes">loadTGA.h</includes>
+    <includedby refid="_texture_8h" local="yes">Texture.h</includedby>
+    <includedby refid="load_t_g_a_8cpp" local="yes">loadTGA.cpp</includedby>
+    <includedby refid="load_t_g_a_8h" local="yes">loadTGA.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>loadTGA.h</label>
+        <link refid="load_t_g_a_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>gl\gl.h</label>
+      </node>
+      <node id="4">
+        <label>gl\glu.h</label>
+      </node>
+      <node id="2">
+        <label>windows.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>Entity.cpp</label>
+        <link refid="_entity_8cpp"/>
+      </node>
+      <node id="11">
+        <label>Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GameManager.cpp</label>
+        <link refid="_game_manager_8cpp"/>
+      </node>
+      <node id="4">
+        <label>GameManager.h</label>
+        <link refid="_game_manager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>RenderSystem.cpp</label>
+        <link refid="_render_system_8cpp"/>
+      </node>
+      <node id="13">
+        <label>RenderSystem.h</label>
+        <link refid="_render_system_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ResourceManager.cpp</label>
+        <link refid="_resource_manager_8cpp"/>
+      </node>
+      <node id="3">
+        <label>ResourceManager.h</label>
+        <link refid="_resource_manager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="15">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Texture.cpp</label>
+        <link refid="_texture_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Texture.h</label>
+        <link refid="_texture_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>VertexBuffer.cpp</label>
+        <link refid="_vertex_buffer_8cpp"/>
+      </node>
+      <node id="10">
+        <label>VertexBuffer.h</label>
+        <link refid="_vertex_buffer_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>loadTGA.cpp</label>
+        <link refid="load_t_g_a_8cpp"/>
+      </node>
+      <node id="1">
+        <label>loadTGA.h</label>
+        <link refid="load_t_g_a_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="load_t_g_a_8h_1a98c0b8a2a6b0defdc6e84fcf443189bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLbyte *</type>
+        <definition>GLbyte * gltLoadTGA</definition>
+        <argsstring>(const char *szFileName, GLint *iWidth, GLint *iHeight, GLint *iComponents, GLenum *eFormat)</argsstring>
+        <name>gltLoadTGA</name>
+        <param>
+          <type>const char *</type>
+          <declname>szFileName</declname>
+        </param>
+        <param>
+          <type>GLint *</type>
+          <declname>iWidth</declname>
+        </param>
+        <param>
+          <type>GLint *</type>
+          <declname>iHeight</declname>
+        </param>
+        <param>
+          <type>GLint *</type>
+          <declname>iComponents</declname>
+        </param>
+        <param>
+          <type>GLenum *</type>
+          <declname>eFormat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="loadTGA.h" line="7" column="8" bodyfile="loadTGA.cpp" bodystart="35" bodyend="116" declfile="loadTGA.h" declline="7" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Must<sp/>have<sp/>for<sp/>Windows<sp/>platform<sp/>builds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gl\gl.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Microsoft<sp/>OpenGL<sp/>headers<sp/>(version<sp/>1.1<sp/>by<sp/>themselves)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gl\glu.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>OpenGL<sp/>Utilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="load_t_g_a_8h" kindref="compound">loadTGA.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">GLbyte<sp/>*<ref refid="load_t_g_a_8h_1a98c0b8a2a6b0defdc6e84fcf443189bf" kindref="member">gltLoadTGA</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*szFileName,<sp/>GLint<sp/>*iWidth,<sp/>GLint<sp/>*iHeight,<sp/>GLint<sp/>*iComponents,<sp/>GLenum<sp/>*eFormat);</highlight></codeline>
+    </programlisting>
+    <location file="loadTGA.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_game_manager" kind="class" language="C++" prot="public">
+    <compoundname>GameManager</compoundname>
+    <includes refid="_game_manager_8h" local="no">GameManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_manager_1a1927c13c1e247846818a9b6c935717e9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GameManager::_running</definition>
+        <argsstring></argsstring>
+        <name>_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="14" column="6" bodyfile="GameManager.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_manager_1ad3469d0bef0b38be64c05a900b4a272e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_render_system" kindref="compound">RenderSystem</ref> *</type>
+        <definition>RenderSystem* GameManager::_renderSystem</definition>
+        <argsstring></argsstring>
+        <name>_renderSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="15" column="14" bodyfile="GameManager.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_manager_1a7a8648a83fc929cbc51b6eaa343815ad" prot="private" static="no" mutable="no">
+        <type><ref refid="class_resource_manager" kindref="compound">ResourceManager</ref> *</type>
+        <definition>ResourceManager* GameManager::_resourceManager</definition>
+        <argsstring></argsstring>
+        <name>_resourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="16" column="17" bodyfile="GameManager.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_manager_1ac6be5fbab66ee1d32d3ca366649984d2" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* GameManager::_window</definition>
+        <argsstring></argsstring>
+        <name>_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="17" column="12" bodyfile="GameManager.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_manager_1a9c0e39bc53b3a76175fe14d3c7697320" prot="private" static="no" mutable="no">
+        <type><ref refid="class_scene" kindref="compound">Scene</ref> *</type>
+        <definition>Scene* GameManager::scene</definition>
+        <argsstring></argsstring>
+        <name>scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="18" column="7" bodyfile="GameManager.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_game_manager_1ac942d2caab25839d10e7a308f2c3a61e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameManager::GameManager</definition>
+        <argsstring>(bool running)</argsstring>
+        <name>GameManager</name>
+        <param>
+          <type>bool</type>
+          <declname>running</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="19" column="1" bodyfile="GameManager.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1aaae63e38e358379c1fe507c5197a8435" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameManager::~GameManager</definition>
+        <argsstring>()</argsstring>
+        <name>~GameManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="20" column="1" bodyfile="GameManager.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_manager_1a829e2ea5acdffac6770877cfae585139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameManager::runGameLoop</definition>
+        <argsstring>()</argsstring>
+        <name>runGameLoop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="22" column="6" bodyfile="GameManager.cpp" bodystart="15" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_game_manager_1aa08a255191c165e7d47e37ea61cb3171" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref> &amp;</type>
+        <definition>GameManager &amp; GameManager::getGameManager</definition>
+        <argsstring>()</argsstring>
+        <name>getGameManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="23" column="20" bodyfile="GameManager.cpp" bodystart="36" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_manager_1aea5ff4f47b90e72f242fe542b3c78c06" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameManager::destroyGameManager</definition>
+        <argsstring>()</argsstring>
+        <name>destroyGameManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="GameManager.h" line="24" column="13" bodyfile="GameManager.cpp" bodystart="57" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="GameManager.h" line="12" column="1" bodyfile="GameManager.h" bodystart="12" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_game_manager_1ad3469d0bef0b38be64c05a900b4a272e" prot="private" virt="non-virtual"><scope>GameManager</scope><name>_renderSystem</name></member>
+      <member refid="class_game_manager_1a7a8648a83fc929cbc51b6eaa343815ad" prot="private" virt="non-virtual"><scope>GameManager</scope><name>_resourceManager</name></member>
+      <member refid="class_game_manager_1a1927c13c1e247846818a9b6c935717e9" prot="private" virt="non-virtual"><scope>GameManager</scope><name>_running</name></member>
+      <member refid="class_game_manager_1ac6be5fbab66ee1d32d3ca366649984d2" prot="private" virt="non-virtual"><scope>GameManager</scope><name>_window</name></member>
+      <member refid="class_game_manager_1aea5ff4f47b90e72f242fe542b3c78c06" prot="public" virt="non-virtual"><scope>GameManager</scope><name>destroyGameManager</name></member>
+      <member refid="class_game_manager_1ac942d2caab25839d10e7a308f2c3a61e" prot="private" virt="non-virtual"><scope>GameManager</scope><name>GameManager</name></member>
+      <member refid="class_game_manager_1aa08a255191c165e7d47e37ea61cb3171" prot="public" virt="non-virtual"><scope>GameManager</scope><name>getGameManager</name></member>
+      <member refid="class_game_manager_1a829e2ea5acdffac6770877cfae585139" prot="public" virt="non-virtual"><scope>GameManager</scope><name>runGameLoop</name></member>
+      <member refid="class_game_manager_1a9c0e39bc53b3a76175fe14d3c7697320" prot="private" virt="non-virtual"><scope>GameManager</scope><name>scene</name></member>
+      <member refid="class_game_manager_1aaae63e38e358379c1fe507c5197a8435" prot="private" virt="non-virtual"><scope>GameManager</scope><name>~GameManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

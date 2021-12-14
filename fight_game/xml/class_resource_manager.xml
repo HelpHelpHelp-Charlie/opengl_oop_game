@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_resource_manager" kind="class" language="C++" prot="public">
+    <compoundname>ResourceManager</compoundname>
+    <includes refid="_resource_manager_8h" local="no">ResourceManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_resource_manager_1a0bd3bb118a2a58c8b51650cdd566f49b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> * &gt; *</type>
+        <definition>std::vector&lt;VertexBuffer *&gt;* ResourceManager::_vertexBufferArray</definition>
+        <argsstring></argsstring>
+        <name>_vertexBufferArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="15" column="17" bodyfile="ResourceManager.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_resource_manager_1a4433a6752c9f5718e43b757d7d52bb58" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_texture" kindref="compound">Texture</ref> * &gt; *</type>
+        <definition>std::vector&lt;Texture *&gt;* ResourceManager::_textureArray</definition>
+        <argsstring></argsstring>
+        <name>_textureArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="16" column="12" bodyfile="ResourceManager.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_resource_manager_1a3b32babd2e81909bbd90d7f2d566fadb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager::ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="17" column="5" bodyfile="ResourceManager.cpp" bodystart="13" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_resource_manager_1a671c186e4630599e7e36d000c53eaf80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ResourceManager::~ResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="18" column="5" bodyfile="ResourceManager.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_resource_manager_1a1b8c1fb41c55bad388e45c3564b52102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_texture" kindref="compound">Texture</ref> * &gt; *</type>
+        <definition>std::vector&lt; Texture * &gt; * ResourceManager::getTextureArray</definition>
+        <argsstring>()</argsstring>
+        <name>getTextureArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="21" column="13" bodyfile="ResourceManager.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_resource_manager_1afb9595acc189aa88fccad22c5f483769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_vertex_buffer" kindref="compound">VertexBuffer</ref> * &gt; *</type>
+        <definition>std::vector&lt; VertexBuffer * &gt; * ResourceManager::getVertexBufferArray</definition>
+        <argsstring>()</argsstring>
+        <name>getVertexBufferArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="22" column="17" bodyfile="ResourceManager.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_resource_manager_1ac7518dcf3792c23848c6cf93ce67e462" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_resource_manager" kindref="compound">ResourceManager</ref> &amp;</type>
+        <definition>ResourceManager &amp; ResourceManager::getResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>getResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="23" column="28" bodyfile="ResourceManager.cpp" bodystart="53" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_resource_manager_1a95be72fdfb8965949f979846831eb4e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ResourceManager::destroyResourceManager</definition>
+        <argsstring>()</argsstring>
+        <name>destroyResourceManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ResourceManager.h" line="24" column="17" bodyfile="ResourceManager.cpp" bodystart="64" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ResourceManager.h" line="12" column="1" bodyfile="ResourceManager.h" bodystart="13" bodyend="26"/>
+    <listofallmembers>
+      <member refid="class_resource_manager_1a4433a6752c9f5718e43b757d7d52bb58" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>_textureArray</name></member>
+      <member refid="class_resource_manager_1a0bd3bb118a2a58c8b51650cdd566f49b" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>_vertexBufferArray</name></member>
+      <member refid="class_resource_manager_1a95be72fdfb8965949f979846831eb4e1" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>destroyResourceManager</name></member>
+      <member refid="class_resource_manager_1ac7518dcf3792c23848c6cf93ce67e462" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>getResourceManager</name></member>
+      <member refid="class_resource_manager_1a1b8c1fb41c55bad388e45c3564b52102" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>getTextureArray</name></member>
+      <member refid="class_resource_manager_1afb9595acc189aa88fccad22c5f483769" prot="public" virt="non-virtual"><scope>ResourceManager</scope><name>getVertexBufferArray</name></member>
+      <member refid="class_resource_manager_1a3b32babd2e81909bbd90d7f2d566fadb" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>ResourceManager</name></member>
+      <member refid="class_resource_manager_1a671c186e4630599e7e36d000c53eaf80" prot="private" virt="non-virtual"><scope>ResourceManager</scope><name>~ResourceManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

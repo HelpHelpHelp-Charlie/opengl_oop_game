@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="class_bounding_box" kind="class"><name>BoundingBox</name>
+    <member refid="class_bounding_box_1a6e401c4da5839950f1f30c8b8c4d1208" kind="function"><name>BoundingBox</name></member>
+  </compound>
+  <compound refid="class_entity" kind="class"><name>Entity</name>
+    <member refid="class_entity_1abbfa8d4cdb09d3b6672c4d02b855b60f" kind="variable"><name>_vertexBuffer</name></member>
+    <member refid="class_entity_1afc1c4ffa492705cbc0f9dcc96a9d2d22" kind="variable"><name>_position</name></member>
+    <member refid="class_entity_1a243b702fc6a67534d299ca1704667f08" kind="variable"><name>_scale</name></member>
+    <member refid="class_entity_1a770a9a513469a6edeb46cf7b3783cc56" kind="variable"><name>_rotation</name></member>
+    <member refid="class_entity_1a1f1772f02ccb5478a5cb21a09f03817b" kind="variable"><name>_velocity</name></member>
+    <member refid="class_entity_1ad84a4f301cd30a31cc951335c1ab495b" kind="variable"><name>_scaleVelocity</name></member>
+    <member refid="class_entity_1a950222067786b57039d2f68b2557ed14" kind="variable"><name>_rotationVelocity</name></member>
+    <member refid="class_entity_1a9b52d90af78abe05b8a658ecf4510e14" kind="variable"><name>_eyeVector</name></member>
+    <member refid="class_entity_1a92dc3bdd80104f1474b94add426b5081" kind="variable"><name>_upVector</name></member>
+    <member refid="class_entity_1a73306699ac0699098b3ce2aaea4f5c95" kind="function"><name>getVertexBuffer</name></member>
+    <member refid="class_entity_1a422b66f3129f0187e5bb8377cb1c1150" kind="function"><name>setVertexBuffer</name></member>
+    <member refid="class_entity_1aa56f70c14495d69c2bdcc8b78735b009" kind="function"><name>getPosition</name></member>
+    <member refid="class_entity_1a87e10143e2349c6e805a6806f8f00226" kind="function"><name>setPosition</name></member>
+    <member refid="class_entity_1a66f77e9e4373aacba5a3b6ca83ce0a9a" kind="function"><name>getScale</name></member>
+    <member refid="class_entity_1a84970413c920468874fa9efc129a9cc2" kind="function"><name>setScale</name></member>
+    <member refid="class_entity_1a8d9a73ad06630797994713588c2d8678" kind="function"><name>getRotation</name></member>
+    <member refid="class_entity_1a7e7d2092ef1375a31fc5b8d2e6c62403" kind="function"><name>setRotation</name></member>
+    <member refid="class_entity_1ada743e15b2af97b9cbc8b9df65bef4f6" kind="function"><name>getVelocity</name></member>
+    <member refid="class_entity_1a559fb6e5c5e79735c42d0aa82d75e717" kind="function"><name>setVelocity</name></member>
+    <member refid="class_entity_1ab1cc189486c97f13361aff47e92cd053" kind="function"><name>getScaleVelocity</name></member>
+    <member refid="class_entity_1ad452c228a8ec03396fb37ed2b6ffd5fa" kind="function"><name>setScaleVelocity</name></member>
+    <member refid="class_entity_1ac367a2b4f4f29ad555d569c1557e6188" kind="function"><name>getRotationVelocity</name></member>
+    <member refid="class_entity_1a98cd63e06d63daaf23cfa6d05393185c" kind="function"><name>setRotationVelocity</name></member>
+    <member refid="class_entity_1ae026ea133a028081a673e381df662e92" kind="function"><name>getEyeVector</name></member>
+    <member refid="class_entity_1aac0ef95ef75d3a82edfdb8097006581a" kind="function"><name>setEyeVector</name></member>
+    <member refid="class_entity_1a772b36cc492187ffc901b8ae9abcc950" kind="function"><name>getUpVector</name></member>
+    <member refid="class_entity_1ae25bebe1ef377d803890d92eee263ad0" kind="function"><name>setUpVector</name></member>
+    <member refid="class_entity_1a0c9fbe317cca6853542c63e089257df2" kind="function"><name>Entity</name></member>
+    <member refid="class_entity_1adf6d3f7cb1b2ba029b6b048a395cc8ae" kind="function"><name>~Entity</name></member>
+  </compound>
+  <compound refid="class_game_manager" kind="class"><name>GameManager</name>
+    <member refid="class_game_manager_1a1927c13c1e247846818a9b6c935717e9" kind="variable"><name>_running</name></member>
+    <member refid="class_game_manager_1ad3469d0bef0b38be64c05a900b4a272e" kind="variable"><name>_renderSystem</name></member>
+    <member refid="class_game_manager_1a7a8648a83fc929cbc51b6eaa343815ad" kind="variable"><name>_resourceManager</name></member>
+    <member refid="class_game_manager_1ac6be5fbab66ee1d32d3ca366649984d2" kind="variable"><name>_window</name></member>
+    <member refid="class_game_manager_1a9c0e39bc53b3a76175fe14d3c7697320" kind="variable"><name>scene</name></member>
+    <member refid="class_game_manager_1ac942d2caab25839d10e7a308f2c3a61e" kind="function"><name>GameManager</name></member>
+    <member refid="class_game_manager_1aaae63e38e358379c1fe507c5197a8435" kind="function"><name>~GameManager</name></member>
+    <member refid="class_game_manager_1a829e2ea5acdffac6770877cfae585139" kind="function"><name>runGameLoop</name></member>
+    <member refid="class_game_manager_1aa08a255191c165e7d47e37ea61cb3171" kind="function"><name>getGameManager</name></member>
+    <member refid="class_game_manager_1aea5ff4f47b90e72f242fe542b3c78c06" kind="function"><name>destroyGameManager</name></member>
+  </compound>
+  <compound refid="class_player_sprite" kind="class"><name>PlayerSprite</name>
+    <member refid="class_player_sprite_1a511087d1e5c48f2b51969cca5802b8ac" kind="variable"><name>_window</name></member>
+    <member refid="class_player_sprite_1a56a22ca77cd284f051a2dd40b514d902" kind="function"><name>PlayerSprite</name></member>
+    <member refid="class_player_sprite_1a2bac34aaf1a4a6106f0bd3c1e63d2b1b" kind="function"><name>~PlayerSprite</name></member>
+    <member refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="class_render_system" kind="class"><name>RenderSystem</name>
+    <member refid="class_render_system_1a76c1bf6b5645d8e7deabf5e6727eb655" kind="variable"><name>_window</name></member>
+    <member refid="class_render_system_1a361a667e709b81a8fcf6ea937367e12c" kind="variable"><name>_height</name></member>
+    <member refid="class_render_system_1abd7df5423d9e5a373d09174e764201ab" kind="variable"><name>_width</name></member>
+    <member refid="class_render_system_1a20496a8f52c4eb755d4bfcaba2e98e1c" kind="function"><name>RenderSystem</name></member>
+    <member refid="class_render_system_1a1838cd6142b9ba29bf086fd146d11f38" kind="function"><name>~RenderSystem</name></member>
+    <member refid="class_render_system_1a0ac3f7e1df83b3a44a6c4830d38bdd5e" kind="function"><name>render</name></member>
+    <member refid="class_render_system_1a5e81ee19719a17b1ea8619305375d281" kind="function"><name>getRenderSystem</name></member>
+    <member refid="class_render_system_1ae9cf102fb529432575d0df662d115ea9" kind="function"><name>destroyRenderSystem</name></member>
+  </compound>
+  <compound refid="class_resource_manager" kind="class"><name>ResourceManager</name>
+    <member refid="class_resource_manager_1a0bd3bb118a2a58c8b51650cdd566f49b" kind="variable"><name>_vertexBufferArray</name></member>
+    <member refid="class_resource_manager_1a4433a6752c9f5718e43b757d7d52bb58" kind="variable"><name>_textureArray</name></member>
+    <member refid="class_resource_manager_1a3b32babd2e81909bbd90d7f2d566fadb" kind="function"><name>ResourceManager</name></member>
+    <member refid="class_resource_manager_1a671c186e4630599e7e36d000c53eaf80" kind="function"><name>~ResourceManager</name></member>
+    <member refid="class_resource_manager_1a1b8c1fb41c55bad388e45c3564b52102" kind="function"><name>getTextureArray</name></member>
+    <member refid="class_resource_manager_1afb9595acc189aa88fccad22c5f483769" kind="function"><name>getVertexBufferArray</name></member>
+    <member refid="class_resource_manager_1ac7518dcf3792c23848c6cf93ce67e462" kind="function"><name>getResourceManager</name></member>
+    <member refid="class_resource_manager_1a95be72fdfb8965949f979846831eb4e1" kind="function"><name>destroyResourceManager</name></member>
+  </compound>
+  <compound refid="class_scene" kind="class"><name>Scene</name>
+    <member refid="class_scene_1a6bcf25be1e74b2926d4734a0d756695c" kind="variable"><name>_children</name></member>
+    <member refid="class_scene_1a013d7f5d032bc0920e53083bf3ccaa2c" kind="function"><name>getChildren</name></member>
+    <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" kind="function"><name>Scene</name></member>
+    <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" kind="function"><name>~Scene</name></member>
+  </compound>
+  <compound refid="class_sprite" kind="class"><name>Sprite</name>
+    <member refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kind="variable"><name>_position</name></member>
+    <member refid="class_sprite_1a289214c87facd5b6a4befde9da6f1dfc" kind="variable"><name>_velocity</name></member>
+    <member refid="class_sprite_1a3baa70853939bdf5248ef23482e61adf" kind="variable"><name>_textureBufferID</name></member>
+    <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1ac4f94a03b2ac324294f3d9655c07f71a" kind="function"><name>Sprite</name></member>
+    <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kind="function"><name>~Sprite</name></member>
+    <member refid="class_sprite_1a60bebb441c4d53043a5c294efe6c6b74" kind="function"><name>setPosition</name></member>
+    <member refid="class_sprite_1aadcef6282ef67645463979fee55d31e0" kind="function"><name>setVelocity</name></member>
+    <member refid="class_sprite_1ad3f15705c933a1d4ac1df2d563217688" kind="function"><name>getPosition</name></member>
+    <member refid="class_sprite_1a6eeffcafd76842e1c46d78c6230158d6" kind="function"><name>getVelocity</name></member>
+    <member refid="class_sprite_1a5b99de686a49a5ca107b39a63b412794" kind="function"><name>render</name></member>
+    <member refid="class_sprite_1a6d0f7e628b4ea8540697605fff906759" kind="function"><name>update</name></member>
+  </compound>
+  <compound refid="class_texture" kind="class"><name>Texture</name>
+    <member refid="class_texture_1aba57094d70f02ef33f1b0030641cfd90" kind="variable"><name>_textureBufferID</name></member>
+    <member refid="class_texture_1a06a0246cb31343557c3441c5733349cd" kind="variable"><name>width</name></member>
+    <member refid="class_texture_1ad37c395c65ff8bde86230908027a6fcd" kind="variable"><name>height</name></member>
+    <member refid="class_texture_1aa5e932cef46305196bc097096713f1c5" kind="variable"><name>type</name></member>
+    <member refid="class_texture_1a476055b1ebebe2707fa1e87fc0b40f27" kind="variable"><name>textureUnit</name></member>
+    <member refid="class_texture_1ab9b3808053b4d39cdc6088138f2c9049" kind="function"><name>Texture</name></member>
+    <member refid="class_texture_1ac6b03994bc872f37e3055d11139f2353" kind="function"><name>getID</name></member>
+    <member refid="class_texture_1a3840dc7429982ffaddeafc8d62345b5d" kind="function"><name>bind</name></member>
+  </compound>
+  <compound refid="struct_t_g_a_h_e_a_d_e_r" kind="struct"><name>TGAHEADER</name>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a7e95180a64f23121916f79bb5a450f67" kind="variable"><name>identsize</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1afa9624515a431c35cac310dc616cce20" kind="variable"><name>colorMapType</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a25f60fd03b8f3ca45c51570fdf9c37f8" kind="variable"><name>imageType</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a77b4ee20178980a4c15b4f9964d316a5" kind="variable"><name>colorMapStart</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a099159a965bb119e3f0bb6ab51263be2" kind="variable"><name>colorMapLength</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1ac1ec5898c11a2c2a857135f6491476a8" kind="variable"><name>colorMapBits</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a401e8bd5c99a9b4eb1f2870fb7798451" kind="variable"><name>xstart</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a5764ddc4d61823db8ad1d4d52a7fa271" kind="variable"><name>ystart</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1ae6ddb06ece470aa657b1b7f874a4b9de" kind="variable"><name>width</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1aec46a067f60610efda8e7253787ba9d5" kind="variable"><name>height</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1a11419767ec86b64b07aef26f94818075" kind="variable"><name>bits</name></member>
+    <member refid="struct_t_g_a_h_e_a_d_e_r_1aaa26be3ddc5aa33fdbbd1bd2fc6aad55" kind="variable"><name>descriptor</name></member>
+  </compound>
+  <compound refid="class_vec2" kind="class"><name>Vec2</name>
+    <member refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kind="variable"><name>x</name></member>
+    <member refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kind="variable"><name>y</name></member>
+    <member refid="class_vec2_1a76080feed7005893ecc634f903cfbae0" kind="function"><name>Vec2</name></member>
+    <member refid="class_vec2_1ab104d71b44ee5b6f2452ac379f8fd94b" kind="function"><name>Vec2</name></member>
+    <member refid="class_vec2_1a69c132a79b7f41ba5445366339637e9d" kind="function"><name>operator+</name></member>
+  </compound>
+  <compound refid="class_vertex_buffer" kind="class"><name>VertexBuffer</name>
+    <member refid="class_vertex_buffer_1acf2ddcbd747a822b2e6c88d800e80bb3" kind="variable"><name>_vertexBufferID</name></member>
+    <member refid="class_vertex_buffer_1a46147394d20c3f7ac579a865e15bb300" kind="variable"><name>_mode</name></member>
+    <member refid="class_vertex_buffer_1ab6bfcb3423bf3ccc3446c2d946030a29" kind="variable"><name>_count</name></member>
+    <member refid="class_vertex_buffer_1aa3ffb1148766ad84f34f158559caf223" kind="variable"><name>_stride</name></member>
+    <member refid="class_vertex_buffer_1a163d9a35d28bbab236d8b3a17e111640" kind="variable"><name>_texture</name></member>
+    <member refid="class_vertex_buffer_1affe31b624c21ffefa23ef9f10d13879d" kind="variable"><name>_positionOffset</name></member>
+    <member refid="class_vertex_buffer_1ad47b6a9b12acb20fc9b5aa0f06fccb14" kind="variable"><name>_textureOffset</name></member>
+    <member refid="class_vertex_buffer_1a58d807701e6c25c15705937b8e699b4d" kind="function"><name>getVertexBufferID</name></member>
+    <member refid="class_vertex_buffer_1a3535027a0946344fb08c0899140788b8" kind="function"><name>VertexBuffer</name></member>
+    <member refid="class_vertex_buffer_1a5216726fdd43b2ae8e1439e347717fdd" kind="function"><name>~VertexBuffer</name></member>
+    <member refid="class_vertex_buffer_1a41eade34b8748926aeda6688fa5f61a7" kind="function"><name>configureVertexAttributes</name></member>
+    <member refid="class_vertex_buffer_1ae522778b0808bb41609ab871e594499f" kind="function"><name>renderVertexBuffer</name></member>
+  </compound>
+  <compound refid="struct_vertex_data" kind="struct"><name>VertexData</name>
+    <member refid="struct_vertex_data_1a7ad04c77405f33123186760721c46515" kind="variable"><name>positionCoordinates</name></member>
+    <member refid="struct_vertex_data_1ad762bc101fa871dce153069c99516cf3" kind="variable"><name>textureCoordinates</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_bounding_box_8h" kind="file"><name>BoundingBox.h</name>
+  </compound>
+  <compound refid="_entity_8cpp" kind="file"><name>Entity.cpp</name>
+  </compound>
+  <compound refid="_entity_8h" kind="file"><name>Entity.h</name>
+  </compound>
+  <compound refid="_game_manager_8cpp" kind="file"><name>GameManager.cpp</name>
+  </compound>
+  <compound refid="_game_manager_8h" kind="file"><name>GameManager.h</name>
+    <member refid="_game_manager_8h_1a8853a0ed05395b10aa55ac78006e9c33" kind="define"><name>Update_per_second</name></member>
+  </compound>
+  <compound refid="load_t_g_a_8cpp" kind="file"><name>loadTGA.cpp</name>
+    <member refid="load_t_g_a_8cpp_1a98c0b8a2a6b0defdc6e84fcf443189bf" kind="function"><name>gltLoadTGA</name></member>
+  </compound>
+  <compound refid="load_t_g_a_8h" kind="file"><name>loadTGA.h</name>
+    <member refid="load_t_g_a_8h_1a98c0b8a2a6b0defdc6e84fcf443189bf" kind="function"><name>gltLoadTGA</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_player_sprite_8cpp" kind="file"><name>PlayerSprite.cpp</name>
+  </compound>
+  <compound refid="_player_sprite_8h" kind="file"><name>PlayerSprite.h</name>
+  </compound>
+  <compound refid="_render_system_8cpp" kind="file"><name>RenderSystem.cpp</name>
+  </compound>
+  <compound refid="_render_system_8h" kind="file"><name>RenderSystem.h</name>
+  </compound>
+  <compound refid="_resource_manager_8cpp" kind="file"><name>ResourceManager.cpp</name>
+  </compound>
+  <compound refid="_resource_manager_8h" kind="file"><name>ResourceManager.h</name>
+  </compound>
+  <compound refid="_scene_8cpp" kind="file"><name>Scene.cpp</name>
+  </compound>
+  <compound refid="_scene_8h" kind="file"><name>Scene.h</name>
+  </compound>
+  <compound refid="_sprite_8cpp" kind="file"><name>Sprite.cpp</name>
+  </compound>
+  <compound refid="_sprite_8h" kind="file"><name>Sprite.h</name>
+  </compound>
+  <compound refid="_texture_8cpp" kind="file"><name>Texture.cpp</name>
+  </compound>
+  <compound refid="_texture_8h" kind="file"><name>Texture.h</name>
+  </compound>
+  <compound refid="_vec2_8cpp" kind="file"><name>Vec2.cpp</name>
+  </compound>
+  <compound refid="_vec2_8h" kind="file"><name>Vec2.h</name>
+  </compound>
+  <compound refid="_vertex_buffer_8cpp" kind="file"><name>VertexBuffer.cpp</name>
+  </compound>
+  <compound refid="_vertex_buffer_8h" kind="file"><name>VertexBuffer.h</name>
+  </compound>
+  <compound refid="_vertex_data_8h" kind="file"><name>VertexData.h</name>
+  </compound>
+</doxygenindex>

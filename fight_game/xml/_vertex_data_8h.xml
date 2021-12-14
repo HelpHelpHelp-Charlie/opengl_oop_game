@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_vertex_data_8h" kind="file" language="C++">
+    <compoundname>VertexData.h</compoundname>
+    <includes local="no">glfw3.h</includes>
+    <includedby refid="_resource_manager_8h" local="yes">ResourceManager.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>VertexData.h</label>
+        <link refid="_vertex_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>glfw3.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>GameManager.cpp</label>
+        <link refid="_game_manager_8cpp"/>
+      </node>
+      <node id="3">
+        <label>GameManager.h</label>
+        <link refid="_game_manager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ResourceManager.cpp</label>
+        <link refid="_resource_manager_8cpp"/>
+      </node>
+      <node id="2">
+        <label>ResourceManager.h</label>
+        <link refid="_resource_manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="1">
+        <label>VertexData.h</label>
+        <link refid="_vertex_data_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_vertex_data" prot="public">VertexData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/><sp/>__FightGame__VertexData__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FightGame__VertexData__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="struct_vertex_data" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="struct_vertex_data_1a7ad04c77405f33123186760721c46515" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GLfloat<sp/>positionCoordinates[3];</highlight></codeline>
+<codeline lineno="6" refid="struct_vertex_data_1ad762bc101fa871dce153069c99516cf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GLfloat<sp/>textureCoordinates[2];</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}<ref refid="struct_vertex_data" kindref="compound">VertexData</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="VertexData.h"/>
+  </compounddef>
+</doxygen>

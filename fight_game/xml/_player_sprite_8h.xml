@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_player_sprite_8h" kind="file" language="C++">
+    <compoundname>PlayerSprite.h</compoundname>
+    <includes refid="_sprite_8h" local="yes">Sprite.h</includes>
+    <includedby refid="_player_sprite_8cpp" local="yes">PlayerSprite.cpp</includedby>
+    <includedby refid="_render_system_8h" local="yes">RenderSystem.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>PlayerSprite.h</label>
+        <link refid="_player_sprite_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Vec2.h</label>
+        <link refid="_vec2_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>glfw3.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>GameManager.cpp</label>
+        <link refid="_game_manager_8cpp"/>
+      </node>
+      <node id="4">
+        <label>GameManager.h</label>
+        <link refid="_game_manager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PlayerSprite.cpp</label>
+        <link refid="_player_sprite_8cpp"/>
+      </node>
+      <node id="1">
+        <label>PlayerSprite.h</label>
+        <link refid="_player_sprite_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RenderSystem.cpp</label>
+        <link refid="_render_system_8cpp"/>
+      </node>
+      <node id="3">
+        <label>RenderSystem.h</label>
+        <link refid="_render_system_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_player_sprite" prot="public">PlayerSprite</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include&quot;<ref refid="_sprite_8h" kindref="compound">Sprite.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_player_sprite" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_sprite" kindref="compound">Sprite</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a56a22ca77cd284f051a2dd40b514d902" kindref="member">PlayerSprite</ref>(GLuint<sp/>textureBufferID,<ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>position);</highlight></codeline>
+<codeline lineno="10" refid="class_player_sprite_1a2bac34aaf1a4a6106f0bd3c1e63d2b1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a2bac34aaf1a4a6106f0bd3c1e63d2b1b" kindref="member">~PlayerSprite</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member">update</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>GLFWwindow<sp/>*_window;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="PlayerSprite.h"/>
+  </compounddef>
+</doxygen>

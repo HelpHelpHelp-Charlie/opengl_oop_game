@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_sprite_8cpp" kind="file" language="C++">
+    <compoundname>Sprite.cpp</compoundname>
+    <includes refid="_sprite_8h" local="yes">Sprite.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Sprite.cpp</label>
+        <link refid="_sprite_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Vec2.h</label>
+        <link refid="_vec2_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>glfw3.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sprite_8h" kindref="compound">Sprite.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kindref="member">Sprite::Sprite</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" kindref="member">Sprite::~Sprite</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a60bebb441c4d53043a5c294efe6c6b74" kindref="member">Sprite::setPosition</ref>(<ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>pos)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref><sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1aadcef6282ef67645463979fee55d31e0" kindref="member">Sprite::setVelocity</ref>(<ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>vec)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_sprite_1a289214c87facd5b6a4befde9da6f1dfc" kindref="member">_velocity</ref><sp/>=<sp/>vec;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/><ref refid="class_sprite_1ad3f15705c933a1d4ac1df2d563217688" kindref="member">Sprite::getPosition</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/><ref refid="class_sprite_1a6eeffcafd76842e1c46d78c6230158d6" kindref="member">Sprite::getVelocity</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_sprite_1a289214c87facd5b6a4befde9da6f1dfc" kindref="member">_velocity</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" kindref="member">Sprite::Sprite</ref>(GLuint<sp/>textureBufferID,<ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>pos)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;_textureBufferID<sp/>=<sp/>textureBufferID;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref><sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a5b99de686a49a5ca107b39a63b412794" kindref="member">Sprite::render</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>glBindTexture(GL_TEXTURE_2D,<sp/>this-&gt;_textureBufferID);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>glLoadIdentity();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>glTranslatef(<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref>.<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>,<sp/><ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref>.<ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>glDrawArrays(GL_QUADS,<sp/>0,<sp/>4);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sprite_1a6d0f7e628b4ea8540697605fff906759" kindref="member">Sprite::update</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref><sp/>=<sp/>this-&gt;<ref refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" kindref="member">_position</ref><sp/>+<sp/>this-&gt;<ref refid="class_sprite_1a289214c87facd5b6a4befde9da6f1dfc" kindref="member">_velocity</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Sprite.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_player_sprite" kind="class" language="C++" prot="public">
+    <compoundname>PlayerSprite</compoundname>
+    <basecompoundref refid="class_sprite" prot="public" virt="non-virtual">Sprite</basecompoundref>
+    <includes refid="_player_sprite_8h" local="no">PlayerSprite.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_sprite_1a511087d1e5c48f2b51969cca5802b8ac" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* PlayerSprite::_window</definition>
+        <argsstring></argsstring>
+        <name>_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerSprite.h" line="13" column="12" bodyfile="PlayerSprite.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_sprite_1a56a22ca77cd284f051a2dd40b514d902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerSprite::PlayerSprite</definition>
+        <argsstring>(GLuint textureBufferID, Vec2 position)</argsstring>
+        <name>PlayerSprite</name>
+        <param>
+          <type>GLuint</type>
+          <declname>textureBufferID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_vec2" kindref="compound">Vec2</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerSprite.h" line="9" column="1" bodyfile="PlayerSprite.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a2bac34aaf1a4a6106f0bd3c1e63d2b1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerSprite::~PlayerSprite</definition>
+        <argsstring>()</argsstring>
+        <name>~PlayerSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerSprite.h" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <reimplements refid="class_sprite_1a6d0f7e628b4ea8540697605fff906759">update</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PlayerSprite.h" line="11" column="6" bodyfile="PlayerSprite.cpp" bodystart="7" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>PlayerSprite</label>
+        <link refid="class_player_sprite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>PlayerSprite</label>
+        <link refid="class_player_sprite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Sprite</label>
+        <link refid="class_sprite"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_position</edgelabel>
+          <edgelabel>_velocity</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Vec2</label>
+        <link refid="class_vec2"/>
+      </node>
+    </collaborationgraph>
+    <location file="PlayerSprite.h" line="4" column="1" bodyfile="PlayerSprite.h" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_sprite_1ab2429dc9599f2f711cfb324ba65b6f14" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_position</name></member>
+      <member refid="class_sprite_1a289214c87facd5b6a4befde9da6f1dfc" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_velocity</name></member>
+      <member refid="class_player_sprite_1a511087d1e5c48f2b51969cca5802b8ac" prot="private" virt="non-virtual"><scope>PlayerSprite</scope><name>_window</name></member>
+      <member refid="class_sprite_1ad3f15705c933a1d4ac1df2d563217688" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getPosition</name></member>
+      <member refid="class_sprite_1a6eeffcafd76842e1c46d78c6230158d6" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getVelocity</name></member>
+      <member refid="class_player_sprite_1a56a22ca77cd284f051a2dd40b514d902" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>PlayerSprite</name></member>
+      <member refid="class_sprite_1a5b99de686a49a5ca107b39a63b412794" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>render</name></member>
+      <member refid="class_sprite_1a60bebb441c4d53043a5c294efe6c6b74" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setPosition</name></member>
+      <member refid="class_sprite_1aadcef6282ef67645463979fee55d31e0" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setVelocity</name></member>
+      <member refid="class_sprite_1a12cba3ac1868418add3c4d95ce87e615" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>Sprite</name></member>
+      <member refid="class_sprite_1ac4f94a03b2ac324294f3d9655c07f71a" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>Sprite</name></member>
+      <member refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" prot="public" virt="virtual"><scope>PlayerSprite</scope><name>update</name></member>
+      <member refid="class_player_sprite_1a2bac34aaf1a4a6106f0bd3c1e63d2b1b" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>~PlayerSprite</name></member>
+      <member refid="class_sprite_1a8accab430f9d90ae5117b57d67e32b84" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>~Sprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

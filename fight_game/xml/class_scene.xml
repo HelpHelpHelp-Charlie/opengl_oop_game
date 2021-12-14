@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_scene" kind="class" language="C++" prot="public">
+    <compoundname>Scene</compoundname>
+    <includes refid="_scene_8h" local="no">Scene.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_scene_1a6bcf25be1e74b2926d4734a0d756695c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_entity" kindref="compound">Entity</ref> * &gt; *</type>
+        <definition>std::vector&lt;Entity *&gt;* Scene::_children</definition>
+        <argsstring></argsstring>
+        <name>_children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scene.h" line="12" column="17" bodyfile="Scene.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_scene_1a013d7f5d032bc0920e53083bf3ccaa2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="class_entity" kindref="compound">Entity</ref> * &gt; *</type>
+        <definition>std::vector&lt; Entity * &gt; * Scene::getChildren</definition>
+        <argsstring>()</argsstring>
+        <name>getChildren</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scene.h" line="16" column="17" bodyfile="Scene.cpp" bodystart="7" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::Scene</definition>
+        <argsstring>()</argsstring>
+        <name>Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scene.h" line="18" column="5" bodyfile="Scene.cpp" bodystart="12" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Scene::~Scene</definition>
+        <argsstring>()</argsstring>
+        <name>~Scene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scene.h" line="19" column="5" bodyfile="Scene.cpp" bodystart="24" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scene.h" line="8" column="1" bodyfile="Scene.h" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_scene_1a6bcf25be1e74b2926d4734a0d756695c" prot="private" virt="non-virtual"><scope>Scene</scope><name>_children</name></member>
+      <member refid="class_scene_1a013d7f5d032bc0920e53083bf3ccaa2c" prot="public" virt="non-virtual"><scope>Scene</scope><name>getChildren</name></member>
+      <member refid="class_scene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>Scene</scope><name>Scene</name></member>
+      <member refid="class_scene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

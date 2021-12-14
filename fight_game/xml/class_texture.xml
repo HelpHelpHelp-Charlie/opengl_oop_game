@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="class_texture" kind="class" language="C++" prot="public">
+    <compoundname>Texture</compoundname>
+    <includes refid="_texture_8h" local="no">Texture.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_texture_1aba57094d70f02ef33f1b0030641cfd90" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Texture::_textureBufferID</definition>
+        <argsstring></argsstring>
+        <name>_textureBufferID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="11" column="8" bodyfile="Texture.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texture_1a06a0246cb31343557c3441c5733349cd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Texture::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="12" column="5" bodyfile="Texture.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texture_1ad37c395c65ff8bde86230908027a6fcd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Texture::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="13" column="5" bodyfile="Texture.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texture_1aa5e932cef46305196bc097096713f1c5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Texture::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="14" column="14" bodyfile="Texture.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_texture_1a476055b1ebebe2707fa1e87fc0b40f27" prot="private" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint Texture::textureUnit</definition>
+        <argsstring></argsstring>
+        <name>textureUnit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="15" column="7" bodyfile="Texture.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_texture_1ab9b3808053b4d39cdc6088138f2c9049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Texture::Texture</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>Texture</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="17" column="1" bodyfile="Texture.cpp" bodystart="3" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texture_1ac6b03994bc872f37e3055d11139f2353" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Texture::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="19" column="15" bodyfile="Texture.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_texture_1a3840dc7429982ffaddeafc8d62345b5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Texture::bind</definition>
+        <argsstring>()</argsstring>
+        <name>bind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Texture.h" line="20" column="6" bodyfile="Texture.cpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Texture.h" line="9" column="1" bodyfile="Texture.h" bodystart="9" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_texture_1aba57094d70f02ef33f1b0030641cfd90" prot="private" virt="non-virtual"><scope>Texture</scope><name>_textureBufferID</name></member>
+      <member refid="class_texture_1a3840dc7429982ffaddeafc8d62345b5d" prot="public" virt="non-virtual"><scope>Texture</scope><name>bind</name></member>
+      <member refid="class_texture_1ac6b03994bc872f37e3055d11139f2353" prot="public" virt="non-virtual"><scope>Texture</scope><name>getID</name></member>
+      <member refid="class_texture_1ad37c395c65ff8bde86230908027a6fcd" prot="private" virt="non-virtual"><scope>Texture</scope><name>height</name></member>
+      <member refid="class_texture_1ab9b3808053b4d39cdc6088138f2c9049" prot="public" virt="non-virtual"><scope>Texture</scope><name>Texture</name></member>
+      <member refid="class_texture_1a476055b1ebebe2707fa1e87fc0b40f27" prot="private" virt="non-virtual"><scope>Texture</scope><name>textureUnit</name></member>
+      <member refid="class_texture_1aa5e932cef46305196bc097096713f1c5" prot="private" virt="non-virtual"><scope>Texture</scope><name>type</name></member>
+      <member refid="class_texture_1a06a0246cb31343557c3441c5733349cd" prot="private" virt="non-virtual"><scope>Texture</scope><name>width</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

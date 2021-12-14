@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="struct_vertex_data" kind="struct" language="C++" prot="public">
+    <compoundname>VertexData</compoundname>
+    <includes refid="_vertex_data_8h" local="no">VertexData.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_vertex_data_1a7ad04c77405f33123186760721c46515" prot="public" static="no" mutable="no">
+        <type>GLfloat</type>
+        <definition>GLfloat VertexData::positionCoordinates[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>positionCoordinates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexData.h" line="5" column="9" bodyfile="VertexData.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_vertex_data_1ad762bc101fa871dce153069c99516cf3" prot="public" static="no" mutable="no">
+        <type>GLfloat</type>
+        <definition>GLfloat VertexData::textureCoordinates[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>textureCoordinates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="VertexData.h" line="6" column="9" bodyfile="VertexData.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="VertexData.h" line="4" column="1" bodyfile="VertexData.h" bodystart="4" bodyend="7"/>
+    <listofallmembers>
+      <member refid="struct_vertex_data_1a7ad04c77405f33123186760721c46515" prot="public" virt="non-virtual"><scope>VertexData</scope><name>positionCoordinates</name></member>
+      <member refid="struct_vertex_data_1ad762bc101fa871dce153069c99516cf3" prot="public" virt="non-virtual"><scope>VertexData</scope><name>textureCoordinates</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

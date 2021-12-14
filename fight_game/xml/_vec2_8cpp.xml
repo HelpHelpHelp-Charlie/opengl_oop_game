@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_vec2_8cpp" kind="file" language="C++">
+    <compoundname>Vec2.cpp</compoundname>
+    <includes refid="_vec2_8h" local="yes">Vec2.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Vec2.cpp</label>
+        <link refid="_vec2_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Vec2.h</label>
+        <link refid="_vec2_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>glfw3.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_vec2_8h" kindref="compound">Vec2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/><ref refid="class_vec2_1a69c132a79b7f41ba5445366339637e9d" kindref="member">Vec2::operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>&amp;<sp/>v)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>ans(this-&gt;<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref><sp/>+<sp/>v.<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>,<sp/>this-&gt;y<sp/>+<sp/>v.<ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ans;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Vec2.cpp"/>
+  </compounddef>
+</doxygen>

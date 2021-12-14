@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="_vec2_8h" kind="file" language="C++">
+    <compoundname>Vec2.h</compoundname>
+    <includes local="no">glfw3.h</includes>
+    <includedby refid="_entity_8h" local="yes">Entity.h</includedby>
+    <includedby refid="_scene_8cpp" local="yes">Scene.cpp</includedby>
+    <includedby refid="_sprite_8h" local="yes">Sprite.h</includedby>
+    <includedby refid="_vec2_8cpp" local="yes">Vec2.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Vec2.h</label>
+        <link refid="_vec2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>glfw3.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Entity.cpp</label>
+        <link refid="_entity_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Entity.h</label>
+        <link refid="_entity_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GameManager.cpp</label>
+        <link refid="_game_manager_8cpp"/>
+      </node>
+      <node id="4">
+        <label>GameManager.h</label>
+        <link refid="_game_manager_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>PlayerSprite.cpp</label>
+        <link refid="_player_sprite_8cpp"/>
+      </node>
+      <node id="12">
+        <label>PlayerSprite.h</label>
+        <link refid="_player_sprite_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>RenderSystem.cpp</label>
+        <link refid="_render_system_8cpp"/>
+      </node>
+      <node id="7">
+        <label>RenderSystem.h</label>
+        <link refid="_render_system_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Scene.cpp</label>
+        <link refid="_scene_8cpp"/>
+      </node>
+      <node id="9">
+        <label>Scene.h</label>
+        <link refid="_scene_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Sprite.cpp</label>
+        <link refid="_sprite_8cpp"/>
+      </node>
+      <node id="11">
+        <label>Sprite.h</label>
+        <link refid="_sprite_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Vec2.cpp</label>
+        <link refid="_vec2_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Vec2.h</label>
+        <link refid="_vec2_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_vec2" prot="public">Vec2</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/><sp/>__FightGame__Vec2__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__FightGame__Vec2__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_vec2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8" refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GLfloat<sp/><ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>GLfloat<sp/><ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="10" refid="class_vec2_1a76080feed7005893ecc634f903cfbae0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_vec2_1a76080feed7005893ecc634f903cfbae0" kindref="member">Vec2</ref>():<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>(0),<ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>(0)<sp/>{};</highlight></codeline>
+<codeline lineno="11" refid="class_vec2_1ab104d71b44ee5b6f2452ac379f8fd94b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_vec2_1ab104d71b44ee5b6f2452ac379f8fd94b" kindref="member">Vec2</ref>(GLfloat<sp/><ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>,<sp/>GLfloat<sp/><ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>)<sp/>:<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>(<ref refid="class_vec2_1a8a6b3e82ce39322459a3a3a5f353d7c2" kindref="member">x</ref>),<sp/><ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>(<ref refid="class_vec2_1a6a46cee52afca47314eac40e2aca0848" kindref="member">y</ref>)<sp/>{}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_vec2" kindref="compound">Vec2</ref><sp/><ref refid="class_vec2_1a69c132a79b7f41ba5445366339637e9d" kindref="member">operator + </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_vec2" kindref="compound">Vec2</ref>&amp;);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="Vec2.h"/>
+  </compounddef>
+</doxygen>
