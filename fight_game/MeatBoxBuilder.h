@@ -5,9 +5,14 @@
 
 #include"TileBuilder.h"
 
-class MeatBoxBuilder :public TileBuilder{
+
+class MeatBoxBuilder :
+	public TileBuilder
+{
+private:
+
 public:
-	Entity* getResult(Vec2 pos) {
+	Tile* getResult(Vec2 pos) {
 
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
@@ -25,7 +30,6 @@ public:
 
 		int animation2DCounter = 0;
 		std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>;
-
 		for (std::vector<Animation2D*>::iterator animatorIterator = this->_animatorArray->at(0)->_animation2DArray->begin();
 			animatorIterator != this->_animatorArray->at(0)->_animation2DArray->end(); animatorIterator++) {
 
@@ -54,19 +58,24 @@ public:
 					(GLvoid*)offsetof(VertexData, textureCoordinates));
 				_vertexBufferArray->push_back(vertexBuffer);
 			}
-			cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
+
 			this->_animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(_vertexBufferArray);
 			cout << this->_animatorArray->at(0)->_animation2DArray << endl;
-			cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
+
 			animation2DCounter++;
 		}
 
 		Entity *m_entity = new Entity(this->_animatorArray->at(0), pos);
 		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
+		Tile *_tile = new MeatBox(m_entity);
 
-		return m_entity;
+		return _tile;
 	}
-	//~MeatBoxBuilder();
+
+
+	~MeatBoxBuilder() {}
+
 };
 
+//
 #endif

@@ -2,11 +2,13 @@
 #ifndef  __FightGame__TableBuilder__
 #define __FightGame__TableBuilder__
 #include"TileBuilder.h"
+
 class TableBuilder :
 	public TileBuilder
 {
+private:
 public:
-	Entity* getResult(Vec2 pos) {
+	Tile* getResult(Vec2 pos) {
 
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
@@ -62,8 +64,9 @@ public:
 
 		Entity *m_entity = new Entity(this->_animatorArray->at(0), pos);
 		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
-
-		return m_entity;
+		//Tile* tmp = new Table(m_entity);
+		Tile *_tile = new Table(m_entity);
+		return _tile;
 	}
 
 	~TableBuilder() {}

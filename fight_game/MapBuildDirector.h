@@ -9,14 +9,12 @@
 #include"Stove.h"
 #include"Table.h"
 class MapBuildDirector {
-	Tile *_tile;
+	//Tile *_tile;
 public:
 
 	Tile* Create(TileBuilder *builder, Vec2 pos) {
-
-		this->_tile = new Tile(builder->getResult(pos));
-		cout << "ddddddlll";
-		return this->_tile;
+		Tile *_tile = builder->getResult(pos);
+		return _tile;
 	}
 };
 

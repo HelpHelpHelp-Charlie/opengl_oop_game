@@ -11,11 +11,16 @@ enum TileType {
 
 class  Tile {
 public:
-	Tile(Entity* e) :_entity(e) {}
+	/*Tile(Entity* e) { _entity = e; }
 	Entity* getEntity() { return this->_entity; }
-	void setEntity(Entity &entity) { this->_entity = &entity; }
+	void setEntity(Entity &entity) { this->_entity = &entity; }*/
+
+	// Tile(Entity* e) :_entity(e) {}
+	virtual Entity* getEntity() = 0;
+	virtual void setEntity(Entity &entity) = 0;
 protected:
 	Entity *_entity;
+
 };
 
 #endif

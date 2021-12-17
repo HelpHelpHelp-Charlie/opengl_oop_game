@@ -60,7 +60,7 @@ GridMap::GridMap(const char * filename)
 	MapBuildDirector* mapBuildDirector = new MapBuildDirector();
 	StoveBuilder* stoveBuiler = new StoveBuilder();
 	MeatBoxBuilder * meatBoxBuilder = new MeatBoxBuilder();
-	TableBuilder* tableBuilder = new TableBuilder();
+	//TableBuilder* tableBuilder = new TableBuilder();
 	//cout << "shit like";
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
@@ -74,14 +74,13 @@ GridMap::GridMap(const char * filename)
 	
 		switch (int(info->x)) {
 		case TileType::MEATBOX:
-			this->_tileArray->push_back(mapBuildDirector->Create(stoveBuiler, pos));
+			this->_tileArray->push_back(mapBuildDirector->Create(meatBoxBuilder, pos));
 			break;
 		case TileType::STOVE:
 			this->_tileArray->push_back(mapBuildDirector->Create(stoveBuiler, pos));
 			break;
 		case TileType::TABLE:
-			this->_tileArray->push_back(mapBuildDirector->Create(tableBuilder, pos));
-		
+		//	this->_tileArray->push_back(mapBuildDirector->Create(tableBuilder, pos));
 			break;
 		default:
 			break;

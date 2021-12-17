@@ -9,12 +9,12 @@ class StoveBuilder :
 private:
 
 public:
-	Entity* getResult(Vec2 pos) {
+	Tile* getResult(Vec2 pos) {
 
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("MeatBox.tga", Vec4(128, 128, 4, 1));
+		this->_texture = new Texture("Stove.tga", Vec4(128, 128, 5, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
@@ -64,9 +64,9 @@ public:
 
 		Entity *m_entity=new Entity(this->_animatorArray->at(0), pos);
 		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
+		Tile *_tile = new Stove(m_entity);
 
-
-		return m_entity;
+		return _tile;
 	}
 
 
