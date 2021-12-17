@@ -57,6 +57,7 @@ public:
 	int getNowAnimate_No();
 	void setNowAnimate_No(int newNum);
 
+	Entity();
     Entity(Animator *newAnimation2D, Vec2 position);
     ~Entity();
 };

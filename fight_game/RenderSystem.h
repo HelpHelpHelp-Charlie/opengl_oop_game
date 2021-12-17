@@ -8,6 +8,7 @@
 #include<glad\glad.h>
 #include<vector>
 #include"Entity.h"
+#include"GridMap.h"
 //#pragma comment(lib,"glew32.lib")
 #pragma comment(lib,"glfw3.lib")
 class RenderSystem {
@@ -19,7 +20,7 @@ private:
 	~RenderSystem();
 public :
 
-	void render(std::vector<Entity *> *entityArray, double deltaTime);
+	void render(GridMap* gridMap,std::vector<Entity *> *entityArray, double deltaTime);
 	static RenderSystem& getRenderSystem();
 	static void destroyRenderSystem();
 };

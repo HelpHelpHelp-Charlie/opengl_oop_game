@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="標頭檔\struct">
+      <UniqueIdentifier>{8677a096-025c-4e5d-b0f3-a2e7119f9f8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\Manager">
+      <UniqueIdentifier>{7674607e-2843-47ec-8b6a-75cbd2e272a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\System">
+      <UniqueIdentifier>{9e7bf8e8-03d0-4df5-9b43-0b8771bf8807}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\map">
+      <UniqueIdentifier>{3916dc98-2bb1-4fa8-9b76-1cb17bc48973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\map\ConcreteTile">
+      <UniqueIdentifier>{ccf60f2b-b984-42fe-8979-64168e245850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="標頭檔\map\TileBuilder">
+      <UniqueIdentifier>{492d5658-c95c-4b50-aaed-f57be891dbe6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -60,33 +78,21 @@
     <ClCompile Include="MovementSystem.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="GridMap.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameManager.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
     <ClInclude Include="loadTGA.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
-    <ClInclude Include="Vec2.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
     <ClInclude Include="BoundingBox.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="VertexBuffer.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
@@ -98,23 +104,71 @@
     <ClInclude Include="Animation2D.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
-    <ClInclude Include="Vec4.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
     <ClInclude Include="Animator.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerInputSystem.h">
+    <ClInclude Include="collision2D.h">
       <Filter>標頭檔</Filter>
     </ClInclude>
-    <ClInclude Include="MovementSystem.h">
-      <Filter>標頭檔</Filter>
+    <ClInclude Include="Vec4.h">
+      <Filter>標頭檔\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec2.h">
+      <Filter>標頭檔\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>標頭檔\struct</Filter>
     </ClInclude>
     <ClInclude Include="Rect.h">
-      <Filter>標頭檔</Filter>
+      <Filter>標頭檔\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>標頭檔\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>標頭檔\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderSystem.h">
+      <Filter>標頭檔\System</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInputSystem.h">
+      <Filter>標頭檔\System</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementSystem.h">
+      <Filter>標頭檔\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Vec8.h">
+      <Filter>標頭檔\struct</Filter>
     </ClInclude>
     <ClInclude Include="GridMap.h">
-      <Filter>標頭檔</Filter>
+      <Filter>標頭檔\map</Filter>
+    </ClInclude>
+    <ClInclude Include="MEATBOX.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="Stove.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="TableBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="StoveBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="MeatBoxBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>標頭檔\map</Filter>
+    </ClInclude>
+    <ClInclude Include="TileBuilder.h">
+      <Filter>標頭檔\map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapBuildDirector.h">
+      <Filter>標頭檔\map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

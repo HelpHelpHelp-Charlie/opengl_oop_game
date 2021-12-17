@@ -22,7 +22,7 @@ void GameManager::runGameLoop()
 	while (_running)
 	{
 
-	_renderSystem->render(scene->getChildren(), deltaTime);
+	_renderSystem->render(scene->getGridMap(),scene->getChildren(), deltaTime);
 		deltaTime += (glfwGetTime() - lastTime)*Update_per_second;
 		lastTime = glfwGetTime();
 

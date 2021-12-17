@@ -12,26 +12,33 @@ RenderSystem::~RenderSystem()
 
 }
 
-void RenderSystem::render(std::vector<Entity *> *entityArray, double deltaTime)
+void RenderSystem::render(GridMap* gridMap,std::vector<Entity *> *entityArray, double deltaTime)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
 
+	glPushMatrix;
+	int i = 0;
+	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+	//	cout << i << " ";
+		i++;
 		Entity *entity = *iterator;
 		if (entity->getAnimator() != NULL) {
 			glLoadIdentity();
-
 			glTranslatef(entity->getPosition().x, entity->getPosition().y,0);
 			//glRotatef(entity->getRotation(), 0.0f, 0.0f, 1.0f);
 			//glScalef(entity->getScale().x, entity->getScale().y, 1);		
 			entity->getAnimator()->play(entity->getNowAnimate_No(),deltaTime);
 		}
-
-
+		//cout << endl;
 	}   
 
 
+	glPopMatrix;
+//	glLoadIdentity();
+	glPushMatrix;
+	//gridMap->drawMap(deltaTime);
+	glPopMatrix;
 	glfwSwapBuffers(_window);
 	glfwPollEvents();
 }

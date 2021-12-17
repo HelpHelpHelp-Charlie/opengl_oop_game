@@ -16,10 +16,15 @@ std::vector<Animator*>* ResourceManager::getAnimatorArray()
 	return _animatorArray;
 }
 
+//GridMap * ResourceManager::getGridMap()
+//{
+//	//return this->_gridMap;
+//}
+
 void ResourceManager::objectAnimator(int object_no) {
 
 	int animation2DCounter = 0;
-	std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>;
+	std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>();
 	for (std::vector<Animation2D*>::iterator animatorIterator = _animatorArray->at(object_no)->_animation2DArray->begin();
 		animatorIterator != _animatorArray->at(object_no)->_animation2DArray->end(); animatorIterator++) {
 
@@ -32,9 +37,9 @@ void ResourceManager::objectAnimator(int object_no) {
 
 			VertexData vertices[4] = {
 				{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 96 * 3,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 96 * 3,104 * 3,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
-				{ { 0,104 * 3,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+				{ { 96 ,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 96 ,104 ,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+				{ { 0,104,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
 			};
 			normalizeFrameCounter++;
 			VertexBuffer *vertexBuffer = new VertexBuffer(
@@ -54,10 +59,12 @@ void ResourceManager::objectAnimator(int object_no) {
 	}
 }
 
-ResourceManager::ResourceManager()
+ResourceManager::ResourceManager()	
 {
 
 	std::cout << "ResourceManager is created" << std::endl;
+
+	
 
 	_textureArray = new std::vector<Texture *>();
 	Texture *Texture_Shark = new Texture("player.tga", Vec4(96, 104, 8, 10));
@@ -79,7 +86,7 @@ ResourceManager::ResourceManager()
 	Animation2D *idle_right = new Animation2D("idle_right.txt", 150);
 
 
-
+	
 	_animatorArray->at(0)->_animation2DArray->push_back(up_run);
 	_animatorArray->at(0)->_animation2DArray->push_back(idle_up);
 	_animatorArray->at(0)->_animation2DArray->push_back(down_run);
@@ -90,6 +97,9 @@ ResourceManager::ResourceManager()
 	_animatorArray->at(0)->_animation2DArray->push_back(idle_right);
 
 	objectAnimator(0);
+
+
+	
 }
 
 ResourceManager::~ResourceManager()

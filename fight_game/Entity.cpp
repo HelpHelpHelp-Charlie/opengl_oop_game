@@ -108,6 +108,17 @@ void Entity::setNowAnimate_No(int newNum)
 	this->_nowAnimate_No = newNum;
 }
 
+Entity::Entity() :
+	_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
+	_velocity(Vec2(0.0f, 0.0f)), _scaleVelocity(Vec2(0.0f, 0.0f)),
+	_rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
+	_upVector(Vec2(0.0f, 1.0f))
+{
+	this->_animator = new Animator();
+	this->_position =Vec2(0, 0);
+	this->_nowAnimate_No = 0;
+}
+
 Entity::Entity(Animator *newAnimator, Vec2 position):
 _animator(newAnimator), _position(position),
 _scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
@@ -115,6 +126,7 @@ _velocity(Vec2(0.0f, 0.0f)), _scaleVelocity(Vec2(0.0f, 0.0f)),
 _rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
 _upVector(Vec2(0.0f, 1.0f))
 {
+	this->_nowAnimate_No = 0;
 }
 
 Entity::~Entity()

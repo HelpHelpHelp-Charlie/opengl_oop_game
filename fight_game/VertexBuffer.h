@@ -22,6 +22,7 @@ private:
 public:
     
     GLuint getVertexBufferID();
+	VertexBuffer() {}
     VertexBuffer(const GLvoid *data,
 				GLsizei size,
                  GLenum mode,
