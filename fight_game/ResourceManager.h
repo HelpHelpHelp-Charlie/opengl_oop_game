@@ -21,7 +21,7 @@ private:
     ResourceManager();
     ~ResourceManager();
 	
-public:
+public:	
 	std::vector<Texture *>* getTextureArray();
     std::vector<VertexBuffer *>* getVertexBufferArray();   
 	std::vector<Animator *>*getAnimatorArray();

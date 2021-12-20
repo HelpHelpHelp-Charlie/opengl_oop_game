@@ -9,7 +9,7 @@
 #include"MovementSystem.h"
 #include "Entity.h"
 #include "Scene.h"
-#define Update_per_second 60
+#define Update_per_second 120
 #pragma comment(lib,"glfw3.lib")
 class GameManager {
 private:

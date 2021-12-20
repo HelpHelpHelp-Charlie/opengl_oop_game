@@ -1,6 +1,6 @@
 #include "PlayerInputSystem.h"
 
-void PlayerInputSystem::setCurrentPlayer(Entity *newPlayer)
+void PlayerInputSystem::setCurrentPlayer(Player *newPlayer)
 {
 	_currentPlayer = newPlayer;
 	_eyeVector = newPlayer->getEyeVector();
@@ -42,14 +42,14 @@ void PlayerInputSystem::update()
 		) {
 
 		if (glfwGetKey(_window, GLFW_KEY_W) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, 10));
+			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, 3));
 			_currentPlayer->setNowAnimate_No(0);
 			_currentPlayer->setEyeVector(Vec2(0, 1));
 		}
 			
 
 		if (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, -10));
+			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, -3));
 			_currentPlayer->setNowAnimate_No(2);
 			_currentPlayer->setEyeVector(Vec2(0,-1 ));
 		}
@@ -60,13 +60,13 @@ void PlayerInputSystem::update()
 
 
 		if (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(-10, _currentPlayer->getVelocity().y));
+			_currentPlayer->setVelocity(Vec2(-3, _currentPlayer->getVelocity().y));
 			_currentPlayer->setNowAnimate_No(4);
 			_currentPlayer->setEyeVector(Vec2(-1, 0));
 		}
 
 		if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(10, _currentPlayer->getVelocity().y));
+			_currentPlayer->setVelocity(Vec2(3, _currentPlayer->getVelocity().y));
 			_currentPlayer->setNowAnimate_No(6);
 			_currentPlayer->setEyeVector(Vec2(1, 0));
 		}

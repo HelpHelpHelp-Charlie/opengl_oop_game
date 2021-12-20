@@ -146,6 +146,7 @@
     <ClCompile Include="loadTGA.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MovementSystem.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerInputSystem.cpp" />
     <ClCompile Include="RenderSystem.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
@@ -167,6 +168,7 @@
     <ClInclude Include="MEATBOX.h" />
     <ClInclude Include="MeatBoxBuilder.h" />
     <ClInclude Include="MovementSystem.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerInputSystem.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="RenderSystem.h" />

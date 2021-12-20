@@ -18,13 +18,13 @@ MovementSystem::~MovementSystem()
 
 }
 
-void MovementSystem::update(std::vector<Entity *> *entityArray)
+void MovementSystem::update(std::vector<Player *> *playerArray)
 {
-	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+	for (std::vector<Player *>::iterator iterator = playerArray->begin(); iterator != playerArray->end(); iterator++) {
 
-		Entity *entity = *iterator;
-
-		entity->setPosition(entity->getPosition()+ entity->getVelocity());
+		Player *player = *iterator;
+		player->update();
+	//	player->setPosition(player->getPosition()+ player->getVelocity());
 	//	entity->setScale(entity->getScale() + entity->getScaleVelocity());
 		//entity->setRotation(entity->getRotation() + entity->getRotationVelocity());
 

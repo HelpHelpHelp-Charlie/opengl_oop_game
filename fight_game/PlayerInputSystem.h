@@ -7,7 +7,7 @@
 #include<gl\GLUT.H>
 #include "Entity.h"
 #include "Vec2.h"
-
+#include"Player.h"
 
 class PlayerInputSystem
 {
@@ -18,7 +18,7 @@ private:
 
 	GLFWwindow *_window;
 
-	Entity *_currentPlayer;
+	Player *_currentPlayer;
 
 	PlayerInputSystem();
 	~PlayerInputSystem();
@@ -27,7 +27,7 @@ private:
 
 public:
 
-	void setCurrentPlayer(Entity *newPlayer);
+	void setCurrentPlayer(Player *newPlayer);
 
 	void update();
 

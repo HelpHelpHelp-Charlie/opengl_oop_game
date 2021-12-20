@@ -11,48 +11,18 @@
 class Entity
 {
 private:
-
+	Vec2 _position;
 	Animator *_animator;
 	int _nowAnimate_No;
  
-	Vec2 _position;
-	Vec2 _scale;
-	GLfloat _rotation;
-    
-	Vec2 _velocity;
-	Vec2 _scaleVelocity;
-	GLfloat _rotationVelocity;
-    
-	Vec2 _eyeVector;
-	Vec2 _upVector;
+
 public:
     
 	Animator *getAnimator();
     void setAnimator(Animator *newAnimator);
-    
+ 
 	Vec2 getPosition();
-    void setPosition(Vec2 newPosition);
-    
-	Vec2 getScale();
-    void setScale(Vec2 newScale);
-    
-	GLfloat getRotation();
-    void setRotation(GLfloat newRotation);
-    
-	Vec2 getVelocity();
-    void setVelocity(Vec2 newVelocity);
-    
-	Vec2 getScaleVelocity();
-    void setScaleVelocity(Vec2 newScaleVelocity);
-    
-	GLfloat getRotationVelocity();
-    void setRotationVelocity(GLfloat newRotationVelocity);
-    
-	Vec2 getEyeVector();
-    void setEyeVector(Vec2 newEyeVector);
-    
-	Vec2 getUpVector();
-    void setUpVector(Vec2 newUpVector);
+	void setPosition(Vec2 newPosition);
 
 	int getNowAnimate_No();
 	void setNowAnimate_No(int newNum);
