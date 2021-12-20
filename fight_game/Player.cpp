@@ -3,8 +3,9 @@
 void Player::update()
 {
 	this->_position = this->_position +this->_velocity;
-	this->_entity->setPosition(this->_position);
-
+	this->_entity->setPosition( Vec2(this->_position.x-this->playerWidth/2, this->_position.y- this->playerWidth / 2));
+	this->_atGridTile=this->_gridmap->getGridLocationInMap(this->_position);
+	cout << _atGridTile<<endl;
 }
 
 

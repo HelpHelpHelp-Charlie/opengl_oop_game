@@ -12,11 +12,18 @@
 class GridMap {
 private:
 	void readFile(const char * filename);
+
 public:
+	const int mapWidth = 10;
+	const int mapHight = 6;
+	const int tileWidth = 100;
 	std::vector<Tile*>* _tileArray;
 	std::vector<Entity*>*_entityArray;
 	void drawMap(double deltaTime);
 	vector<Vec4*> *_mapinfo;
+		
+	Vec2 getGridLocationInMap(Vec2 loc);
+
 	GridMap(const char* filename);
 };
 #endif

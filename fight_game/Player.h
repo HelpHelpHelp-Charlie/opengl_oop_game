@@ -1,9 +1,9 @@
-#ifndef  __FightGame__Player___
+#ifndef __FightGame__Player___
 #define __FightGame__Player__
 
 #pragma once
 #include"Entity.h"
-
+#include"GridMap.h"
 #include<glfw3.h>
 class Player {
 private:
@@ -11,18 +11,24 @@ private:
 	Vec2 _position;
 	Vec2 _scale;
 	GLfloat _rotation;
-
+	GridMap *_gridmap;
+	
 	Vec2 _velocity;
 	Vec2 _scaleVelocity;
 	GLfloat _rotationVelocity;
 
+	Vec2 _atGridTile;
+	Vec2 _lookatGridTile;
 	Vec2 _eyeVector;
 	Vec2 _upVector;
 public:
-	Player(Entity* e) :	_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
+	const int playerWidth = 100;
+	Player(Entity* e ,GridMap* gridmap) :	_position(Vec2(200, 200)),_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
 		_velocity(Vec2(0.0f, 0.0f)), _scaleVelocity(Vec2(0.0f, 0.0f)),
 		_rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
-		_upVector(Vec2(0.0f, 1.0f)) { _entity = e; }
+		_upVector(Vec2(0.0f, 1.0f)) {
+		_entity = e; this->_gridmap = gridmap;
+	}
 	~Player();
 
 	void update();

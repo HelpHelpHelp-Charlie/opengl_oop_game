@@ -2,6 +2,7 @@
 #define __FightGame__Vec2__
 
 #pragma once
+#include<iostream>
 #include<glfw3.h>
 class Vec2 {
 public:
@@ -10,6 +11,7 @@ public:
 	Vec2():x(0),y(0) {};
 	Vec2(GLfloat x, GLfloat y) :x(x), y(y) {}
 	Vec2 operator + (const Vec2&);
+	friend std::ostream& operator<<(std::ostream&, const Vec2&);
 
 };
 

@@ -54,6 +54,11 @@ void GridMap::drawMap(double deltaTime)
 	}
 }
 
+Vec2 GridMap::getGridLocationInMap(Vec2 loc)
+{
+	return Vec2(int(loc.x/this->tileWidth), int(loc.y / this->tileWidth));
+}
+
 GridMap::GridMap(const char * filename)
 {
 	readFile(filename);
@@ -66,7 +71,7 @@ GridMap::GridMap(const char * filename)
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
 
 		Vec4 *info = *iterator;
-		Vec2 pos(info->y, info->z);
+		Vec2 pos(info->y*this->tileWidth, info->z*this->tileWidth);
 
 		//Tile *tilevvv = new Tile();
 		//tilevvv = mapBuildDirector->Create(stoveBuiler, pos);

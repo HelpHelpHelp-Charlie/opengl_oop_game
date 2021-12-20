@@ -27,20 +27,21 @@ Scene::Scene()
 	_childrenPlayer = new std::vector<Player *>();
 
     ResourceManager *resourceManager = &ResourceManager::getResourceManager();
+
+
+	///////////map initialize
+	 this->_gridmap = new GridMap("scene_1_map.txt");
 	///////player list initialize
     Entity *mainPlayerEntity =new Entity(resourceManager->getAnimatorArray()->at(0),
                        Vec2(50, 50));
 	
-	Player *mainPlayer = new Player(mainPlayerEntity);
+	Player *mainPlayer = new Player(mainPlayerEntity, _gridmap);
 	this->_childrenPlayer->push_back(mainPlayer);
 
-	///////////map initialize
-	 this->_gridmap = new GridMap("scene_1_map.txt");
-
 	 ////////// entity initialize for render
-	_childrenEntity->push_back(mainPlayerEntity);
+	
 	 _childrenEntity->insert(_childrenEntity->end(), this->_gridmap->_entityArray->begin(), this->_gridmap->_entityArray->end());
-
+	_childrenEntity->push_back(mainPlayerEntity);
 
 }
 
