@@ -32,6 +32,7 @@ void GameManager::runGameLoop()
 
 			_playerInputSystem->update();
 			_movementSystem->update(scene->getChildrenPlayer());
+			scene->getGridMap()->update(scene->getChildrenPlayer()->at(0)->getAtGridTile(), scene->getChildrenPlayer()->at(0)->getEyeVector());
 			--deltaTime;
 		}
 	}

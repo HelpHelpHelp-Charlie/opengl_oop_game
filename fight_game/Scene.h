@@ -6,6 +6,7 @@
 #include "Entity.h"
 #include"GridMap.h"
 #include"Player.h"
+#include"HighLightSign.h"
 class Scene
 {
 private:

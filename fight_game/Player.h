@@ -33,6 +33,9 @@ public:
 
 	void update();
 
+
+	Vec2 getAtGridTile();
+
 	Entity* getEntity() { return this->_entity; }
 	void setEntity(Entity &entity) { this->_entity = &entity; }
 

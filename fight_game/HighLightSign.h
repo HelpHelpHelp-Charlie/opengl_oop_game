@@ -1,28 +1,30 @@
 #pragma once
-#ifndef  __FightGame__StoveBuilder__
-#define __FightGame__StoveBuilder__
-
-#include"TileBuilder.h"
-class StoveBuilder :
-	public TileBuilder
-{
+#ifndef __FightGame__HighLightSign__
+#define __FightGame__HighLightSign__
+#include"AbstractInteraction.h"
+#include"Entity.h"
+class HighLightSign :
+	public AbstractInteraction{
 private:
+	Entity *_entity;
+	
+	Texture *_texture;
+	std::vector<VertexBuffer *> *_vertexBufferArray;
+	std::vector<Animator *>*_animatorArray;
+	AbstractInteraction *_AbstractInteraction;
 
 public:
-	Tile* getResult(Vec2 pos) {
-
+	HighLightSign(Vec2 thisLocation){
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("Stove.tga", Vec4(128, 128, 5, 1));
+		this->_texture = new Texture("selectSign.tga", Vec4(128, 128, 2, 1));
 
-		Animator *player = new Animator();
+		Animator *player = new Animator();//false
 		this->_animatorArray->push_back(player);
 
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
-		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
-		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
-		//this->_animator->_animation2DArray->push_back(idle_up);
+		Animation2D *selectSign = new Animation2D("selectSign.txt", 100);
+		this->_animatorArray->at(0)->_animation2DArray->push_back(selectSign);
 
 
 		int animation2DCounter = 0;
@@ -54,25 +56,23 @@ public:
 					(GLvoid*)offsetof(VertexData, textureCoordinates));
 				_vertexBufferArray->push_back(vertexBuffer);
 			}
-		
+
 			this->_animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(_vertexBufferArray);
 			cout << this->_animatorArray->at(0)->_animation2DArray << endl;
-	
+
 			animation2DCounter++;
 		}
+		cout << "[pppppppppppppppppppppppp" << endl;
+		this->_entity = new Entity(this->_animatorArray->at(0), thisLocation);
+	};
 
-		Entity *m_entity=new Entity(this->_animatorArray->at(0), pos);
-		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
-		Tile *_tile = new Stove(m_entity);
+	Entity *getEntity() { return this->_entity; }
 
-		return _tile;
+
+	void setVisibility(bool trigger) {	
+		this->getEntity()->getAnimator()->setVisibility(false);
+		if(trigger)this->getEntity()->getAnimator()->setVisibility(true);
 	}
 
-
-	~StoveBuilder() {}
-
 };
-
-
-
-#endif
+#endif // !__FightGame__HighLightSign__

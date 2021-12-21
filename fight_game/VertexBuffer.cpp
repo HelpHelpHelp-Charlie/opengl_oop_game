@@ -58,6 +58,8 @@ void VertexBuffer::configureVertexAttributes()
 
 void VertexBuffer::renderVertexBuffer()
 {
+	
+	
     glDrawArrays(GL_QUADS, 0, _count);
 	
 }

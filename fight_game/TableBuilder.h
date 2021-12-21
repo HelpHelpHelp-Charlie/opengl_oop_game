@@ -13,12 +13,12 @@ public:
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("MeatBox.tga", Vec4(128, 128, 4, 1));
+		this->_texture = new Texture("table.tga", Vec4(128, 128, 4, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
 
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
+		Animation2D *MeatBox_idle = new Animation2D("table.txt", 30);
 		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
 		//this->_animator->_animation2DArray->push_back(idle_up);
@@ -35,7 +35,6 @@ public:
 			int normalizeFrameCounter = 0;
 			_vertexBufferArray = new std::vector<VertexBuffer *>();
 			for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
-				cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
 				VertexData vertices[4] = {
 					{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
 					{ { 100,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
@@ -54,10 +53,8 @@ public:
 					(GLvoid*)offsetof(VertexData, textureCoordinates));
 				_vertexBufferArray->push_back(vertexBuffer);
 			}
-			cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
 			this->_animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(_vertexBufferArray);
 			cout << this->_animatorArray->at(0)->_animation2DArray << endl;
-			cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
 			animation2DCounter++;
 		}
 

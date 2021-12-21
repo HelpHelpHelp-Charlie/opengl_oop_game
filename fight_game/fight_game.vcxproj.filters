@@ -31,6 +31,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="標頭檔\Interaction">
+      <UniqueIdentifier>{fafd1aa0-94e0-431a-bd74-0af9d8c09a13}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -175,6 +178,12 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractInteraction.h">
+      <Filter>標頭檔\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="HighLightSign.h">
+      <Filter>標頭檔\Interaction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

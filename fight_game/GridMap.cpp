@@ -59,13 +59,21 @@ Vec2 GridMap::getGridLocationInMap(Vec2 loc)
 	return Vec2(int(loc.x/this->tileWidth), int(loc.y / this->tileWidth));
 }
 
+void GridMap::update(Vec2 PlayerPos, Vec2 playerLookAt)
+{
+	for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
+		Tile* tile = *iterator;
+		tile->update(PlayerPos, playerLookAt);
+	}
+}
+
 GridMap::GridMap(const char * filename)
 {
 	readFile(filename);
 	MapBuildDirector* mapBuildDirector = new MapBuildDirector();
 	StoveBuilder* stoveBuiler = new StoveBuilder();
 	MeatBoxBuilder * meatBoxBuilder = new MeatBoxBuilder();
-	//TableBuilder* tableBuilder = new TableBuilder();
+	TableBuilder* tableBuilder = new TableBuilder();
 	//cout << "shit like";
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
@@ -85,7 +93,7 @@ GridMap::GridMap(const char * filename)
 			this->_tileArray->push_back(mapBuildDirector->Create(stoveBuiler, pos));
 			break;
 		case TileType::TABLE:
-		//	this->_tileArray->push_back(mapBuildDirector->Create(tableBuilder, pos));
+			this->_tileArray->push_back(mapBuildDirector->Create(tableBuilder, pos));
 			break;
 		default:
 			break;
@@ -102,8 +110,11 @@ GridMap::GridMap(const char * filename)
 	}	
 	int i = 0;
 	this->_entityArray = new std::vector<Entity*>();
+	this->_entityHighLightSignArray = new std::vector<Entity*>();
 		for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
 			this->_entityArray->push_back(this->_tileArray->at(i)->getEntity());
+			cout << "ddddddddddddddddddddddddddddddddddddd";
+			this->_entityHighLightSignArray->push_back(this->_tileArray->at(i)->getHighLightSignEntity());
 			cout <<"fffpp"<< i<<endl;
 			i++;
 		}

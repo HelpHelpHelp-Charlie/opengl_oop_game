@@ -4,6 +4,10 @@ Texture::Texture(const char * filename, Vec4 TextureCutSetting)
 {
 	_TextureCutSetting = TextureCutSetting;
 	glGenTextures(1, &this->_textureBufferID);
+
+	glEnable(GL_BLEND);
+	glBlendEquation(GL_FUNC_ADD); // this is default
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glBindTexture(GL_TEXTURE_2D, this->_textureBufferID);
 
 	GLbyte *pImage = NULL;
@@ -19,12 +23,10 @@ Texture::Texture(const char * filename, Vec4 TextureCutSetting)
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	glTexImage2D(GL_TEXTURE_2D, 0, iComponents, iWidth, iHeight, 0, eFormat, GL_UNSIGNED_BYTE, pImage);
 
-
 	free(pImage);
 }
 
 void Texture::bindTexture()
 {
-
 	glBindTexture(GL_TEXTURE_2D, this->_textureBufferID);
 }

@@ -39,7 +39,6 @@ public:
 			int normalizeFrameCounter = 0;
 			_vertexBufferArray = new std::vector<VertexBuffer *>();
 			for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
-				cout << "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff" << endl;
 				VertexData vertices[4] = {
 					{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
 					{ { 100,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
@@ -68,7 +67,7 @@ public:
 		Entity *m_entity = new Entity(this->_animatorArray->at(0), pos);
 		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
 		Tile *_tile = new MeatBox(m_entity);
-
+		
 		return _tile;
 	}
 
