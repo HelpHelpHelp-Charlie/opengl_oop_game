@@ -16,7 +16,7 @@ public:
 	virtual Sprite* getSprite() = 0;
 	Sprite* getHighLightSignSprite() {return this->_HighLightSign->getSprite();};
 	virtual void setSprite(Sprite &sprite) = 0;
-	void update(Player* player) {
+	virtual void update(Player* player) {
 		//this->_HighLightSign->setVisibility(this->_HighLightSign->trigger(this->getSprite()->getPosition(), player->getAtGridTile(), player->getEyeVector()));
 		this->_HighLightSign->setVisibility(this->_HighLightSign->trigger(this->getSprite()->getPosition(),player));
 	}

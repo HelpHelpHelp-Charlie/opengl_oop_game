@@ -5,6 +5,8 @@
 #include"Sprite.h"
 #include"GridMap.h"
 #include<glfw3.h>
+#include"Entity.h"
+#include"EntityManager.h"
 class GridMap;
 class Player {
 private:
@@ -22,6 +24,12 @@ private:
 	Vec2 _lookatGridTile;
 	Vec2 _eyeVector;
 	Vec2 _upVector;
+
+	bool _grab;
+	bool _isGrabingThing=false;
+	int _grabEntityID=9;
+
+	EntityManager*_entityManager;
 public:
 	const int playerWidth = 100;
 	Player(Sprite* e ,GridMap* gridmap) :	_position(Vec2(200, 200)),_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
@@ -29,6 +37,7 @@ public:
 		_rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
 		_upVector(Vec2(0.0f, 1.0f)) {
 		_sprite = e; this->_gridmap = gridmap;
+		this->_entityManager = &EntityManager::getEntityManager();
 	}
 	~Player();
 
@@ -66,6 +75,16 @@ public:
 
 	int getNowAnimate_No();
 	void setNowAnimate_No(int newNum);
+
+	bool getGrab();
+	void setGrab(bool newGrab);
+
+
+	bool getIsGrabingThing();
+	void setIsGrabingThing(bool isGrabing);
+
+	int getGrabEntityID();
+	void setGrabEntityID(int ID);
 };
 
 #endif

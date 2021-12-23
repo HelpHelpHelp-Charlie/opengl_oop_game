@@ -99,6 +99,9 @@
     <ClCompile Include="AbstractInteraction.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="grabFromBoxh.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="loadTGA.h">
@@ -214,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="EntityManager.h">
       <Filter>標頭檔\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="grabFromBoxh.h">
+      <Filter>標頭檔\Interaction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

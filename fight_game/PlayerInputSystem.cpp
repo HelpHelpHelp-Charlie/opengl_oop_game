@@ -72,11 +72,15 @@ void PlayerInputSystem::update()
 			_currentPlayer->setEyeVector(Vec2(1, 0));
 		}
 
-		if (glfwGetKey(_window, GLFW_KEY_P) == GLFW_PRESS) {
-
+		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+			this->_currentPlayer->setGrab(true);
 		}
-
-
+		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
+			this->_currentPlayer->setGrab(false);
+		}
+		if (glfwGetKey(_window, GLFW_KEY_P) == GLFW_PRESS) {
+			this->_currentPlayer->setIsGrabingThing (false);
+		}
 
 		if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_RELEASE&&glfwGetKey(_window, GLFW_KEY_A) == GLFW_RELEASE) {
 			_currentPlayer->setVelocity(Vec2(0, _currentPlayer->getVelocity().y));			

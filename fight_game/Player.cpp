@@ -5,7 +5,8 @@ void Player::update()
 	this->_position = this->_position +this->_velocity;
 	this->_sprite->setPosition( Vec2(this->_position.x-this->playerWidth/2, this->_position.y- this->playerWidth / 2));
 	this->_atGridTile=this->_gridmap->getGridLocationInMap(this->_position);
-
+	//cout << _grabEntityID << endl;
+	if (this->_isGrabingThing)this->_entityManager->getEntityArr()->at(this->_grabEntityID)->setPos(this->_position);
 	//cout << _atGridTile<<endl;
 }
 
@@ -103,4 +104,34 @@ int Player::getNowAnimate_No()
 void Player::setNowAnimate_No(int newNum)
 {
 	this->_sprite->setNowAnimate_No(newNum);
+}
+
+bool Player::getGrab()
+{
+	return this->_grab;
+}
+
+void Player::setGrab(bool newGrab)
+{
+	this->_grab = newGrab;
+}
+
+bool Player::getIsGrabingThing()
+{
+	return this->_isGrabingThing;
+}
+
+void Player::setIsGrabingThing(bool isGrabing)
+{
+	this->_isGrabingThing = isGrabing;
+}
+
+int Player::getGrabEntityID()
+{
+	return this->_grabEntityID;
+}
+
+void Player::setGrabEntityID(int ID)
+{
+	this->_grabEntityID = ID;
 }

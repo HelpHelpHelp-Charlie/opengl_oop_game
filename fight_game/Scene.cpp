@@ -28,11 +28,12 @@ GridMap * Scene::getGridMap()
 void Scene::update()
 {
 	this->_childrenEntity = this->_entityManager->getEntityArr();
+	_entityManager->update();
 }
 
 Scene::Scene()
 {
-	this->_entityManager = new EntityManager;
+	this->_entityManager = &EntityManager::getEntityManager();
 	std::cout << "Scene is created" << std::endl;
 	_childrenSprite = new std::vector<Sprite *>();
 	_childrenPlayer = new std::vector<Player *>();
@@ -60,7 +61,7 @@ Scene::Scene()
 
 
 
-	_entityManager->addNewEntity(IngredientType::MEAT,Vec2(400,400));
+	//_entityManager->addNewEntity(IngredientType::MEAT,Vec2(400,400));
 }
 
 Scene::~Scene()

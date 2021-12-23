@@ -16,7 +16,22 @@ void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, s
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	gridMap->drawMap(deltaTime);
+	gridMap->drawMap(deltaTime);		
+	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+		//	cout << i << " ";
+		Entity *entity = *iterator;
+		if (entity->getSprite()->getAnimator() != NULL) {
+			//glLoadIdentity();
+			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
+			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);	
+			glLoadIdentity();
+			glTranslatef(entity->getSprite()->getPosition().x, entity->getSprite()->getPosition().y, 0);
+			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
+		}
+
+		//cout << endl;
+	}
+	glPushMatrix;
 
 	int i = 0;
 	for (std::vector<Sprite *>::iterator iterator = spriteArray->begin(); iterator != spriteArray->end(); iterator++) {
@@ -32,19 +47,8 @@ void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, s
 		}
 		//cout << endl;
 	}   
-	
+	glPopMatrix;
 
-	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
-		//	cout << i << " ";
-		Entity *entity = *iterator;
-		if (entity->getSprite()->getAnimator() != NULL) {
-			glLoadIdentity();
-			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
-			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
-			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
-		}
-		//cout << endl;
-	}
 	glfwSwapBuffers(_window);
 	glfwPollEvents();
 }

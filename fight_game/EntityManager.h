@@ -10,7 +10,12 @@ private:
 public:
 	EntityManager();
 	std::vector<Entity *>* getEntityArr();
-	void addNewEntity(IngredientType type,Vec2 pos);
+	int addNewEntity(IngredientType type);
+	void update();
+
+
+	static EntityManager& getEntityManager();
+	static void destroyEntityManager();
 };
 
 

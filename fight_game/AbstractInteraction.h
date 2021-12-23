@@ -2,9 +2,10 @@
 #ifndef  __FightGame__AbstractInteraction__
 #define __FightGame__AbstractInteraction__
 #include"Vec2.h"
-
+#include"EntityManager.h"
 
 class Player;
+
 class AbstractInteraction {
 private:
 protected:

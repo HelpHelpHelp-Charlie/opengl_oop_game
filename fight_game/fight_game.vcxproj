@@ -147,6 +147,7 @@
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="grabFromBoxh.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GridMap.cpp" />
@@ -172,6 +173,7 @@
     <ClInclude Include="ConcreteIngredientFactory.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="grabFromBoxh.h" />
     <ClInclude Include="HighLightSign.h" />
     <ClInclude Include="Ingredient.h" />
     <ClInclude Include="MapBuildDirector.h" />

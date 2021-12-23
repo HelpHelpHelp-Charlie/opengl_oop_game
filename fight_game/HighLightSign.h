@@ -11,7 +11,6 @@ private:
 	Texture *_texture;
 	std::vector<VertexBuffer *> *_vertexBufferArray;
 	std::vector<Animator *>*_animatorArray;
-	AbstractInteraction *_AbstractInteraction;
 
 public:
 	HighLightSign(Vec2 thisLocation){

@@ -98,4 +98,6 @@ void Animation2D::play(double deltatime)
 	_vertexBufferArray->at(current_frame_indx)->configureVertexAttributes();
 	_vertexBufferArray->at(current_frame_indx)->renderVertexBuffer();
 
+	//cout << current_frame_indx<<endl;
+	
 }
