@@ -2,11 +2,11 @@
 #ifndef __FightGame__HighLightSign__
 #define __FightGame__HighLightSign__
 #include"AbstractInteraction.h"
-#include"Entity.h"
+#include"Sprite.h"
 class HighLightSign :
 	public AbstractInteraction{
 private:
-	Entity *_entity;
+	Sprite *_sprite;
 	
 	Texture *_texture;
 	std::vector<VertexBuffer *> *_vertexBufferArray;
@@ -63,15 +63,15 @@ public:
 			animation2DCounter++;
 		}
 		cout << "[pppppppppppppppppppppppp" << endl;
-		this->_entity = new Entity(this->_animatorArray->at(0), thisLocation);
+		this->_sprite = new Sprite(this->_animatorArray->at(0), thisLocation);
 	};
 
-	Entity *getEntity() { return this->_entity; }
+	Sprite *getSprite() { return this->_sprite; }
 
 
 	void setVisibility(bool trigger) {	
-		this->getEntity()->getAnimator()->setVisibility(false);
-		if(trigger)this->getEntity()->getAnimator()->setVisibility(true);
+		this->getSprite()->getAnimator()->setVisibility(false);
+		if(trigger)this->getSprite()->getAnimator()->setVisibility(true);
 	}
 
 };

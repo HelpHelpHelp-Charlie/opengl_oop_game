@@ -8,6 +8,7 @@ void PlayerInputSystem::setCurrentPlayer(Player *newPlayer)
 
 PlayerInputSystem::PlayerInputSystem() : _window(glfwGetCurrentContext())
 {
+	
 	glfwGetCursorPos(_window, &_lastMousePosition.x, &_lastMousePosition.y);
 }
 
@@ -70,6 +71,12 @@ void PlayerInputSystem::update()
 			_currentPlayer->setNowAnimate_No(6);
 			_currentPlayer->setEyeVector(Vec2(1, 0));
 		}
+
+		if (glfwGetKey(_window, GLFW_KEY_P) == GLFW_PRESS) {
+
+		}
+
+
 
 		if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_RELEASE&&glfwGetKey(_window, GLFW_KEY_A) == GLFW_RELEASE) {
 			_currentPlayer->setVelocity(Vec2(0, _currentPlayer->getVelocity().y));			

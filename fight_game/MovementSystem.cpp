@@ -25,8 +25,8 @@ void MovementSystem::update(std::vector<Player *> *playerArray)
 		Player *player = *iterator;
 		player->update();
 	//	player->setPosition(player->getPosition()+ player->getVelocity());
-	//	entity->setScale(entity->getScale() + entity->getScaleVelocity());
-		//entity->setRotation(entity->getRotation() + entity->getRotationVelocity());
+	//	sprite->setScale(sprite->getScale() + sprite->getScaleVelocity());
+		//sprite->setRotation(sprite->getRotation() + sprite->getRotationVelocity());
 
 	}
 }

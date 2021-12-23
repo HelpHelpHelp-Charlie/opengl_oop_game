@@ -64,9 +64,9 @@ public:
 			animation2DCounter++;
 		}
 
-		Entity *m_entity = new Entity(this->_animatorArray->at(0), pos);
-		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
-		Tile *_tile = new MeatBox(m_entity);
+		Sprite *m_sprite = new Sprite(this->_animatorArray->at(0), pos);
+		//cout << "_tile setNowAnimate_No" << _tile->getSprite()->getNowAnimate_No() << endl;
+		Tile *_tile = new MeatBox(m_sprite);
 		
 		return _tile;
 	}

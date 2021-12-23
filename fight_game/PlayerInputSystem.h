@@ -5,10 +5,10 @@
 #include <iostream>
 #include  <glfw3.h>
 #include<gl\GLUT.H>
-#include "Entity.h"
+#include "Sprite.h"
 #include "Vec2.h"
 #include"Player.h"
-
+#include"EntityManager.h"
 class PlayerInputSystem
 {
 private:

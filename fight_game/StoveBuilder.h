@@ -15,15 +15,15 @@ public:
 		this->_animatorArray = new std::vector<Animator *>();
 
 		this->_texture = new Texture("Stove.tga", Vec4(128, 128, 5, 1));
+		//this->_texture = new Texture("Ingredient.tga", Vec4(128, 128, 9, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
-
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
+		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30); 
+		//Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 256, 128, 128), 30);
 		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
 		//this->_animator->_animation2DArray->push_back(idle_up);
-
 
 		int animation2DCounter = 0;
 		std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>;
@@ -61,10 +61,10 @@ public:
 			animation2DCounter++;
 		}
 
-		Entity *m_entity=new Entity(this->_animatorArray->at(0), pos);
-		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
-		Tile *_tile = new Stove(m_entity);
-
+		Sprite *m_sprite =new Sprite(this->_animatorArray->at(0), pos);
+		//cout << "_tile setNowAnimate_No" << _tile->getSprite()->getNowAnimate_No() << endl;
+		Tile *_tile = new Stove(m_sprite);
+		
 		return _tile;
 	}
 

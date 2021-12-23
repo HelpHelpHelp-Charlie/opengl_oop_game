@@ -6,7 +6,7 @@
 #include <iostream>
 #include "Vec2.h"
 #include <glfw3.h>
-#include "Entity.h"
+#include "Sprite.h"
 #include"Player.h"
 class MovementSystem
 {

@@ -59,10 +59,10 @@ public:
 		}
 
 
-		Entity *m_entity = new Entity(this->_animatorArray->at(0), pos);
-		//cout << "_tile setNowAnimate_No" << _tile->getEntity()->getNowAnimate_No() << endl;
-		//Tile* tmp = new Table(m_entity);
-		Tile *_tile = new Table(m_entity);
+		Sprite *m_sprite = new Sprite(this->_animatorArray->at(0), pos);
+		//cout << "_tile setNowAnimate_No" << _tile->getSprite()->getNowAnimate_No() << endl;
+		//Tile* tmp = new Table(m_sprite);
+		Tile *_tile = new Table(m_sprite);
 		return _tile;
 	}
 

@@ -6,11 +6,11 @@ class MeatBox :
 	public Tile
 {
 public:
-	MeatBox(Entity* e) { _entity = e; this->_HighLightSign = new HighLightSign(this->getEntity()->getPosition()); }
+	MeatBox(Sprite* e) { _sprite = e; this->_HighLightSign = new HighLightSign(this->getSprite()->getPosition()); }
 	//
 	~MeatBox();
-	 Entity* getEntity() { return this->_entity; }
-	 void setEntity(Entity &entity) { this->_entity = &entity; }
+	 Sprite* getSprite() { return this->_sprite; }
+	 void setSprite(Sprite &sprite) { this->_sprite = &sprite; }
 
 };
 

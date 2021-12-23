@@ -2,12 +2,13 @@
 #define __FightGame__Player__
 
 #pragma once
-#include"Entity.h"
+#include"Sprite.h"
 #include"GridMap.h"
 #include<glfw3.h>
+class GridMap;
 class Player {
 private:
-	Entity* _entity;	
+	Sprite* _sprite;
 	Vec2 _position;
 	Vec2 _scale;
 	GLfloat _rotation;
@@ -23,11 +24,11 @@ private:
 	Vec2 _upVector;
 public:
 	const int playerWidth = 100;
-	Player(Entity* e ,GridMap* gridmap) :	_position(Vec2(200, 200)),_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
+	Player(Sprite* e ,GridMap* gridmap) :	_position(Vec2(200, 200)),_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
 		_velocity(Vec2(0.0f, 0.0f)), _scaleVelocity(Vec2(0.0f, 0.0f)),
 		_rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
 		_upVector(Vec2(0.0f, 1.0f)) {
-		_entity = e; this->_gridmap = gridmap;
+		_sprite = e; this->_gridmap = gridmap;
 	}
 	~Player();
 
@@ -36,8 +37,8 @@ public:
 
 	Vec2 getAtGridTile();
 
-	Entity* getEntity() { return this->_entity; }
-	void setEntity(Entity &entity) { this->_entity = &entity; }
+	Sprite* getSprite() { return this->_sprite; }
+	void setSprite(Sprite &sprite) { this->_sprite = &sprite; }
 
 	Vec2 getPosition();
 	void setPosition(Vec2 newPosition);

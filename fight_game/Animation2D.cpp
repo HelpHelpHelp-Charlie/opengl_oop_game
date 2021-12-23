@@ -1,5 +1,17 @@
 #include "Animation2D.h"
 
+
+Animation2D::Animation2D(Vec4 newframe, float speed) : anim_cursor(0),
+current_frame_indx(0),
+speed(speed)
+{
+	_frames = new vector<Vec4*>;
+	Vec4 *frame =new Vec4(newframe.x, newframe.y, newframe.z, newframe.w);
+	_frames->push_back(frame);
+	frames_count = (int)_frames->size();
+}
+
+
 Animation2D::Animation2D(const char * filename, float speed) : anim_cursor(0),
 current_frame_indx(0),
 speed(speed)
@@ -59,7 +71,7 @@ std::vector<Vec4 *>* Animation2D::getNormallizeFramesArray(Vec4 TextureCutSettin
 		_normalizeFrames->push_back(temp);
 
 	}
-	
+
 	return _normalizeFrames;
 }
 
@@ -84,6 +96,6 @@ void Animation2D::play(double deltatime)
 
 	//cout << current_frame_indx  ;
 	_vertexBufferArray->at(current_frame_indx)->configureVertexAttributes();
-	_vertexBufferArray->at(current_frame_indx)->renderVertexBuffer();	
+	_vertexBufferArray->at(current_frame_indx)->renderVertexBuffer();
 
 }

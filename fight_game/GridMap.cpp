@@ -42,14 +42,15 @@ void GridMap::drawMap(double deltaTime)
 {
 	for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
 		Tile *tile = *iterator;
-		if (tile->getEntity()->getAnimator() != NULL) {
+		if (tile->getSprite()->getAnimator() != NULL) {
 			glLoadIdentity();
-			glTranslatef(tile->getEntity()->getPosition().x, tile->getEntity()->getPosition().y, 0);
-			//glRotatef(entity->getRotation(), 0.0f, 0.0f, 1.0f);
-			//glScalef(entity->getScale().x, entity->getScale().y, 1);		
+			glTranslatef(tile->getSprite()->getPosition().x, tile->getSprite()->getPosition().y, 0);
+			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
+			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
 
-			//cout << "getNowAnimate_No= " << tile->getEntity()->getNowAnimate_No() << endl;
-			tile->getEntity()->getAnimator()->play(tile->getEntity()->getNowAnimate_No(), deltaTime);
+			//cout << "getNowAnimate_No= " << tile->getSprite()->getNowAnimate_No() << endl;
+			tile->getSprite()->getAnimator()->play(tile->getSprite()->getNowAnimate_No(), deltaTime);
+			tile->getHighLightSignSprite()->getAnimator()->play(tile->getHighLightSignSprite()->getNowAnimate_No(), deltaTime);
 		}
 	}
 }
@@ -59,13 +60,17 @@ Vec2 GridMap::getGridLocationInMap(Vec2 loc)
 	return Vec2(int(loc.x/this->tileWidth), int(loc.y / this->tileWidth));
 }
 
-void GridMap::update(Vec2 PlayerPos, Vec2 playerLookAt)
+
+
+void GridMap::update(Player* player)
 {
 	for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
 		Tile* tile = *iterator;
-		tile->update(PlayerPos, playerLookAt);
+		//tile->update(player->getAtGridTile(), player->getEyeVector());
+		tile->update(player);
 	}
 }
+
 
 GridMap::GridMap(const char * filename)
 {
@@ -102,20 +107,6 @@ GridMap::GridMap(const char * filename)
 	
 
 		
-		//cout << "abc:" << this->_tileArray->at(0)->getEntity()<<" "<< this->_tileArray->at(0)->getEntity()->getAnimator()->_animation2DArray;// ->getNowAnimate_No();
-		//this->_tileArray->at(0)->getEntity()->setNowAnimate_No(0);
-		//cout << "def:" << this->_tileArray->at(0)->getEntity();//->getNowAnimate_No();
-			//cout << "abc:" << tilevvv.getEntity() << " " << tilevvv.getEntity()->getAnimator()->_animation2DArray;
-
 	}	
-	int i = 0;
-	this->_entityArray = new std::vector<Entity*>();
-	this->_entityHighLightSignArray = new std::vector<Entity*>();
-		for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
-			this->_entityArray->push_back(this->_tileArray->at(i)->getEntity());
-			cout << "ddddddddddddddddddddddddddddddddddddd";
-			this->_entityHighLightSignArray->push_back(this->_tileArray->at(i)->getHighLightSignEntity());
-			cout <<"fffpp"<< i<<endl;
-			i++;
-		}
+
 }

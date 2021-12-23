@@ -12,33 +12,39 @@ RenderSystem::~RenderSystem()
 
 }
 
-void RenderSystem::render(GridMap* gridMap,std::vector<Entity *> *entityArray, double deltaTime)
+void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, std::vector<Entity *> *entityArray,double deltaTime)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
+	gridMap->drawMap(deltaTime);
 
-	glPushMatrix;
 	int i = 0;
-	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+	for (std::vector<Sprite *>::iterator iterator = spriteArray->begin(); iterator != spriteArray->end(); iterator++) {
 	//	cout << i << " ";
 		i++;
-		Entity *entity = *iterator;
-		if (entity->getAnimator() != NULL) {
+		Sprite *sprite = *iterator;
+		if (sprite->getAnimator() != NULL) {
 			glLoadIdentity();
-			glTranslatef(entity->getPosition().x, entity->getPosition().y,0);
-			//glRotatef(entity->getRotation(), 0.0f, 0.0f, 1.0f);
-			//glScalef(entity->getScale().x, entity->getScale().y, 1);		
-			entity->getAnimator()->play(entity->getNowAnimate_No(),deltaTime);
+			glTranslatef(sprite->getPosition().x, sprite->getPosition().y,0);
+			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
+			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
+			sprite->getAnimator()->play(sprite->getNowAnimate_No(),deltaTime);
 		}
 		//cout << endl;
 	}   
+	
 
-
-	glPopMatrix;
-//	glLoadIdentity();
-	glPushMatrix;
-	//gridMap->drawMap(deltaTime);
-	glPopMatrix;
+	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+		//	cout << i << " ";
+		Entity *entity = *iterator;
+		if (entity->getSprite()->getAnimator() != NULL) {
+			glLoadIdentity();
+			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
+			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
+			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
+		}
+		//cout << endl;
+	}
 	glfwSwapBuffers(_window);
 	glfwPollEvents();
 }

@@ -142,9 +142,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\glad\src\glad.c" />
+    <ClCompile Include="AbstractInteraction.cpp" />
     <ClCompile Include="Animation2D.cpp" />
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GridMap.cpp" />
     <ClCompile Include="loadTGA.cpp" />
@@ -160,17 +163,23 @@
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractIngredientFactory.h" />
     <ClInclude Include="AbstractInteraction.h" />
     <ClInclude Include="Animation2D.h" />
     <ClInclude Include="Animator.h" />
     <ClInclude Include="BoundingBox.h" />
     <ClInclude Include="collision2D.h" />
-    <ClInclude Include="HighLightSign.h" />
-    <ClInclude Include="MapBuildDirector.h" />
+    <ClInclude Include="ConcreteIngredientFactory.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="HighLightSign.h" />
+    <ClInclude Include="Ingredient.h" />
+    <ClInclude Include="MapBuildDirector.h" />
+    <ClInclude Include="Sprite.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GridMap.h" />
     <ClInclude Include="loadTGA.h" />
+    <ClInclude Include="ConcreteIngredient.h" />
     <ClInclude Include="MEATBOX.h" />
     <ClInclude Include="MeatBoxBuilder.h" />
     <ClInclude Include="MovementSystem.h" />

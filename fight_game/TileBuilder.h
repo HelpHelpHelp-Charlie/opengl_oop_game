@@ -7,7 +7,7 @@
 #include"Animation2D.h"
 #include"Animator.h"
 #include"VertexBuffer.h"
-#include"Entity.h"
+#include"Sprite.h"
 #include"Vec2.h"
 
 
@@ -23,7 +23,7 @@ protected:
 	std::vector<VertexBuffer *> *_vertexBufferArray;
 	std::vector<Animator *>*_animatorArray;
 public:	
-	//virtual Entity* getResult(Vec2 pos) = 0;
+	//virtual Sprite* getResult(Vec2 pos) = 0;
 	virtual Tile* getResult(Vec2 pos) = 0;
 	/*virtual void BuildTexture();*/
 };

@@ -1,35 +1,29 @@
+#pragma once
+
 #ifndef  __FightGame__Entity__
 #define __FightGame__Entity__
-
-#include <iostream>
-#include "VertexBuffer.h"
-#include"Vec2.h"
-#include <vector>
+#include<string>
+#include"Texture.h"
 #include"Animation2D.h"
 #include"Animator.h"
+#include"Sprite.h"
 
-class Entity
-{
-private:
-	Vec2 _position;
-	Animator *_animator;
-	int _nowAnimate_No;
- 
-
+class Entity {
 public:
-    
-	Animator *getAnimator();
-    void setAnimator(Animator *newAnimator);
- 
-	Vec2 getPosition();
-	void setPosition(Vec2 newPosition);
 
-	int getNowAnimate_No();
-	void setNowAnimate_No(int newNum);
+	void makeSprite(Vec2 pos, Vec4 textureSetting);
+	void setID(int newID) ;
+	int getID() ;
+	Sprite* getSprite();
+protected:
+	Vec2 Pos;
+	int _id_InTheScene;
+	Sprite *_sprite;
+	std::string imgName = "Ingredient.tga";
+	Vec4 AnimationFrameData;
+private:
 
-	Entity();
-    Entity(Animator *newAnimation2D, Vec2 position);
-    ~Entity();
 };
+
 
 #endif
