@@ -106,14 +106,14 @@ void Player::setNowAnimate_No(int newNum)
 	this->_sprite->setNowAnimate_No(newNum);
 }
 
-bool Player::getGrab()
+bool Player::getGrabOrPlace()
 {
-	return this->_grab;
+	return this->_grabOrPlace;
 }
 
-void Player::setGrab(bool newGrab)
+void Player::setGrabOrPlace(bool newGrab)
 {
-	this->_grab = newGrab;
+	this->_grabOrPlace = newGrab;
 }
 
 bool Player::getIsGrabingThing()

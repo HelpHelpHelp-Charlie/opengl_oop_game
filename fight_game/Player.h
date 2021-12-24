@@ -25,7 +25,7 @@ private:
 	Vec2 _eyeVector;
 	Vec2 _upVector;
 
-	bool _grab;
+	bool _grabOrPlace;
 	bool _isGrabingThing=false;
 	int _grabEntityID=9;
 
@@ -76,8 +76,8 @@ public:
 	int getNowAnimate_No();
 	void setNowAnimate_No(int newNum);
 
-	bool getGrab();
-	void setGrab(bool newGrab);
+	bool getGrabOrPlace();
+	void setGrabOrPlace(bool newGrab);
 
 
 	bool getIsGrabingThing();

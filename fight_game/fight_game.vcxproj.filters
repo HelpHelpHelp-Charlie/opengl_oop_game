@@ -102,6 +102,9 @@
     <ClCompile Include="grabFromBoxh.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="PlaceThing.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="loadTGA.h">
@@ -167,9 +170,6 @@
     <ClInclude Include="Stove.h">
       <Filter>標頭檔\map\ConcreteTile</Filter>
     </ClInclude>
-    <ClInclude Include="Table.h">
-      <Filter>標頭檔\map\ConcreteTile</Filter>
-    </ClInclude>
     <ClInclude Include="TableBuilder.h">
       <Filter>標頭檔\map\TileBuilder</Filter>
     </ClInclude>
@@ -219,6 +219,12 @@
       <Filter>標頭檔\Manager</Filter>
     </ClInclude>
     <ClInclude Include="grabFromBoxh.h">
+      <Filter>標頭檔\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaceThing.h">
       <Filter>標頭檔\Interaction</Filter>
     </ClInclude>
   </ItemGroup>

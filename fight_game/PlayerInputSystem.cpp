@@ -73,10 +73,10 @@ void PlayerInputSystem::update()
 		}
 
 		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS) {
-			this->_currentPlayer->setGrab(true);
+			this->_currentPlayer->setGrabOrPlace(true);
 		}
 		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
-			this->_currentPlayer->setGrab(false);
+			this->_currentPlayer->setGrabOrPlace(false);
 		}
 		if (glfwGetKey(_window, GLFW_KEY_P) == GLFW_PRESS) {
 			this->_currentPlayer->setIsGrabingThing (false);

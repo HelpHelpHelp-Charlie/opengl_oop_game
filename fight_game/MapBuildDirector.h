@@ -14,6 +14,7 @@ public:
 
 	Tile* Create(TileBuilder *builder, Vec2 pos) {
 		Tile *_tile = builder->getResult(pos);
+
 		return _tile;
 	}
 };

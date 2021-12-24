@@ -148,6 +148,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="grabFromBoxh.cpp" />
+    <ClCompile Include="PlaceThing.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GridMap.cpp" />
@@ -177,6 +178,7 @@
     <ClInclude Include="HighLightSign.h" />
     <ClInclude Include="Ingredient.h" />
     <ClInclude Include="MapBuildDirector.h" />
+    <ClInclude Include="PlaceThing.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GridMap.h" />

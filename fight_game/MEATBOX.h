@@ -8,7 +8,7 @@ class MeatBox :
 {
 public:
 	MeatBox(Sprite* e) { _sprite = e; this->_HighLightSign = new HighLightSign(this->getSprite()->getPosition()); 
-	this->_grabFromBox = new GrabFromBox();
+	this->_grabFromBox = new GrabFromBox(); this->_entityManager = &EntityManager::getEntityManager();
 	}
 	//
 	~MeatBox();

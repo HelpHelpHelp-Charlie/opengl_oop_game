@@ -4,6 +4,7 @@
 #include"collision2D.h"
 #include"Sprite.h"
 #include"HighLightSign.h"
+#include"EntityManager.h"
 
 enum TileType {
 	TABLE,STOVE,MEATBOX,NumberOfAnimalItem
@@ -21,7 +22,17 @@ public:
 		this->_HighLightSign->setVisibility(this->_HighLightSign->trigger(this->getSprite()->getPosition(),player));
 	}
 
+
+	int getGrabEntityID() { return this->_grabEntityID; }
+	void setGrabEntityID(int ID) { this->_grabEntityID = ID; }
+
+	bool getIsGrabingThing() { return this->_isGrabingThing; }
+	void setIsGrabingThing(bool i) { this->_isGrabingThing = i; }
+
 protected:
+	bool _isGrabingThing = false;
+	int _grabEntityID = 9;
+	EntityManager*_entityManager;
 
 	HighLightSign *_HighLightSign;
 	Sprite *_sprite;

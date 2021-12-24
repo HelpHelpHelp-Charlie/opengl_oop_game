@@ -2,7 +2,7 @@
 #include"Player.h"
 bool GrabFromBox::grab(bool trigger, Player * player, IngredientType type)
 {
-	if (trigger&&player->getGrab() && !player->getIsGrabingThing()) {
+	if (trigger&&player->getGrabOrPlace() && !player->getIsGrabingThing()) {
 		int h = this->_entityManager->addNewEntity(type);
 		cout << h;
 		player->setGrabEntityID(h);
