@@ -17,6 +17,7 @@ public:
 	void setPos(Vec2 pos) { this->_pos = pos; }
 	Sprite* getSprite();
 	void update();
+	virtual int getType()=0;
 protected:
 	Vec2 _pos;
 	int _id_InTheScene;

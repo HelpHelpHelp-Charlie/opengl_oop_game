@@ -9,6 +9,8 @@
 #include"StoveBuilder.h"
 #include"MeatBoxBuilder.h"
 #include"TableBuilder.h"
+#include"TrashcanBuilder.h"
+#include"BunBoxBuilder.h"
 class Player;
 
 class GridMap {

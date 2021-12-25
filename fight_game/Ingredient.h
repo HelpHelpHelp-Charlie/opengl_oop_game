@@ -16,8 +16,8 @@ public Entity
 {
 private:
 protected:
-
+	IngredientType type;
 public:
-
+	int getType() { return int(this->type); };
 };
 #endif

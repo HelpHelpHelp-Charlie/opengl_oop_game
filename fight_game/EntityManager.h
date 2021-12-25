@@ -7,13 +7,15 @@
 class EntityManager {
 private:
 	std::vector<Entity *>* _entityArr;
+	std::vector<int>_IDarray;
 public:
 	EntityManager();
 	std::vector<Entity *>* getEntityArr();
+	std::vector<int> getIDarray();
 	int addNewEntity(IngredientType type);
 	void update();
-
-
+	void removeEntity(int ID);
+	void show();
 	static EntityManager& getEntityManager();
 	static void destroyEntityManager();
 };

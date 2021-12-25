@@ -10,8 +10,9 @@ private:
 public:
 	GrabFromBox() {
 		this->_entityManager = &EntityManager::getEntityManager();
+		this->enable = true;
 	};
-
+	
 	bool grab(bool trigger,Player* player, IngredientType type);
 
 

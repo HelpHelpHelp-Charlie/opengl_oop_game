@@ -22,7 +22,7 @@ public:
 
 		 this->_HighLightSign->setVisibility(this->_HighLightSign->trigger(this->getSprite()->getPosition(), player));
 		 if (this->_grabFromBox->grab(this->_grabFromBox->trigger(this->getSprite()->getPosition(), player), player, IngredientType::MEAT)) {
-			 this->_sprite->setNowAnimate_No(1); cout << "dddd";
+			 this->_sprite->setNowAnimate_No(1);
 		 }
 		// this->_grabFromBox
 	 }

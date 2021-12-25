@@ -51,6 +51,12 @@ void GridMap::drawMap(double deltaTime)
 			//cout << "getNowAnimate_No= " << tile->getSprite()->getNowAnimate_No() << endl;
 			tile->getSprite()->getAnimator()->play(tile->getSprite()->getNowAnimate_No(), deltaTime);
 			tile->getHighLightSignSprite()->getAnimator()->play(tile->getHighLightSignSprite()->getNowAnimate_No(), deltaTime);
+
+
+			glLoadIdentity();
+			glTranslatef(tile->getSprite()->getPosition().x, tile->getSprite()->getPosition().y-20, 0);
+			if (tile->getProgressBarSprite()!=nullptr)tile->getProgressBarSprite()->getAnimator()->play(tile->getProgressBarSprite()->getNowAnimate_No(), deltaTime);
+
 		}
 	}
 }
@@ -79,6 +85,8 @@ GridMap::GridMap(const char * filename)
 	StoveBuilder* stoveBuiler = new StoveBuilder();
 	MeatBoxBuilder * meatBoxBuilder = new MeatBoxBuilder();
 	TableBuilder* tableBuilder = new TableBuilder();
+	TrashcanBuilder* trashcanBuilder = new TrashcanBuilder();
+	BunBoxBuilder* bunBoxBuilder = new BunBoxBuilder();
 	//cout << "shit like";
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
@@ -99,6 +107,12 @@ GridMap::GridMap(const char * filename)
 			break;
 		case TileType::TABLE:
 			this->_tileArray->push_back(mapBuildDirector->Create(tableBuilder, pos));
+			break;
+		case TileType::TRASHCAN:
+			this->_tileArray->push_back(mapBuildDirector->Create(trashcanBuilder, pos));
+			break;
+		case TileType::BUNBOX:
+			this->_tileArray->push_back(mapBuildDirector->Create(bunBoxBuilder, pos));
 			break;
 		default:
 			break;

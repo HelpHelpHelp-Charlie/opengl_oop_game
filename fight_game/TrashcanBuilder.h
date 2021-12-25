@@ -1,9 +1,9 @@
 #pragma once
-#ifndef  __FightGame__TableBuilder__
-#define __FightGame__TableBuilder__
+#ifndef  __FightGame__TrashcanBuilder__
+#define __FightGame__TrashcanBuilder__
 #include"TileBuilder.h"
 
-class TableBuilder :
+class TrashcanBuilder :
 	public TileBuilder
 {
 private:
@@ -13,14 +13,15 @@ public:
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("table.tga", Vec4(128, 128, 4, 1));
+		this->_texture = new Texture("trashCan.tga", Vec4(128, 128, 9, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
 
 		Animation2D *MeatBox_idle = new Animation2D("table.txt", 30);
-		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
+		Animation2D *explode = new Animation2D("trashcan_explode.txt", 30);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
+		this->_animatorArray->at(0)->_animation2DArray->push_back(explode);
 		//this->_animator->_animation2DArray->push_back(idle_up);
 
 
@@ -60,11 +61,13 @@ public:
 
 
 		Sprite *m_sprite = new Sprite(this->_animatorArray->at(0), pos);
-		Tile *_tile = new Table(m_sprite);
+		//cout << "_tile setNowAnimate_No" << _tile->getSprite()->getNowAnimate_No() << endl;
+		//Tile* tmp = new Table(m_sprite);
+		Tile *_tile = new Trashcan(m_sprite);
 		return _tile;
 	}
 
-	~TableBuilder() {}
+	~TrashcanBuilder() {}
 };
 
 #endif

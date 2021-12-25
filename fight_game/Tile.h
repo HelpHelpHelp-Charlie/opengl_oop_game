@@ -7,7 +7,7 @@
 #include"EntityManager.h"
 
 enum TileType {
-	TABLE,STOVE,MEATBOX,NumberOfAnimalItem
+	TABLE,STOVE,MEATBOX,TRASHCAN,BUNBOX,NumberOfAnimalItem
 };
 
 
@@ -15,7 +15,8 @@ class Tile {
 public:
 
 	virtual Sprite* getSprite() = 0;
-	Sprite* getHighLightSignSprite() {return this->_HighLightSign->getSprite();};
+	virtual Sprite* getHighLightSignSprite() {return this->_HighLightSign->getSprite();};
+	virtual Sprite* getProgressBarSprite() { return nullptr; }
 	virtual void setSprite(Sprite &sprite) = 0;
 	virtual void update(Player* player) {
 		//this->_HighLightSign->setVisibility(this->_HighLightSign->trigger(this->getSprite()->getPosition(), player->getAtGridTile(), player->getEyeVector()));

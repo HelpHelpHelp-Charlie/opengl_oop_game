@@ -10,18 +10,35 @@ std::vector<Entity*>* EntityManager::getEntityArr()
 	return this->_entityArr;
 }
 
+std::vector<int> EntityManager::getIDarray()
+{
+	return this->_IDarray;
+}
+
 int EntityManager::addNewEntity(IngredientType type)
 {
 	switch (type) {
 		//	case IngredientType::PLATE:break;
-	case IngredientType::MEAT:
+	case IngredientType::MEAT: {
 		Meat* meat = new Meat;
 		this->_entityArr->push_back(meat);
-		meat->setID(this->_entityArr->size());
-		//cout<<"sss" << this->_entityArr->size() << endl;
-		return this->_entityArr->size()-1;
 		break;
 	}
+	case IngredientType::BUN: {
+		Bun* bun = new Bun;
+		this->_entityArr->push_back(bun);
+		break;
+	}
+
+	case IngredientType::COOKEDPATTIES: {
+		CookedPatties* cookedPatties = new CookedPatties;
+		this->_entityArr->push_back(cookedPatties);
+		break;
+	}
+
+	}
+	this->_IDarray.push_back(_entityArr->size() - 1);
+	return this->_IDarray.size() - 1;
 }
 
 void EntityManager::update()
@@ -33,13 +50,39 @@ void EntityManager::update()
 	}
 }
 
+void EntityManager::removeEntity(int ID)
+{
+	cout << "before" << endl;
+	this->show();
+	this->_entityArr->erase(_entityArr->begin() + _IDarray.at(ID));
+	for (int i = ID; i < this->_IDarray.size(); i++) {
+		if (_IDarray.at(i) > 0)_IDarray.at(i)--;
+	}
+	cout << "after" << endl;
+	this->show();
+}
+
+void EntityManager::show()
+{
+
+	cout << "show" << endl << this->_IDarray.size() << endl;;
+	for (int i = 0; i < this->_IDarray.size(); i++) {
+		cout << i << " " << this->_IDarray[i] << " ";
+	}
+	cout << endl;
+	for (int i = 0; i < this->_entityArr->size(); i++) {
+		cout << this->_entityArr->at(i) << " ";
+	}
+	cout << endl << endl;
+}
+
 EntityManager & EntityManager::getEntityManager()
 {
 	static EntityManager *entityManager = NULL;
 
 	if (entityManager == NULL) {
 		entityManager = new EntityManager();
-		
+
 	}
 
 	return *entityManager;

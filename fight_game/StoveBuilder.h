@@ -19,10 +19,12 @@ public:
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30); 
+		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
+		Animation2D *stove_cook = new Animation2D("stove_cook.txt", 30);
 		//Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 256, 128, 128), 30);
 		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
+		this->_animatorArray->at(0)->_animation2DArray->push_back(stove_cook);
 		//this->_animator->_animation2DArray->push_back(idle_up);
 
 		int animation2DCounter = 0;

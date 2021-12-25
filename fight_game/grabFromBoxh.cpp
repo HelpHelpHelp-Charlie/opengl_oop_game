@@ -2,12 +2,15 @@
 #include"Player.h"
 bool GrabFromBox::grab(bool trigger, Player * player, IngredientType type)
 {
-	if (trigger&&player->getGrabOrPlace() && !player->getIsGrabingThing()) {
-		int h = this->_entityManager->addNewEntity(type);
-		cout << h;
-		player->setGrabEntityID(h);
-		player->setIsGrabingThing(true);
-		return true;
+	if (this->enable) {
+		if (trigger&&player->getGrabOrPlace() && !player->getIsGrabingThing()) {
+			int h = this->_entityManager->addNewEntity(type);
+			cout << h;
+			player->setGrabEntityID(h);
+			player->setIsGrabingThing(true);
+			return true;
+		}
 	}
+
 	return false;
 }

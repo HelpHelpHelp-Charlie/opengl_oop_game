@@ -4,10 +4,11 @@
 #define __FightGame__MapBuildDirector__
 #include"Tile.h"
 #include"TileBuilder.h"
-
+#include"Trashcan.h"
 #include"MEATBOX.h"
 #include"Stove.h"
 #include"Table.h"
+#include"BunBox.h"
 class MapBuildDirector {
 	//Tile *_tile;
 public:
