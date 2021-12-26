@@ -33,9 +33,9 @@ void Entity::makeSprite(Vec2 pos, Vec4 textureSetting)
 		for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
 			VertexData vertices[4] = {
 				{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 80,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 80,80,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
-				{ {0,80,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+				{ { 120,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 120,120,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+				{ {0,120,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
 			};
 			normalizeFrameCounter++;
 			VertexBuffer *vertexBuffer = new VertexBuffer(
@@ -51,8 +51,6 @@ void Entity::makeSprite(Vec2 pos, Vec4 textureSetting)
 		}
 
 		animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(vertexBufferArray);
-		cout << animatorArray->at(0)->_animation2DArray << endl;
-
 		animation2DCounter++;
 	}
 
@@ -76,5 +74,5 @@ Sprite * Entity::getSprite()
 
 void Entity::update()
 {
-	this->_sprite->setPosition(this->_pos);
+	this->_sprite->setPosition(Vec2(this->_pos.x+this->_spriteOffset.x, this->_pos.y + this->_spriteOffset.y));
 }

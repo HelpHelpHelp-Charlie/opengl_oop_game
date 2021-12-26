@@ -17,8 +17,6 @@ public:
 	bool trigger(Vec2 thisLocation, Player* player); //{
 	void setEnable(bool e) {this->enable=e;}
 	bool getEnable() { return this->enable; }
-		//cout << "(" << playerLocation.x + playerLookAt.x << "," << playerLocation.y + playerLookAt.y << ")" << endl;
-		//cout << "(" << thisLocation.x << "," << thisLocation.y << ")" << endl;
 		//return (thisLocation.x/100== playerLocation.x+ playerLookAt.x&&thisLocation.y / 100 == playerLocation.y + playerLookAt.y);
 	//}
 };

@@ -9,13 +9,13 @@
 #include"Stove.h"
 #include"Table.h"
 #include"BunBox.h"
+#include"Former.h"
 class MapBuildDirector {
 	//Tile *_tile;
 public:
 
 	Tile* Create(TileBuilder *builder, Vec2 pos) {
 		Tile *_tile = builder->getResult(pos);
-
 		return _tile;
 	}
 };

@@ -7,7 +7,7 @@
 #include"EntityManager.h"
 
 enum TileType {
-	TABLE,STOVE,MEATBOX,TRASHCAN,BUNBOX,NumberOfAnimalItem
+	TABLE,STOVE,MEATBOX,TRASHCAN,BUNBOX,FORMER,NumberOfAnimalItem
 };
 
 

@@ -72,9 +72,9 @@ public:
 			for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
 				VertexData vertices[4] = {
 					{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
-					{ { 100,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
-					{ { 100,100,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
-					{ { 0,100,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+					{ { 150,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+					{ { 150,150,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+					{ { 0,150,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
 				};
 				normalizeFrameCounter++;
 				VertexBuffer *vertexBuffer = new VertexBuffer(
@@ -90,8 +90,6 @@ public:
 			}
 
 			this->_animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(_vertexBufferArray);
-			cout << this->_animatorArray->at(0)->_animation2DArray << endl;
-
 			animation2DCounter++;
 		}
 		this->_sprite = new Sprite(this->_animatorArray->at(0), thisLocation);
@@ -111,7 +109,6 @@ public:
 			}
 			_nowUseTime = glfwGetTime() - _startTime;
 			this->_sprite->setNowAnimate_No(int((_nowUseTime / _needTime) * 12));
-			cout << int((_nowUseTime / _needTime) * 12) << endl;
 
 			if ((_nowUseTime / _needTime) >= 1) {
 				autoCook = false;

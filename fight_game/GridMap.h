@@ -10,6 +10,7 @@
 #include"MeatBoxBuilder.h"
 #include"TableBuilder.h"
 #include"TrashcanBuilder.h"
+#include"FormerBuilder.h"
 #include"BunBoxBuilder.h"
 class Player;
 
@@ -20,7 +21,7 @@ private:
 public:
 	const int mapWidth = 10;
 	const int mapHight = 6;
-	const int tileWidth = 100;
+	const int tileWidth = 150;
 	std::vector<Tile*>* _tileArray;
 	std::vector<Sprite*>*_spriteHighLightSignArray;
 	void drawMap(double deltaTime);

@@ -111,6 +111,9 @@
     <ClCompile Include="takeThing.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
+    <ClCompile Include="Conbine.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="loadTGA.h">
@@ -252,6 +255,15 @@
       <Filter>標頭檔\map\TileBuilder</Filter>
     </ClInclude>
     <ClInclude Include="takeThing.h">
+      <Filter>標頭檔\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="Former.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="FormerBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="Conbine.h">
       <Filter>標頭檔\Interaction</Filter>
     </ClInclude>
   </ItemGroup>

@@ -48,7 +48,7 @@ void GridMap::drawMap(double deltaTime)
 			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
 			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
 
-			//cout << "getNowAnimate_No= " << tile->getSprite()->getNowAnimate_No() << endl;
+
 			tile->getSprite()->getAnimator()->play(tile->getSprite()->getNowAnimate_No(), deltaTime);
 			tile->getHighLightSignSprite()->getAnimator()->play(tile->getHighLightSignSprite()->getNowAnimate_No(), deltaTime);
 
@@ -87,7 +87,7 @@ GridMap::GridMap(const char * filename)
 	TableBuilder* tableBuilder = new TableBuilder();
 	TrashcanBuilder* trashcanBuilder = new TrashcanBuilder();
 	BunBoxBuilder* bunBoxBuilder = new BunBoxBuilder();
-	//cout << "shit like";
+	FormerBuilder* formerBuilder = new FormerBuilder();
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
 
@@ -114,9 +114,11 @@ GridMap::GridMap(const char * filename)
 		case TileType::BUNBOX:
 			this->_tileArray->push_back(mapBuildDirector->Create(bunBoxBuilder, pos));
 			break;
+		case TileType::FORMER:
+			this->_tileArray->push_back(mapBuildDirector->Create(formerBuilder, pos));
+			break;
 		default:
 			break;
-			//cout << "shit like" << endl;
 		}
 	
 

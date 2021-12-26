@@ -18,7 +18,11 @@ public:
 	Sprite* getSprite();
 	void update();
 	virtual int getType()=0;
+	void setSpriteOffset(Vec2 off) {this->_spriteOffset=off;}
+	Vec2 getSpriteOffset() { return this->_spriteOffset; }
+
 protected:
+	Vec2 _spriteOffset;
 	Vec2 _pos;
 	int _id_InTheScene;
 	Sprite *_sprite;

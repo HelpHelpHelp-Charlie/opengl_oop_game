@@ -7,7 +7,7 @@ bool TakeThing::Take(bool trigger, Player * player, Tile * tile,bool call)
 		
 		if (this->enable&&trigger&&!player->getGrabOrPlace() && tile->getIsGrabingThing() && !player->getIsGrabingThing()) {
 			player->setGrabEntityID(tile->getGrabEntityID());
-			player->setIsGrabingThing(true);cout << "ff"<<endl;
+			player->setIsGrabingThing(true);
 			tile->setIsGrabingThing(false);
 			this->enable = false;
 			return true;

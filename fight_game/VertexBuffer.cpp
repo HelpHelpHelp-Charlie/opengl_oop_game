@@ -53,7 +53,6 @@ void VertexBuffer::configureVertexAttributes()
 	glVertexPointer(3, GL_FLOAT, _stride, _positionOffset);
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	glTexCoordPointer(2, GL_FLOAT, _stride, _textureOffset);
-//	std::cout << _vertexBufferID << std::endl;
 }
 
 void VertexBuffer::renderVertexBuffer()

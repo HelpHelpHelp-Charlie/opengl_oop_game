@@ -16,26 +16,9 @@ void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, s
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	gridMap->drawMap(deltaTime);		
-	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
-		//	cout << i << " ";
-		Entity *entity = *iterator;
-		if (entity->getSprite()->getAnimator() != NULL) {
-			//glLoadIdentity();
-			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
-			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);	
-			glLoadIdentity();
-			glTranslatef(entity->getSprite()->getPosition().x, entity->getSprite()->getPosition().y, 0);
-			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
-		}
-
-		//cout << endl;
-	}
-	glPushMatrix;
-
-	int i = 0;
+	gridMap->drawMap(deltaTime);	
+int i = 0;
 	for (std::vector<Sprite *>::iterator iterator = spriteArray->begin(); iterator != spriteArray->end(); iterator++) {
-	//	cout << i << " ";
 		i++;
 		Sprite *sprite = *iterator;
 		if (sprite->getAnimator() != NULL) {
@@ -45,8 +28,22 @@ void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, s
 			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
 			sprite->getAnimator()->play(sprite->getNowAnimate_No(),deltaTime);
 		}
-		//cout << endl;
 	}   
+
+
+	glPushMatrix;
+	for (std::vector<Entity *>::iterator iterator = entityArray->begin(); iterator != entityArray->end(); iterator++) {
+		Entity *entity = *iterator;
+		if (entity->getSprite()->getAnimator() != NULL) {
+			//glLoadIdentity();
+			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
+			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);	
+			glLoadIdentity();
+			glTranslatef(entity->getSprite()->getPosition().x, entity->getSprite()->getPosition().y, 0);
+			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
+		}
+	}
+	
 	glPopMatrix;
 
 	glfwSwapBuffers(_window);
@@ -60,13 +57,14 @@ RenderSystem& RenderSystem::getRenderSystem()
 	static RenderSystem *renderSystem = NULL;
 	if (renderSystem == NULL) {
 		renderSystem = new RenderSystem();
-		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-		glViewport(0, 0, 800 * 16 / 9, 800);
+		//glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glViewport(0, 0, 1000 * 16 / 9, 1000);
 
 		glEnable(GL_TEXTURE_2D);
 
 		glMatrixMode(GL_PROJECTION);
-		glOrtho(0.0f, 800 * 16 / 9, 0.0f, 800, -1, 1);
+		glOrtho(0.0f, 1000 * 16 / 9, 0.0f, 1000, -1, 1);
 		glMatrixMode(GL_MODELVIEW);
 		glEnable(GL_BLEND);
 	}

@@ -145,6 +145,7 @@
     <ClCompile Include="AbstractInteraction.cpp" />
     <ClCompile Include="Animation2D.cpp" />
     <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="Conbine.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="grabFromBoxh.cpp" />
@@ -175,9 +176,12 @@
     <ClInclude Include="BunBox.h" />
     <ClInclude Include="BunBoxBuilder.h" />
     <ClInclude Include="collision2D.h" />
+    <ClInclude Include="Conbine.h" />
     <ClInclude Include="ConcreteIngredientFactory.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="Former.h" />
+    <ClInclude Include="FormerBuilder.h" />
     <ClInclude Include="grabFromBoxh.h" />
     <ClInclude Include="HighLightSign.h" />
     <ClInclude Include="Ingredient.h" />

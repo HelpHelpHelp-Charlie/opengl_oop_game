@@ -34,12 +34,11 @@ void ResourceManager::objectAnimator(int object_no) {
 		int normalizeFrameCounter = 0;
 		_vertexBufferArray = new std::vector<VertexBuffer *>();
 		for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
-
-			VertexData vertices[4] = {
-				{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 96 ,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
-				{ { 96 ,104 ,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
-				{ { 0,104,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+				VertexData vertices[4] = {
+					{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
+					{ { 200,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+					{ { 200,200,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+					{ { 0,200,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
 			};
 			normalizeFrameCounter++;
 			VertexBuffer *vertexBuffer = new VertexBuffer(
@@ -67,7 +66,7 @@ ResourceManager::ResourceManager()
 	
 
 	_textureArray = new std::vector<Texture *>();
-	Texture *Texture_Shark = new Texture("player.tga", Vec4(96, 104, 8, 10));
+	Texture *Texture_Shark = new Texture("ame.tga", Vec4(128, 128, 7, 8));
 	_textureArray->push_back(Texture_Shark);
 
 	_animatorArray = new std::vector<Animator *>();
@@ -77,13 +76,14 @@ ResourceManager::ResourceManager()
 
 
 	Animation2D *up_run = new Animation2D("up_run.txt", 30);
-	Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
+	Animation2D *idle_up = new Animation2D("idle_up.txt", 200);
 	Animation2D *down_run = new Animation2D("down_run.txt", 30);
-	Animation2D *idle_down = new Animation2D("idle_down.txt", 150);
+	Animation2D *idle_down = new Animation2D("idle_down.txt", 200);
 	Animation2D *left_run = new Animation2D("left_run.txt", 30);
-	Animation2D *idle_left = new Animation2D("idle_left.txt", 150);
+	Animation2D *idle_left = new Animation2D("idle_left.txt", 200);
 	Animation2D *right_run = new Animation2D("right_run.txt", 30);
-	Animation2D *idle_right = new Animation2D("idle_right.txt", 150);
+	Animation2D *idle_right = new Animation2D("idle_right.txt", 200);
+	Animation2D *GP = new Animation2D("GP.txt", 20);
 
 
 	
@@ -95,6 +95,7 @@ ResourceManager::ResourceManager()
 	_animatorArray->at(0)->_animation2DArray->push_back(idle_left);
 	_animatorArray->at(0)->_animation2DArray->push_back(right_run);
 	_animatorArray->at(0)->_animation2DArray->push_back(idle_right);
+	_animatorArray->at(0)->_animation2DArray->push_back(GP);
 
 	objectAnimator(0);
 

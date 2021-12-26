@@ -5,9 +5,10 @@ void Player::update()
 	this->_position = this->_position +this->_velocity;
 	this->_sprite->setPosition( Vec2(this->_position.x-this->playerWidth/2, this->_position.y- this->playerWidth / 2));
 	this->_atGridTile=this->_gridmap->getGridLocationInMap(this->_position);
-	//cout << _grabEntityID << endl;
-	if (this->_isGrabingThing)this->_entityManager->getEntityArr()->at(this->_entityManager->getIDarray().at(this->_grabEntityID))->setPos(this->_position);
-	//cout << _atGridTile<<endl; 
+	if (this->_isGrabingThing) 
+		this->_entityManager->getEntityArr()->at(this->_entityManager->getIDarray().at(this->_grabEntityID))
+		->setPos(Vec2((this->_position.x-50) + 90*(this->getEyeVector().x), (this->_position.y - 50) +90* (this->getEyeVector().y)));
+
 }
 
 Vec2 Player::getAtGridTile()

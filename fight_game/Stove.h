@@ -34,7 +34,7 @@ public :
 			 this->_progressBar->show();
 			 this->_sprite->setNowAnimate_No(0);
 		} 
-		if( this->_grabFromBox->grab(this->_grabFromBox->trigger(this->getSprite()->getPosition(), player), player, IngredientType::COOKEDPATTIES)) {
+		if( this->_grabFromBox->grab(this->_grabFromBox->trigger(this->getSprite()->getPosition(), player), player, stoveOutput)) {
 			this->_progressBar->notShow();
 			this->_grabFromBox->setEnable(false);
 			this->_inputThing->setEnable(true);
@@ -48,7 +48,7 @@ private:
 	GrabFromBox *_grabFromBox;
 	ProgressBar *_progressBar;
 	InPutThing *_inputThing;
-	IngredientType stoveInput = IngredientType::MEAT;
+	IngredientType stoveInput = IngredientType::RAWPATTIES;
 	IngredientType stoveOutput = IngredientType::COOKEDPATTIES;
 
 };

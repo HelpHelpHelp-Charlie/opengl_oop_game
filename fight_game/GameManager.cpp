@@ -50,7 +50,7 @@ GameManager &GameManager::getGameManager()
 		glfwWindowHint(GLFW_GREEN_BITS, 8);
 		glfwWindowHint(GLFW_BLUE_BITS, 8);
 		glfwWindowHint(GLFW_ALPHA_BITS, 8);
-		GLFWwindow *window = glfwCreateWindow(1280, 720, "OverCooked", NULL, NULL);
+		GLFWwindow *window = glfwCreateWindow(1600, 1000, "OverCooked", NULL, NULL);
 		glfwSwapInterval(0);
 		glfwMakeContextCurrent(window);
 

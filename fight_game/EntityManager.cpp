@@ -29,7 +29,11 @@ int EntityManager::addNewEntity(IngredientType type)
 		this->_entityArr->push_back(bun);
 		break;
 	}
-
+	case IngredientType::RAWPATTIES: {
+		RawPatties* rawPatties = new RawPatties;
+		this->_entityArr->push_back(rawPatties);
+		break;
+	}
 	case IngredientType::COOKEDPATTIES: {
 		CookedPatties* cookedPatties = new CookedPatties;
 		this->_entityArr->push_back(cookedPatties);
@@ -52,14 +56,12 @@ void EntityManager::update()
 
 void EntityManager::removeEntity(int ID)
 {
-	cout << "before" << endl;
-	this->show();
+	//this->show();
 	this->_entityArr->erase(_entityArr->begin() + _IDarray.at(ID));
 	for (int i = ID; i < this->_IDarray.size(); i++) {
 		if (_IDarray.at(i) > 0)_IDarray.at(i)--;
 	}
-	cout << "after" << endl;
-	this->show();
+	//this->show();
 }
 
 void EntityManager::show()

@@ -43,14 +43,14 @@ void PlayerInputSystem::update()
 		) {
 
 		if (glfwGetKey(_window, GLFW_KEY_W) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, 3));
+			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, 5));
 			_currentPlayer->setNowAnimate_No(0);
 			_currentPlayer->setEyeVector(Vec2(0, 1));
 		}
 			
 
 		if (glfwGetKey(_window, GLFW_KEY_S) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, -3));
+			_currentPlayer->setVelocity(Vec2(_currentPlayer->getVelocity().x, -5));
 			_currentPlayer->setNowAnimate_No(2);
 			_currentPlayer->setEyeVector(Vec2(0,-1 ));
 		}
@@ -61,23 +61,18 @@ void PlayerInputSystem::update()
 
 
 		if (glfwGetKey(_window, GLFW_KEY_A) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(-3, _currentPlayer->getVelocity().y));
+			_currentPlayer->setVelocity(Vec2(-5, _currentPlayer->getVelocity().y));
 			_currentPlayer->setNowAnimate_No(4);
 			_currentPlayer->setEyeVector(Vec2(-1, 0));
 		}
 
 		if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_PRESS) {
-			_currentPlayer->setVelocity(Vec2(3, _currentPlayer->getVelocity().y));
+			_currentPlayer->setVelocity(Vec2(5, _currentPlayer->getVelocity().y));
 			_currentPlayer->setNowAnimate_No(6);
 			_currentPlayer->setEyeVector(Vec2(1, 0));
 		}
 
-		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS) {
-			this->_currentPlayer->setGrabOrPlace(true);
-		}
-		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
-			this->_currentPlayer->setGrabOrPlace(false);
-		}
+
 		if (glfwGetKey(_window, GLFW_KEY_P) == GLFW_PRESS) {
 			this->_currentPlayer->setIsGrabingThing (false);
 		}
@@ -87,7 +82,7 @@ void PlayerInputSystem::update()
 		}
 
 		if (glfwGetKey(_window, GLFW_KEY_D) == GLFW_RELEASE&&glfwGetKey(_window, GLFW_KEY_A) == GLFW_RELEASE&&
-			glfwGetKey(_window, GLFW_KEY_S) == GLFW_RELEASE&&glfwGetKey(_window, GLFW_KEY_W) == GLFW_RELEASE) {
+			glfwGetKey(_window, GLFW_KEY_S) == GLFW_RELEASE&&glfwGetKey(_window, GLFW_KEY_W) == GLFW_RELEASE&&_currentPlayer->getNowAnimate_No()!=8) {
 			if (_currentPlayer->getEyeVector().x==0&& _currentPlayer->getEyeVector().y == 1) {
 				_currentPlayer->setNowAnimate_No(1);
 			}else if (_currentPlayer->getEyeVector().x == 0 && _currentPlayer->getEyeVector().y == -1) {
@@ -98,6 +93,13 @@ void PlayerInputSystem::update()
 				_currentPlayer->setNowAnimate_No(7);
 			}
 
+		}	
+		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_PRESS) {
+			this->_currentPlayer->setGrabOrPlace(true);
+			_currentPlayer->setNowAnimate_No(8);
+		}
+		if (glfwGetKey(_window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
+			this->_currentPlayer->setGrabOrPlace(false);
 		}
 
 		//Vector2 currentMousePosition;
