@@ -1,7 +1,7 @@
 #include "RenderSystem.h"
 
 
-RenderSystem::RenderSystem() :_window(glfwGetCurrentContext())
+RenderSystem::RenderSystem():_window(glfwGetCurrentContext())
 {
 	std::cout << "RenderSystem is created" << std::endl;
 }
@@ -12,23 +12,23 @@ RenderSystem::~RenderSystem()
 
 }
 
-void RenderSystem::render(GridMap* gridMap,std::vector<Sprite *> *spriteArray, std::vector<Entity *> *entityArray,double deltaTime)
+void RenderSystem::render(GridMap* gridMap, std::vector<Sprite *> *spriteArray, std::vector<Entity *> *entityArray, UIComponentManager *_UI, double deltaTime)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	
-	gridMap->drawMap(deltaTime);	
-int i = 0;
+
+	gridMap->drawMap(deltaTime);
+	int i = 0;
 	for (std::vector<Sprite *>::iterator iterator = spriteArray->begin(); iterator != spriteArray->end(); iterator++) {
 		i++;
 		Sprite *sprite = *iterator;
 		if (sprite->getAnimator() != NULL) {
 			glLoadIdentity();
-			glTranslatef(sprite->getPosition().x, sprite->getPosition().y,0);
+			glTranslatef(sprite->getPosition().x, sprite->getPosition().y, 0);
 			//glRotatef(sprite->getRotation(), 0.0f, 0.0f, 1.0f);
 			//glScalef(sprite->getScale().x, sprite->getScale().y, 1);		
-			sprite->getAnimator()->play(sprite->getNowAnimate_No(),deltaTime);
+			sprite->getAnimator()->play(sprite->getNowAnimate_No(), deltaTime);
 		}
-	}   
+	}
 
 
 	glPushMatrix;
@@ -43,17 +43,22 @@ int i = 0;
 			entity->getSprite()->getAnimator()->play(entity->getSprite()->getNowAnimate_No(), deltaTime);
 		}
 	}
-	
+
 	glPopMatrix;
 
+
+	glPushMatrix;
+	_UI->drawUI(deltaTime);
+	glPopMatrix;
 	glfwSwapBuffers(_window);
 	glfwPollEvents();
 }
 
 
+
 RenderSystem& RenderSystem::getRenderSystem()
 {
-	
+
 	static RenderSystem *renderSystem = NULL;
 	if (renderSystem == NULL) {
 		renderSystem = new RenderSystem();

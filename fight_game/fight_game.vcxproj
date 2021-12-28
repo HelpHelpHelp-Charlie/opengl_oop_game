@@ -143,9 +143,10 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\glad\src\glad.c" />
     <ClCompile Include="AbstractInteraction.cpp" />
+    <ClCompile Include="AbstractUIComponent.cpp" />
     <ClCompile Include="Animation2D.cpp" />
     <ClCompile Include="Animator.cpp" />
-    <ClCompile Include="Conbine.cpp" />
+    <ClCompile Include="Combine.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="grabFromBoxh.cpp" />
@@ -164,10 +165,12 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="takeThing.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UIComponentManager.cpp" />
     <ClCompile Include="Vec2.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractFormula.h" />
     <ClInclude Include="AbstractIngredientFactory.h" />
     <ClInclude Include="AbstractInteraction.h" />
     <ClInclude Include="Animation2D.h" />
@@ -176,7 +179,8 @@
     <ClInclude Include="BunBox.h" />
     <ClInclude Include="BunBoxBuilder.h" />
     <ClInclude Include="collision2D.h" />
-    <ClInclude Include="Conbine.h" />
+    <ClInclude Include="Combine.h" />
+    <ClInclude Include="ConcreteFormula.h" />
     <ClInclude Include="ConcreteIngredientFactory.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityManager.h" />
@@ -186,8 +190,11 @@
     <ClInclude Include="HighLightSign.h" />
     <ClInclude Include="Ingredient.h" />
     <ClInclude Include="InPutThing.h" />
+    <ClInclude Include="machingSystem.h" />
     <ClInclude Include="MapBuildDirector.h" />
     <ClInclude Include="PlaceThing.h" />
+    <ClInclude Include="PlateBox.h" />
+    <ClInclude Include="PlateBoxBuilder.h" />
     <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="GameManager.h" />
@@ -208,11 +215,15 @@
     <ClInclude Include="Table.h" />
     <ClInclude Include="TableBuilder.h" />
     <ClInclude Include="takeThing.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TileBuilder.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Trashcan.h" />
     <ClInclude Include="TrashcanBuilder.h" />
+    <ClInclude Include="AbstractUIComponent.h" />
+    <ClInclude Include="UIComponentManager.h" />
     <ClInclude Include="Vec2.h" />
     <ClInclude Include="Vec4.h" />
     <ClInclude Include="Vec8.h" />

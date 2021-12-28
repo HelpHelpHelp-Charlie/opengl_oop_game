@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <glfw3.h>
-#include<gl\GLUT.H>
+//#include<gl\GLUT.H>
 #include<glad\glad.h>
 #include"Texture.h"
 #include"VertexData.h"

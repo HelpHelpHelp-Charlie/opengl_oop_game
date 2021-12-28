@@ -4,13 +4,14 @@
 #include"Tile.h"
 #include"PlaceThing.h"
 #include"takeThing.h"
+#include"Combine.h"
 class Table:
 	public Tile
 {
 public:
 	Table(Sprite* e) { _sprite = e;  this->_HighLightSign = new HighLightSign(this->getSprite()->getPosition()); 
 	this->_placeThing = new PlaceThing(); this->_entityManager = &EntityManager::getEntityManager();
-	this->_takeThing = new TakeThing();
+	this->_takeThing = new TakeThing(); this->_combine = new Combine();
 	}
 	~Table();
 	 Sprite* getSprite() { return this->_sprite;}
@@ -21,9 +22,11 @@ public:
 		 if (this->_isGrabingThing)this->_entityManager->getEntityArr()->at(this->_entityManager->getIDarray().at(this->_grabEntityID))->setPos(this->_sprite->getPosition());
 
 		 this->_takeThing->Take(this->_placeThing->trigger(this->getSprite()->getPosition(), player), player, this,!this->_placeThing->getEnable());
+		 this->_combine->CombineOnTile(this->_combine->trigger(this->getSprite()->getPosition(), player),player,this);
 	 }
 
 private:
+	Combine* _combine;
 	PlaceThing* _placeThing;
 	TakeThing* _takeThing;
 };

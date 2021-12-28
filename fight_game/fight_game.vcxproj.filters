@@ -37,6 +37,9 @@
     <Filter Include="標頭檔\Ingredient">
       <UniqueIdentifier>{56066d48-6d5a-4102-9c5a-deaccb0c22db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="標頭檔\UI">
+      <UniqueIdentifier>{bf8235a5-5dd7-4653-ae28-d9423ea99ddf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -111,7 +114,13 @@
     <ClCompile Include="takeThing.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
-    <ClCompile Include="Conbine.cpp">
+    <ClCompile Include="Combine.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="UIComponentManager.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractUIComponent.cpp">
       <Filter>原始程式檔</Filter>
     </ClCompile>
   </ItemGroup>
@@ -263,8 +272,35 @@
     <ClInclude Include="FormerBuilder.h">
       <Filter>標頭檔\map\TileBuilder</Filter>
     </ClInclude>
-    <ClInclude Include="Conbine.h">
+    <ClInclude Include="AbstractFormula.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcreteFormula.h">
+      <Filter>標頭檔</Filter>
+    </ClInclude>
+    <ClInclude Include="machingSystem.h">
+      <Filter>標頭檔\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Combine.h">
       <Filter>標頭檔\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="PlateBox.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="PlateBoxBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
+    <ClInclude Include="UIComponentManager.h">
+      <Filter>標頭檔\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractUIComponent.h">
+      <Filter>標頭檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>標頭檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>標頭檔\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

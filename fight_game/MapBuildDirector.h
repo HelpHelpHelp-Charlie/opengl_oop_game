@@ -10,6 +10,7 @@
 #include"Table.h"
 #include"BunBox.h"
 #include"Former.h"
+#include"PlateBox.h"
 class MapBuildDirector {
 	//Tile *_tile;
 public:

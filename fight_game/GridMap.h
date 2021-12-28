@@ -12,12 +12,13 @@
 #include"TrashcanBuilder.h"
 #include"FormerBuilder.h"
 #include"BunBoxBuilder.h"
+#include"PlateBoxBuilder.h"
 class Player;
 
 class GridMap {
 private:
 	void readFile(const char * filename);
-
+	Sprite* _backGround;
 public:
 	const int mapWidth = 10;
 	const int mapHight = 6;
@@ -31,6 +32,7 @@ public:
 	//void update(Vec2 PlayerPos, Vec2 playerLookAt);
 	void update(Player* player);
 	GridMap(const char* filename);
+	void makeBackGround() ;
 	
 };
 #endif

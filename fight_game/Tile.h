@@ -6,8 +6,9 @@
 #include"HighLightSign.h"
 #include"EntityManager.h"
 
+
 enum TileType {
-	TABLE,STOVE,MEATBOX,TRASHCAN,BUNBOX,FORMER,NumberOfAnimalItem
+	TABLE,STOVE,MEATBOX,TRASHCAN,BUNBOX,FORMER,PLATEBOX,NumberOfAnimalItem
 };
 
 

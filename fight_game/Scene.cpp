@@ -20,6 +20,12 @@ std::vector<Player*>* Scene::getChildrenPlayer()
 	return this->_childrenPlayer;
 }
 
+UIComponentManager * Scene::getUIComponentManager()
+{
+	return this->_uiComponentManager;
+}
+
+
 GridMap * Scene::getGridMap()
 {
 	return this->_gridmap;
@@ -38,8 +44,9 @@ Scene::Scene()
 	_childrenSprite = new std::vector<Sprite *>();
 	_childrenPlayer = new std::vector<Player *>();
 	_childrenEntity = new std::vector<Entity *>();
+	_childrenUIComponent = new std::vector<AbstractUIComponent *>();
 	ResourceManager *resourceManager = &ResourceManager::getResourceManager();
-
+	this->_uiComponentManager= &UIComponentManager::getUIComponentManager();
 	
 	///////////map initialize
 	this->_gridmap = new GridMap("scene_1_map.txt");
@@ -52,16 +59,8 @@ Scene::Scene()
 
 	////////// sprite initialize for render
 
-
    ///////////
-	//_childrenSprite->insert(_childrenSprite->end(), this->_gridmap->_spriteArray->begin(), this->_gridmap->_spriteArray->end());
 	_childrenSprite->push_back(mainPlayerSprite);
-	//_childrenSprite->insert(_childrenSprite->end(), this->_gridmap->_spriteHighLightSignArray->begin(), this->_gridmap->_spriteHighLightSignArray->end());
-	
-
-
-
-	//_entityManager->addNewEntity(IngredientType::MEAT,Vec2(400,400));
 }
 
 Scene::~Scene()

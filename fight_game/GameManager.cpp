@@ -22,7 +22,7 @@ void GameManager::runGameLoop()
 	while (_running)
 	{
 
-		_renderSystem->render(scene->getGridMap(), scene->getChildrenSprite(), scene->getChildrenEntity(), deltaTime);
+		_renderSystem->render(scene->getGridMap(), scene->getChildrenSprite(), scene->getChildrenEntity(), scene->getUIComponentManager(),deltaTime);
 		deltaTime += (glfwGetTime() - lastTime)*Update_per_second;
 		lastTime = glfwGetTime();
 
@@ -34,6 +34,7 @@ void GameManager::runGameLoop()
 			_movementSystem->update(scene->getChildrenPlayer());
 			//scene->getGridMap()->update(scene->getChildrenPlayer()->at(0)->getAtGridTile(), scene->getChildrenPlayer()->at(0)->getEyeVector());
 			scene->getGridMap()->update(scene->getChildrenPlayer()->at(0));
+			scene->getUIComponentManager()->update();
 			--deltaTime;
 		}
 		scene->update();

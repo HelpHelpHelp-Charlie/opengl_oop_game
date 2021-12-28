@@ -12,7 +12,7 @@
 
 
 enum TileBuilderType {
-	TABLEBuilder, STOVEBuilder, MEATBOXBuilder,TRASHCANBuilder, BUNBOXBuilder,FORMERBuilder,NumberOfBuilderItem
+	TABLEBuilder, STOVEBuilder, MEATBOXBuilder,TRASHCANBuilder, BUNBOXBuilder,FORMERBuilder,PLATEBOXBuilder,NumberOfBuilderItem
 };
 
 class TileBuilder 

@@ -39,7 +39,12 @@ void GridMap::readFile(const char * filename)
 
 
 void GridMap::drawMap(double deltaTime)
-{
+{	
+	if (this->_backGround->getAnimator() != NULL) {
+		glLoadIdentity();
+		glTranslatef(this->_backGround->getPosition().x, this->_backGround->getPosition().y, 0);
+		this->_backGround->getAnimator()->play(this->_backGround->getNowAnimate_No(), deltaTime);
+	}
 	for (std::vector<Tile*>::iterator iterator = this->_tileArray->begin(); iterator != this->_tileArray->end(); iterator++) {
 		Tile *tile = *iterator;
 		if (tile->getSprite()->getAnimator() != NULL) {
@@ -59,6 +64,7 @@ void GridMap::drawMap(double deltaTime)
 
 		}
 	}
+
 }
 
 Vec2 GridMap::getGridLocationInMap(Vec2 loc)
@@ -88,6 +94,7 @@ GridMap::GridMap(const char * filename)
 	TrashcanBuilder* trashcanBuilder = new TrashcanBuilder();
 	BunBoxBuilder* bunBoxBuilder = new BunBoxBuilder();
 	FormerBuilder* formerBuilder = new FormerBuilder();
+	PlateBoxBuilder* plateBoxBuilder = new PlateBoxBuilder();
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
 
@@ -117,6 +124,8 @@ GridMap::GridMap(const char * filename)
 		case TileType::FORMER:
 			this->_tileArray->push_back(mapBuildDirector->Create(formerBuilder, pos));
 			break;
+		case TileType::PLATEBOX:
+			this->_tileArray->push_back(mapBuildDirector->Create(plateBoxBuilder, pos));
 		default:
 			break;
 		}
@@ -125,4 +134,61 @@ GridMap::GridMap(const char * filename)
 		
 	}	
 
+	makeBackGround();
+
+}
+
+void GridMap::makeBackGround()
+{
+	std::vector<Texture *>*_textureArray = new std::vector<Texture *>();
+	Texture *Texture_Shark = new Texture("back.tga", Vec4( 800,500, 1,1));
+	_textureArray->push_back(Texture_Shark);
+
+	std::vector<Animator *>*_animatorArray = new std::vector<Animator *>();
+
+	Animator *player = new Animator();
+	_animatorArray->push_back(player);
+
+
+	Animation2D *a = new Animation2D(Vec4(0,500,800,500), 30);
+	_animatorArray->at(0)->_animation2DArray->push_back(a);
+
+
+
+
+	int animation2DCounter = 0;
+	std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>();
+	for (std::vector<Animation2D*>::iterator animatorIterator = _animatorArray->at(0)->_animation2DArray->begin();
+		animatorIterator != _animatorArray->at(0)->_animation2DArray->end(); animatorIterator++) {
+
+		normalizeFrames = _animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->getNormallizeFramesArray(_textureArray->at(0)->getTextureCutSetting());
+
+
+		int normalizeFrameCounter = 0;
+		std::vector<VertexBuffer *>* _vertexBufferArray = new std::vector<VertexBuffer *>();
+		for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
+			VertexData vertices[4] = {
+				{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 1600,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 1600,1000,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+				{ { 0,1000,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+			};
+			normalizeFrameCounter++;
+			VertexBuffer *vertexBuffer = new VertexBuffer(
+				vertices,
+				sizeof(vertices),
+				GL_QUADS,
+				4,
+				sizeof(VertexData),
+				_textureArray->at(0),
+				(GLvoid*)offsetof(VertexData, positionCoordinates),
+				(GLvoid*)offsetof(VertexData, textureCoordinates));
+			_vertexBufferArray->push_back(vertexBuffer);
+		}
+
+		_animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(_vertexBufferArray);
+		animation2DCounter++;
+	}
+
+	this->_backGround = new Sprite(_animatorArray->at(0), Vec2(0,0));
 }

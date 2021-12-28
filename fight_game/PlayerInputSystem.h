@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include  <glfw3.h>
-#include<gl\GLUT.H>
+
 #include "Sprite.h"
 #include "Vec2.h"
 #include"Player.h"

@@ -3,7 +3,7 @@
 #define __FightGame__Ingredient__
 #include "Entity.h"
 enum IngredientType {
-	PLATE, MEAT, RAWPATTIES, COOKEDPATTIES, BUN, BUGGER, PLATE_MEAT, PLATE_BUN, PLATE_BUGGER, NumberOfIngredientItem
+	PLATE, MEAT, RAWPATTIES, COOKEDPATTIES, BUN, BUGER, PLATE_PATTIES, PLATE_BUN, PLATE_BUGER, NumberOfIngredientItem
 };
 //const char* ToString(IngredientType value)
 //{

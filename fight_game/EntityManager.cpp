@@ -39,7 +39,33 @@ int EntityManager::addNewEntity(IngredientType type)
 		this->_entityArr->push_back(cookedPatties);
 		break;
 	}
+	case IngredientType::PLATE: {
+		Plate* plate = new Plate;
+		this->_entityArr->push_back(plate);
+		break;
+	}
+	case IngredientType::BUGER: {
+		Buger* buger = new Buger;
+		this->_entityArr->push_back(buger);
+		break;
+	}
+	case IngredientType::PLATE_BUGER: {
+		Plate_Buger* buger = new Plate_Buger;
+		this->_entityArr->push_back(buger);
+		break;
+	}
+	case IngredientType::PLATE_BUN: {
+		Plate_Bun* buger = new Plate_Bun;
+		this->_entityArr->push_back(buger);
+		break;
+	}
+	case IngredientType::PLATE_PATTIES: {
+		Plate_Patties* buger = new Plate_Patties;
+		this->_entityArr->push_back(buger);
+		break;
+	}
 
+	
 	}
 	this->_IDarray.push_back(_entityArr->size() - 1);
 	return this->_IDarray.size() - 1;
