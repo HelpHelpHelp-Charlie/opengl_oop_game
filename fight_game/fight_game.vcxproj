@@ -192,10 +192,13 @@
     <ClInclude Include="InPutThing.h" />
     <ClInclude Include="machingSystem.h" />
     <ClInclude Include="MapBuildDirector.h" />
+    <ClInclude Include="PickUpBar.h" />
+    <ClInclude Include="PickUpBarBuilder.h" />
     <ClInclude Include="PlaceThing.h" />
     <ClInclude Include="PlateBox.h" />
     <ClInclude Include="PlateBoxBuilder.h" />
     <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ScoreBoard.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GridMap.h" />

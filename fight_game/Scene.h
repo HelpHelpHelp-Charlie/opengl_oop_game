@@ -21,6 +21,7 @@ private:
 	UIComponentManager* _uiComponentManager;
 	GridMap*_gridmap;
 	EntityManager* _entityManager;
+	int score=0;
 public:
 	std::vector<Entity *>* getChildrenEntity();
     std::vector<Sprite *>* getChildrenSprite();

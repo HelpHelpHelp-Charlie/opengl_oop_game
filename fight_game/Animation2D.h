@@ -15,6 +15,7 @@ class Animation2D
 public:
 	Animation2D(const char* filename,float speed);
 	Animation2D(Vec4 newframe, float speed);
+	Animation2D::Animation2D(Vec4 newframe, float speed, int frameSetNum);
 	~Animation2D();
 
 	std::vector<Vec4 *>* getNormallizeFramesArray(Vec4 TextureCutSetting);

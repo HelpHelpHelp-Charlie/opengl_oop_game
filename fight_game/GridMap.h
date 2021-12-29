@@ -13,6 +13,7 @@
 #include"FormerBuilder.h"
 #include"BunBoxBuilder.h"
 #include"PlateBoxBuilder.h"
+#include"PickUpBarBuilder.h"
 class Player;
 
 class GridMap {

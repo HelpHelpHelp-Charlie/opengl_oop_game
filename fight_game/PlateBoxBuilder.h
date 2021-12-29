@@ -17,13 +17,13 @@ public:
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("PlateBox.tga", Vec4(128, 128, 4, 1));
+		this->_texture = new Texture("PlateBox.tga", Vec4(256, 256, 4, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
 
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
-		Animation2D *MeatBox_take = new Animation2D("MeatBox_take.txt", 30);
+		Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 256, 256, 256), 30);
+		Animation2D *MeatBox_take = new Animation2D("Plate_take.txt", 30);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_take);
 		//this->_animator->_animation2DArray->push_back(idle_up);
@@ -66,7 +66,7 @@ public:
 		Sprite *m_sprite = new Sprite(this->_animatorArray->at(0), pos);
 		Tile *_tile = new PlateBox(m_sprite);
 
-		return _tile;
+		return _tile;	
 	}
 
 

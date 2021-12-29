@@ -56,7 +56,7 @@ void GridMap::drawMap(double deltaTime)
 
 			tile->getSprite()->getAnimator()->play(tile->getSprite()->getNowAnimate_No(), deltaTime);
 			tile->getHighLightSignSprite()->getAnimator()->play(tile->getHighLightSignSprite()->getNowAnimate_No(), deltaTime);
-
+			
 
 			glLoadIdentity();
 			glTranslatef(tile->getSprite()->getPosition().x, tile->getSprite()->getPosition().y-20, 0);
@@ -95,6 +95,7 @@ GridMap::GridMap(const char * filename)
 	BunBoxBuilder* bunBoxBuilder = new BunBoxBuilder();
 	FormerBuilder* formerBuilder = new FormerBuilder();
 	PlateBoxBuilder* plateBoxBuilder = new PlateBoxBuilder();
+	PickUpBarBuilder* pickUpBarBuilder = new PickUpBarBuilder();
 	this->_tileArray = new vector<Tile*>;
 	for (std::vector<Vec4 *>::iterator iterator = _mapinfo->begin(); iterator != _mapinfo->end(); iterator++) {
 
@@ -126,6 +127,10 @@ GridMap::GridMap(const char * filename)
 			break;
 		case TileType::PLATEBOX:
 			this->_tileArray->push_back(mapBuildDirector->Create(plateBoxBuilder, pos));
+			break;
+		case TileType::PICKUPBAR:
+			this->_tileArray->push_back(mapBuildDirector->Create(pickUpBarBuilder, pos));
+			break;
 		default:
 			break;
 		}
@@ -141,7 +146,7 @@ GridMap::GridMap(const char * filename)
 void GridMap::makeBackGround()
 {
 	std::vector<Texture *>*_textureArray = new std::vector<Texture *>();
-	Texture *Texture_Shark = new Texture("back.tga", Vec4( 800,500, 1,1));
+	Texture *Texture_Shark = new Texture("back.tga", Vec4( 1600,1000, 3,1));
 	_textureArray->push_back(Texture_Shark);
 
 	std::vector<Animator *>*_animatorArray = new std::vector<Animator *>();
@@ -150,10 +155,8 @@ void GridMap::makeBackGround()
 	_animatorArray->push_back(player);
 
 
-	Animation2D *a = new Animation2D(Vec4(0,500,800,500), 30);
+	Animation2D *a = new Animation2D("back.txt", 100);
 	_animatorArray->at(0)->_animation2DArray->push_back(a);
-
-
 
 
 	int animation2DCounter = 0;

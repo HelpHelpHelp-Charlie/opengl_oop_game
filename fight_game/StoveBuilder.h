@@ -14,12 +14,12 @@ public:
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("Stove.tga", Vec4(128, 128, 5, 1));
+		this->_texture = new Texture("Stove.tga", Vec4(256, 256, 5, 1));
 		//this->_texture = new Texture("Ingredient.tga", Vec4(128, 128, 9, 1));
 
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
+		Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 256,256,256), 30);
 		Animation2D *stove_cook = new Animation2D("stove_cook.txt", 30);
 		//Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 256, 128, 128), 30);
 		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);

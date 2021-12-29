@@ -1,6 +1,19 @@
 #include "Animation2D.h"
 
 
+Animation2D::Animation2D(Vec4 newframe, float speed,int frameSetNum) : anim_cursor(0),
+current_frame_indx(0),
+speed(speed)
+{
+	_frames = new vector<Vec4*>;
+	for (int j = 0; j < frameSetNum; j++) {
+	Vec4 *frame = new Vec4(newframe.x+ newframe.z*j, newframe.y, newframe.z, newframe.w);
+	_frames->push_back(frame);
+
+	}	
+	frames_count = (int)_frames->size();
+}
+
 Animation2D::Animation2D(Vec4 newframe, float speed) : anim_cursor(0),
 current_frame_indx(0),
 speed(speed)

@@ -22,7 +22,7 @@ public:
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
 
-		Animation2D *MeatBox_idle = new Animation2D("MeatBox_idle.txt", 30);
+		Animation2D *MeatBox_idle = new Animation2D(Vec4(0, 128, 128, 128), 30);
 		Animation2D *MeatBox_take = new Animation2D("MeatBox_take.txt", 30);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
 		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_take);

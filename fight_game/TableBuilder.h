@@ -13,16 +13,15 @@ public:
 		this->_vertexBufferArray = new std::vector<VertexBuffer *>();
 		this->_animatorArray = new std::vector<Animator *>();
 
-		this->_texture = new Texture("table.tga", Vec4(128, 128, 4, 1));
-
+		//this->_texture = new Texture("table.tga", Vec4(128, 128, 4, 1));
+		this->_texture = new Texture("TableCy.tga", Vec4(128, 128, 2, 1));
 		Animator *player = new Animator();
 		this->_animatorArray->push_back(player);
 
-		Animation2D *MeatBox_idle = new Animation2D("table.txt", 30);
-		//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
-		this->_animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
-		//this->_animator->_animation2DArray->push_back(idle_up);
-
+		Animation2D *a = new Animation2D(Vec4(0,128,128, 128), 30);
+		this->_animatorArray->at(0)->_animation2DArray->push_back(a);
+		Animation2D *b = new Animation2D(Vec4(0, 256, 128, 128), 30);
+		this->_animatorArray->at(0)->_animation2DArray->push_back(b);
 
 		int animation2DCounter = 0;
 		std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>;

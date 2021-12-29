@@ -10,7 +10,7 @@ private:
 	Text* _text1;
 	Text* _text2;
 	Text* _text3;
-	double totalTime = 30;
+	double totalTime = 180;
 	double startTime;
 protected:
 public:
@@ -18,15 +18,15 @@ public:
 		//this->_position = Vec2(100, 100);
 		this->imgName = "timer.tga";
 		//this->AnimationFrameData="timer.txt";
-		this->HeightandWidth = Vec2(400, 200);
-		this->autoMakeSprite(Vec2(400, 400), Vec4(256, 128, 5, 5), 24);
-		this->getSprite()->setPosition(Vec2(0, 800));
+		this->HeightandWidth = Vec2(370, 110);
+		this->autoMakeSprite(Vec2(400, 400), Vec4(256, 128,  9,3), 9,3);
+		this->getSprite()->setPosition(Vec2(10, 890));
 		this->_text1 = new Text();
 		this->_text2 = new Text();
 		this->_text3 = new Text();
-		this->_text1->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 70, this->getSprite()->getPosition().y + 30));
-		this->_text2->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 200, this->getSprite()->getPosition().y + 30));
-		this->_text3->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 280, this->getSprite()->getPosition().y + 30));
+		this->_text1->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 60, this->getSprite()->getPosition().y + 5));
+		this->_text2->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 180, this->getSprite()->getPosition().y + 5));
+		this->_text3->getSprite()->setPosition(Vec2(this->getSprite()->getPosition().x + 260, this->getSprite()->getPosition().y + 5));
 		this->startTime = glfwGetTime();
 	}
 
@@ -61,7 +61,8 @@ public:
 			this->_text1->setText(int(restTime / 60));
 			this->_text2->setText(int(int(int(restTime) % 60)) / 10);
 			this->_text3->setText(int(int(int(restTime) % 60)) % 10);
-			this->_sprite->setNowAnimate_No(int((passedTime / totalTime) * 24));
+				this->_sprite->setNowAnimate_No(int((passedTime / totalTime) * 9));		
+				//this->_sprite->setNowAnimate_No(1);
 		}
 
 	}

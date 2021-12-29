@@ -302,5 +302,14 @@
     <ClInclude Include="Text.h">
       <Filter>標頭檔\UI</Filter>
     </ClInclude>
+    <ClInclude Include="ScoreBoard.h">
+      <Filter>標頭檔\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PickUpBar.h">
+      <Filter>標頭檔\map\ConcreteTile</Filter>
+    </ClInclude>
+    <ClInclude Include="PickUpBarBuilder.h">
+      <Filter>標頭檔\map\TileBuilder</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

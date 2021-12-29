@@ -3,9 +3,10 @@
 UIComponentManager::UIComponentManager()
 {
 	this->_timer = new Timer();
-
+	this->_scoreBoard = new ScoreBoard();
 	this->_UIComponentArr = new std::vector<AbstractUIComponent*>;
 	this->_UIComponentArr->push_back(_timer);
+	this->_UIComponentArr->push_back(_scoreBoard);
 }
 
 std::vector<AbstractUIComponent*>* UIComponentManager::getUIComponentArr()

@@ -11,6 +11,7 @@
 #include"BunBox.h"
 #include"Former.h"
 #include"PlateBox.h"
+#include"PickUpBar.h"
 class MapBuildDirector {
 	//Tile *_tile;
 public:

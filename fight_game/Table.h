@@ -23,8 +23,10 @@ public:
 
 		 this->_takeThing->Take(this->_placeThing->trigger(this->getSprite()->getPosition(), player), player, this,!this->_placeThing->getEnable());
 		 this->_combine->CombineOnTile(this->_combine->trigger(this->getSprite()->getPosition(), player),player,this);
-	 }
 
+		this->_sprite->setNowAnimate_No((this->_isGrabingThing ? 1:  0)) ;
+	 }
+		
 private:
 	Combine* _combine;
 	PlaceThing* _placeThing;

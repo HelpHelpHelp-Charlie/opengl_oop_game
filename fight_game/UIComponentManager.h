@@ -4,16 +4,19 @@
 #include"Timer.h"
 #include<vector>
 #include"Timer.h"
+#include"ScoreBoard.h"
 class UIComponentManager {
 private:
 	std::vector<AbstractUIComponent*>* _UIComponentArr;
 	Timer *_timer;
+	ScoreBoard *_scoreBoard;
 	//std::vector<int>_IDarray;
 public:
 	UIComponentManager();
 	std::vector<AbstractUIComponent *>* getUIComponentArr();
 	void drawUI(double deltaTime);
 	void update();
+	ScoreBoard* getscoreBoard() { return this->_scoreBoard; }
 	//std::vector<int> getIDarray();
 	//int addNewEntity(IngredientType type);
 	//void update();
