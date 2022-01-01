@@ -1,123 +1,78 @@
-//
-//  Entity.cpp
-//  SimpleFPS
-//
-//  Created by Dimitriy Dounaev on 11/10/13.
-//  Copyright (c) 2013 Dimitriy Dounaev. All rights reserved.
-//
-
 #include "Entity.h"
 
-Animator *Entity::getAnimator()
+
+void Entity::makeSprite(Vec2 pos, Vec4 textureSetting)
 {
-    return _animator;
+	Texture *texture;
+	std::vector<VertexBuffer *> *vertexBufferArray;
+	std::vector<Animator *>*animatorArray;
+
+	vertexBufferArray = new std::vector<VertexBuffer *>();
+	animatorArray = new std::vector<Animator *>();
+	const char * a = this->imgName.c_str();
+	texture = new Texture(a, textureSetting);
+
+	Animator *player = new Animator();
+	animatorArray->push_back(player);
+	Animation2D *MeatBox_idle = new Animation2D(this->AnimationFrameData, 30);
+	//Animation2D *idle_up = new Animation2D("idle_up.txt", 150);
+	animatorArray->at(0)->_animation2DArray->push_back(MeatBox_idle);
+	//this->_animator->_animation2DArray->push_back(idle_up);
+
+
+	int animation2DCounter = 0;
+	std::vector<Vec4*> *normalizeFrames = new std::vector<Vec4*>;
+	for (std::vector<Animation2D*>::iterator animatorIterator = animatorArray->at(0)->_animation2DArray->begin();
+		animatorIterator != animatorArray->at(0)->_animation2DArray->end(); animatorIterator++) {
+
+		normalizeFrames = animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->getNormallizeFramesArray(texture->getTextureCutSetting());
+
+
+		int normalizeFrameCounter = 0;
+		vertexBufferArray = new std::vector<VertexBuffer *>();
+		for (std::vector<Vec4*>::iterator iterator = normalizeFrames->begin(); iterator != normalizeFrames->end(); iterator++) {
+			VertexData vertices[4] = {
+				{ { 0,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 120,0,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y } },
+				{ { 120,120,0 },{ normalizeFrames->at(normalizeFrameCounter)->x + normalizeFrames->at(normalizeFrameCounter)->z,normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } },
+				{ {0,120,0 },{ normalizeFrames->at(normalizeFrameCounter)->x, normalizeFrames->at(normalizeFrameCounter)->y - normalizeFrames->at(normalizeFrameCounter)->w } }
+			};
+			normalizeFrameCounter++;
+			VertexBuffer *vertexBuffer = new VertexBuffer(
+				vertices,
+				sizeof(vertices),
+				GL_QUADS,
+				4,
+				sizeof(VertexData),
+				texture,
+				(GLvoid*)offsetof(VertexData, positionCoordinates),
+				(GLvoid*)offsetof(VertexData, textureCoordinates));
+			vertexBufferArray->push_back(vertexBuffer);
+		}
+
+		animatorArray->at(0)->_animation2DArray->at(animation2DCounter)->setvertexBufferArray(vertexBufferArray);
+		animation2DCounter++;
+	}
+
+	this->_sprite = new Sprite(animatorArray->at(0), pos);
 }
 
-void Entity::setAnimator(Animator *newAnimator)
+void Entity::setID(int newID)
 {
-	_animator = newAnimator;
+	this->_id_InTheScene;
 }
 
-Vec2 Entity::getPosition()
+int Entity::getID()
 {
-    return _position;
+	return this->_id_InTheScene;
 }
 
-void Entity::setPosition(Vec2 newPosition)
+Sprite * Entity::getSprite()
 {
-    _position = newPosition;
+	return this->_sprite;
 }
 
-Vec2 Entity::getScale()
+void Entity::update()
 {
-    return _scale;
-}
-
-void Entity::setScale(Vec2 newScale)
-{
-    _scale = newScale;
-}
-
-GLfloat Entity::getRotation()
-{
-    return _rotation;
-}
-
-void Entity::setRotation(GLfloat newRotation)
-{
-    _rotation = newRotation;
-}
-
-Vec2 Entity::getVelocity()
-{
-    return _velocity;
-}
-
-void Entity::setVelocity(Vec2 newVelocity)
-{
-    _velocity = newVelocity;
-}
-
-Vec2 Entity::getScaleVelocity()
-{
-    return _scaleVelocity;
-}
-
-void Entity::setScaleVelocity(Vec2 newScaleVelocity)
-{
-    _scaleVelocity = newScaleVelocity;
-}
-
-GLfloat Entity::getRotationVelocity()
-{
-    return _rotationVelocity;
-}
-
-void Entity::setRotationVelocity(GLfloat newRotationVelocity)
-{
-    _rotationVelocity = newRotationVelocity;
-}
-
-Vec2 Entity::getEyeVector()
-{
-    return _eyeVector;
-}
-
-void Entity::setEyeVector(Vec2 newEyeVector)
-{
-    _eyeVector = newEyeVector;
-}
-
-Vec2 Entity::getUpVector()
-{
-    return _upVector;
-}
-
-void Entity::setUpVector(Vec2 newUpVector)
-{
-    _upVector = newUpVector;
-}
-
-int Entity::getNowAnimate_No()
-{
-	return this->_nowAnimate_No;
-}
-
-void Entity::setNowAnimate_No(int newNum)
-{
-	this->_nowAnimate_No = newNum;
-}
-
-Entity::Entity(Animator *newAnimator, Vec2 position):
-_animator(newAnimator), _position(position),
-_scale(Vec2(1.0f, 1.0f)), _rotation(GLfloat(0.0f)),
-_velocity(Vec2(0.0f, 0.0f)), _scaleVelocity(Vec2(0.0f, 0.0f)),
-_rotationVelocity(GLfloat(0.0f)), _eyeVector(Vec2(0.0f, 0.0f)),
-_upVector(Vec2(0.0f, 1.0f))
-{
-}
-
-Entity::~Entity()
-{
-    
+	this->_sprite->setPosition(Vec2(this->_pos.x+this->_spriteOffset.x, this->_pos.y + this->_spriteOffset.y));
 }

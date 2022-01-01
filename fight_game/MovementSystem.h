@@ -6,8 +6,8 @@
 #include <iostream>
 #include "Vec2.h"
 #include <glfw3.h>
-#include "Entity.h"
-
+#include "Sprite.h"
+#include"Player.h"
 class MovementSystem
 {
 private:
@@ -17,7 +17,7 @@ private:
 
 public:
 
-	void update(std::vector<Entity *> *entityArray);
+	void update(std::vector<Player *> *playerArray);
 
 	static MovementSystem& getMovementSystem();
 	static void destroyMovementSystem();

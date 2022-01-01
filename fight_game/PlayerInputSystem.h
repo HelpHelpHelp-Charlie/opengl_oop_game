@@ -4,11 +4,11 @@
 
 #include <iostream>
 #include  <glfw3.h>
-#include<gl\GLUT.H>
-#include "Entity.h"
+
+#include "Sprite.h"
 #include "Vec2.h"
-
-
+#include"Player.h"
+#include"EntityManager.h"
 class PlayerInputSystem
 {
 private:
@@ -18,7 +18,7 @@ private:
 
 	GLFWwindow *_window;
 
-	Entity *_currentPlayer;
+	Player *_currentPlayer;
 
 	PlayerInputSystem();
 	~PlayerInputSystem();
@@ -27,7 +27,7 @@ private:
 
 public:
 
-	void setCurrentPlayer(Entity *newPlayer);
+	void setCurrentPlayer(Player *newPlayer);
 
 	void update();
 

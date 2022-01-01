@@ -1,12 +1,12 @@
 #include "GameManager.h"
- 
-GameManager::GameManager(bool running):_running(running),
+
+GameManager::GameManager(bool running) :_running(running),
 _window(glfwGetCurrentContext()),
 _renderSystem(&RenderSystem::getRenderSystem()),
 _resourceManager(&ResourceManager::getResourceManager()),
 _movementSystem(&MovementSystem::getMovementSystem()),
 _playerInputSystem(&PlayerInputSystem::getPlayerInputSystem()),
-	scene(new Scene){
+scene(new Scene) {
 }
 
 GameManager::~GameManager()
@@ -18,22 +18,26 @@ void GameManager::runGameLoop()
 {
 	double lastTime = glfwGetTime();
 	double deltaTime = 0.0f;
-	_playerInputSystem->setCurrentPlayer(scene->getChildren()->at(0));
+	_playerInputSystem->setCurrentPlayer(scene->getChildrenPlayer()->at(0));
 	while (_running)
 	{
 
-	_renderSystem->render(scene->getChildren(), deltaTime);
+		_renderSystem->render(scene->getGridMap(), scene->getChildrenSprite(), scene->getChildrenEntity(), scene->getUIComponentManager(),deltaTime);
 		deltaTime += (glfwGetTime() - lastTime)*Update_per_second;
 		lastTime = glfwGetTime();
 
 		while (deltaTime >= 1.0f) {
-		_running = !glfwWindowShouldClose(_window);
+			_running = !glfwWindowShouldClose(_window);
 
-		_movementSystem->update(scene->getChildren());
-		_playerInputSystem->update();
 
+			_playerInputSystem->update();
+			_movementSystem->update(scene->getChildrenPlayer());
+			//scene->getGridMap()->update(scene->getChildrenPlayer()->at(0)->getAtGridTile(), scene->getChildrenPlayer()->at(0)->getEyeVector());
+			scene->getGridMap()->update(scene->getChildrenPlayer()->at(0));
+			scene->getUIComponentManager()->update();
 			--deltaTime;
 		}
+		scene->update();
 	}
 }
 
@@ -47,7 +51,7 @@ GameManager &GameManager::getGameManager()
 		glfwWindowHint(GLFW_GREEN_BITS, 8);
 		glfwWindowHint(GLFW_BLUE_BITS, 8);
 		glfwWindowHint(GLFW_ALPHA_BITS, 8);
-		GLFWwindow *window = glfwCreateWindow(1280, 720, "OverCooked", NULL, NULL);	
+		GLFWwindow *window = glfwCreateWindow(1600, 1000, "OverCooked", NULL, NULL);
 		glfwSwapInterval(0);
 		glfwMakeContextCurrent(window);
 
